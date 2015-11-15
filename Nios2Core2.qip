@@ -1,0 +1,14 @@
+# clk_0
+# cpu0
+set_global_assignment -name SDC_FILE [file join $::quartus(qip_path) cpu0.sdc]
+set_global_assignment -name SOURCE_FILE [file join $::quartus(qip_path) cpu0.ocp]
+# sdram
+# triStateBridge
+# cfi
+# sysid
+# jtag_uart
+# timer0
+# pio0
+# null
+set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID F46D04FC6EBC000001510A4F0A9D 
+ 
