@@ -17,7 +17,7 @@
 	<link_spec auto_gen_script="yes">
 		<script name="none">
 		<section memory="cfi" name=".text"/>
-<section memory="cfi" name=".rodata"/>
+<section memory="sdram" name=".rodata"/>
 <section memory="sdram" name=".rwdata"/>
 <section memory="sdram" name=".stack"/>
 <section memory="sdram" name=".heap"/>

@@ -3,7 +3,7 @@
  * Machine generated for a CPU named "cpu0" as defined in:
  * e:\MyProject\My_project\Altera\Q11MultiCore\software\CPU0_syslib\..\..\Nios2Core2.ptf
  *
- * Generated: 2015-11-16 10:28:58.586
+ * Generated: 2015-11-16 16:32:01.399
  *
  */
 
@@ -145,20 +145,7 @@ SECTIONS
         . = ALIGN(32 / 8);
     } >  cfi =0x3a880100 /* NOP on Nios2 (big endian) */
 
-    .rodata :AT (LOADADDR (.text) + SIZEOF (.text))
-    {
-        PROVIDE (__ram_rodata_start = ABSOLUTE(.));
-        . = ALIGN(32 / 8);
-        *(.rodata .rodata.* .gnu.linkonce.r.*)
-        *(.rodata1)
-        . = ALIGN(32 / 8);
-        PROVIDE (__ram_rodata_end = ABSOLUTE(.));
-    } > cfi
-
-    PROVIDE (__flash_rodata_start = LOADADDR(.rodata));
-
-
-    .exceptions :AT (LOADADDR (.rodata) + SIZEOF (.rodata))
+    .exceptions :AT (LOADADDR (.text) + SIZEOF (.text))
     {
         PROVIDE (__ram_exceptions_start = ABSOLUTE(.));
         . = ALIGN(32 / 8);
@@ -187,9 +174,22 @@ SECTIONS
         PROVIDE (__ram_exceptions_end = ABSOLUTE(.));
     } > sdram
 
-    PROVIDE (__flash_exceptions_start = LOADADDR(.exceptions));
+   PROVIDE (__flash_exceptions_start = LOADADDR(.exceptions));
 
-    .rwdata  :AT (LOADADDR (.exceptions) + SIZEOF (.exceptions))
+
+    .rodata :AT (LOADADDR (.exceptions) + SIZEOF (.exceptions))
+    {
+        PROVIDE (__ram_rodata_start = ABSOLUTE(.));
+        . = ALIGN(32 / 8);
+        *(.rodata .rodata.* .gnu.linkonce.r.*)
+        *(.rodata1)
+        . = ALIGN(32 / 8);
+        PROVIDE (__ram_rodata_end = ABSOLUTE(.));
+    } > sdram
+
+    PROVIDE (__flash_rodata_start = LOADADDR(.rodata));
+
+    .rwdata  :AT (LOADADDR (.rodata) + SIZEOF (.rodata))
     {
         PROVIDE (__ram_rwdata_start = ABSOLUTE(.));
         . = ALIGN(32 / 8);

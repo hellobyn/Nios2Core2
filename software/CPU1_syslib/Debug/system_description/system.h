@@ -3,7 +3,7 @@
  * Machine generated for a CPU named "cpu1" as defined in:
  * e:\MyProject\My_project\Altera\Q11MultiCore\software\CPU1_syslib\..\..\Nios2Core2.ptf
  *
- * Generated: 2015-11-16 10:29:41.807
+ * Generated: 2015-11-16 16:36:30.152
  *
  */
 
@@ -256,7 +256,7 @@ DO NOT MODIFY THIS FILE
  */
 
 #define ALT_TEXT_DEVICE       CFI
-#define ALT_RODATA_DEVICE     CFI
+#define ALT_RODATA_DEVICE     SDRAM
 #define ALT_RWDATA_DEVICE     SDRAM
 #define ALT_EXCEPTIONS_DEVICE SDRAM
 #define ALT_RESET_DEVICE      CFI
