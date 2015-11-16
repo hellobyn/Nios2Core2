@@ -3,7 +3,7 @@
  * Machine generated for a CPU named "cpu0" as defined in:
  * e:\MyProject\My_project\Altera\Q11MultiCore\software\CPU0_syslib\..\..\Nios2Core2.ptf
  *
- * Generated: 2015-11-15 17:23:44.612
+ * Generated: 2015-11-16 10:27:17.268
  *
  */
 
@@ -63,21 +63,18 @@ DO NOT MODIFY THIS FILE
 #define ALT_CPU_NAME "cpu0"
 #define ALT_CPU_ARCHITECTURE "altera_nios2"
 #define ALT_DEVICE_FAMILY "CYCLONEIVE"
-#define ALT_STDIN "/dev/jtag_uart"
-#define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
-#define ALT_STDIN_BASE 0x00401038
-#define ALT_STDIN_DEV jtag_uart
-#define ALT_STDIN_PRESENT
-#define ALT_STDOUT "/dev/jtag_uart"
-#define ALT_STDOUT_TYPE "altera_avalon_jtag_uart"
-#define ALT_STDOUT_BASE 0x00401038
-#define ALT_STDOUT_DEV jtag_uart
-#define ALT_STDOUT_PRESENT
-#define ALT_STDERR "/dev/jtag_uart"
-#define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
-#define ALT_STDERR_BASE 0x00401038
-#define ALT_STDERR_DEV jtag_uart
-#define ALT_STDERR_PRESENT
+#define ALT_STDIN "/dev/null"
+#define ALT_STDIN_TYPE ""
+#define ALT_STDIN_BASE UNDEFINED VARIABLE %BASE_ADDRESS%
+#define ALT_STDIN_DEV null
+#define ALT_STDOUT "/dev/null"
+#define ALT_STDOUT_TYPE ""
+#define ALT_STDOUT_BASE UNDEFINED VARIABLE %BASE_ADDRESS%
+#define ALT_STDOUT_DEV null
+#define ALT_STDERR "/dev/null"
+#define ALT_STDERR_TYPE ""
+#define ALT_STDERR_BASE UNDEFINED VARIABLE %BASE_ADDRESS%
+#define ALT_STDERR_DEV null
 #define ALT_CPU_FREQ 100000000
 #define ALT_IRQ_BASE NULL
 #define ALT_LEGACY_INTERRUPT_API_PRESENT
@@ -192,7 +189,7 @@ DO NOT MODIFY THIS FILE
 #define SYSID_BASE 0x00401030
 #define SYSID_SPAN 8
 #define SYSID_ID 11u
-#define SYSID_TIMESTAMP 1447576925u
+#define SYSID_TIMESTAMP 1447592398u
 #define SYSID_REGENERATE_VALUES 0
 #define ALT_MODULE_CLASS_sysid altera_avalon_sysid
 
@@ -282,11 +279,19 @@ DO NOT MODIFY THIS FILE
  *
  */
 
-#define ALT_TEXT_DEVICE       SDRAM
-#define ALT_RODATA_DEVICE     SDRAM
+#define ALT_TEXT_DEVICE       CFI
+#define ALT_RODATA_DEVICE     CFI
 #define ALT_RWDATA_DEVICE     SDRAM
 #define ALT_EXCEPTIONS_DEVICE SDRAM
 #define ALT_RESET_DEVICE      CFI
+
+/*
+ * The text section is initialised so no bootloader will be required.
+ * Set a variable to tell crt0.S to provide code at the reset address and
+ * to initialise rwdata if appropriate.
+ */
+
+#define ALT_NO_BOOTLOADER
 
 
 #endif /* __SYSTEM_H_ */

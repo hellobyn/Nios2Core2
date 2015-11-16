@@ -3,93 +3,123 @@ Copyright (c) 1999-2009 Altera Corporation.  All rights reserved.
 
 
 No .sopc_builder configuration file(!)
-# 2015.11.15 16:42:33 (*) mk_custom_sdk starting
-# 2015.11.15 16:42:33 (*) Reading project E:/MyProject/My_project/Altera/Q11MultiCore/Nios2Core2.ptf.
+# 2015.11.15 21:00:55 (*) mk_custom_sdk starting
+# 2015.11.15 21:00:55 (*) Reading project E:/MyProject/My_project/Altera/Q11MultiCore/Nios2Core2.ptf.
 
-# 2015.11.15 16:42:33 (*) Finding all CPUs
-# 2015.11.15 16:42:33 (*) Finding all available components
-# 2015.11.15 16:42:33 (*) Reading E:/MyProject/My_project/Altera/Q11MultiCore/.sopc_builder/install.ptf
+# 2015.11.15 21:00:55 (*) Finding all CPUs
+# 2015.11.15 21:00:55 (*) Finding all available components
+# 2015.11.15 21:00:55 (*) Reading E:/MyProject/My_project/Altera/Q11MultiCore/.sopc_builder/install.ptf
 
-# 2015.11.15 16:42:33 (*) Found 63 components
+# 2015.11.15 21:00:55 (*) Found 63 components
 
-# 2015.11.15 16:42:33 (*) Finding all peripherals
+# 2015.11.15 21:00:56 (*) Finding all peripherals
 
-# 2015.11.15 16:42:33 (*) Finding software components
+# 2015.11.15 21:00:56 (*) Finding software components
 
-# 2015.11.15 16:42:34 (*) (Legacy SDK Generation Skipped)
-# 2015.11.15 16:42:34 (*) (All TCL Script Generation Skipped)
-# 2015.11.15 16:42:34 (*) (No Libraries Built)
-# 2015.11.15 16:42:34 (*) (Contents Generation Skipped)
-# 2015.11.15 16:42:34 (*) mk_custom_sdk finishing
+# 2015.11.15 21:00:56 (*) (Legacy SDK Generation Skipped)
+# 2015.11.15 21:00:56 (*) (All TCL Script Generation Skipped)
+# 2015.11.15 21:00:56 (*) (No Libraries Built)
+# 2015.11.15 21:00:56 (*) (Contents Generation Skipped)
+# 2015.11.15 21:00:56 (*) mk_custom_sdk finishing
 
-# 2015.11.15 16:42:34 (*) Starting generation for system: Nios2Core2.
+# 2015.11.15 21:00:56 (*) Starting generation for system: Nios2Core2.
 
+.
 .
 .
 .
 .
 .
+....
+
+# 2015.11.15 21:00:58 (*) Running Generator Program for cpu0
+
+# 2015.11.15 21:00:59 (*) Starting Nios II generation
+# 2015.11.15 21:00:59 (*)   Checking for plaintext license.
+# 2015.11.15 21:00:59 (*)   Plaintext license not found.
+# 2015.11.15 21:00:59 (*)   Checking for encrypted license (non-evaluation).
+# 2015.11.15 21:00:59 (*)   Encrypted license found.  SOF will not be time-limited.
+# 2015.11.15 21:00:59 (*)   Getting CPU configuration settings
+Warning: currently assigned JTAG instance ID 0 for cpu0/jtag_debug_module is shared by cpu1/jtag_debug_module. Reassigned to 1.
+
+# 2015.11.15 21:00:59 (*)   Elaborating CPU configuration settings
+# 2015.11.15 21:00:59 (*)   Creating all objects for CPU
+# 2015.11.15 21:00:59 (*)     Testbench
+# 2015.11.15 21:01:00 (*)     Instruction decoding
+# 2015.11.15 21:01:00 (*)       Instruction fields
+# 2015.11.15 21:01:00 (*)       Instruction decodes
+# 2015.11.15 21:01:00 (*)       Signals for RTL simulation waveforms
+# 2015.11.15 21:01:00 (*)       Instruction controls
+# 2015.11.15 21:01:01 (*)     Pipeline frontend
+# 2015.11.15 21:01:01 (*)     Pipeline backend
+
+# 2015.11.15 21:01:03 (*)   Generating HDL from CPU objects
+# 2015.11.15 21:01:06 (*)   Creating encrypted HDL
+# 2015.11.15 21:01:07 (*) Done Nios II generation
+
+# 2015.11.15 21:01:07 (*) Running Generator Program for sdram
+
+# 2015.11.15 21:01:08 (*) Running Generator Program for cfi
+
+# 2015.11.15 21:01:09 (*) Running Generator Program for sysid
+
+# 2015.11.15 21:01:10 (*) Running Generator Program for jtag_uart
+
+# 2015.11.15 21:01:11 (*) Running Generator Program for timer0
+
+# 2015.11.15 21:01:11 (*) Running Generator Program for pio0
+
+# 2015.11.15 21:01:12 (*) Running Generator Program for cpu1
+
+# 2015.11.15 21:01:13 (*) Starting Nios II generation
+# 2015.11.15 21:01:13 (*)   Checking for plaintext license.
+# 2015.11.15 21:01:13 (*)   Plaintext license not found.
+# 2015.11.15 21:01:13 (*)   Checking for encrypted license (non-evaluation).
+# 2015.11.15 21:01:14 (*)   Encrypted license found.  SOF will not be time-limited.
+# 2015.11.15 21:01:14 (*)   Getting CPU configuration settings
+# 2015.11.15 21:01:14 (*)   Elaborating CPU configuration settings
+# 2015.11.15 21:01:14 (*)   Creating all objects for CPU
+
+# 2015.11.15 21:01:14 (*)     Testbench
+# 2015.11.15 21:01:14 (*)     Instruction decoding
+# 2015.11.15 21:01:14 (*)       Instruction fields
+# 2015.11.15 21:01:14 (*)       Instruction decodes
+# 2015.11.15 21:01:15 (*)       Signals for RTL simulation waveforms
+# 2015.11.15 21:01:15 (*)       Instruction controls
+# 2015.11.15 21:01:15 (*)     Pipeline frontend
+# 2015.11.15 21:01:15 (*)     Pipeline backend
+# 2015.11.15 21:01:17 (*)   Generating HDL from CPU objects
+# 2015.11.15 21:01:20 (*)   Creating encrypted HDL
+
+# 2015.11.15 21:01:21 (*) Done Nios II generation
+
+# 2015.11.15 21:01:21 (*) Running Generator Program for timer1
+
+# 2015.11.15 21:01:22 (*) Running Generator Program for pio1
+
 .
-.
-
-# 2015.11.15 16:42:35 (*) Running Generator Program for cpu0
-
-# 2015.11.15 16:42:36 (*) Starting Nios II generation
-# 2015.11.15 16:42:36 (*)   Checking for plaintext license.
-# 2015.11.15 16:42:36 (*)   Plaintext license not found.
-# 2015.11.15 16:42:36 (*)   Checking for encrypted license (non-evaluation).
-# 2015.11.15 16:42:37 (*)   Encrypted license found.  SOF will not be time-limited.
-# 2015.11.15 16:42:37 (*)   Getting CPU configuration settings
-# 2015.11.15 16:42:37 (*)   Elaborating CPU configuration settings
-# 2015.11.15 16:42:37 (*)   Creating all objects for CPU
-
-# 2015.11.15 16:42:37 (*)     Testbench
-# 2015.11.15 16:42:37 (*)     Instruction decoding
-# 2015.11.15 16:42:37 (*)       Instruction fields
-# 2015.11.15 16:42:37 (*)       Instruction decodes
-# 2015.11.15 16:42:38 (*)       Signals for RTL simulation waveforms
-# 2015.11.15 16:42:38 (*)       Instruction controls
-# 2015.11.15 16:42:38 (*)     Pipeline frontend
-# 2015.11.15 16:42:38 (*)     Pipeline backend
-# 2015.11.15 16:42:40 (*)   Generating HDL from CPU objects
-# 2015.11.15 16:42:43 (*)   Creating encrypted HDL
-
-# 2015.11.15 16:42:44 (*) Done Nios II generation
-
-# 2015.11.15 16:42:45 (*) Running Generator Program for sdram
-
-# 2015.11.15 16:42:45 (*) Running Generator Program for cfi
-
-# 2015.11.15 16:42:46 (*) Running Generator Program for sysid
-
-# 2015.11.15 16:42:47 (*) Running Generator Program for jtag_uart
-
-# 2015.11.15 16:42:47 (*) Running Generator Program for timer0
-
-# 2015.11.15 16:42:48 (*) Running Generator Program for pio0
-
-.
-
-# 2015.11.15 16:42:49 (*) Running Test Generator Program for sdram
-
-# 2015.11.15 16:42:49 (*) Making arbitration and system (top) modules.
-
-# 2015.11.15 16:42:52 (*) Generating Quartus symbol for top level: Nios2Core2
-
-# 2015.11.15 16:42:52 (*) Generating Symbol E:/MyProject/My_project/Altera/Q11MultiCore/Nios2Core2.bsf
-
-# 2015.11.15 16:42:52 (*) Creating command-line system-generation script: E:/MyProject/My_project/Altera/Q11MultiCore/Nios2Core2_generation_script
-
-# 2015.11.15 16:42:52 (*) Running setup for HDL simulator: modelsim
 
 
-# 2015.11.15 16:42:53 (*) Completed generation for system: Nios2Core2.
-# 2015.11.15 16:42:53 (*) THE FOLLOWING SYSTEM ITEMS HAVE BEEN GENERATED:
+# 2015.11.15 21:01:23 (*) Running Test Generator Program for sdram
+
+# 2015.11.15 21:01:24 (*) Making arbitration and system (top) modules.
+
+# 2015.11.15 21:01:29 (*) Generating Quartus symbol for top level: Nios2Core2
+
+# 2015.11.15 21:01:29 (*) Generating Symbol E:/MyProject/My_project/Altera/Q11MultiCore/Nios2Core2.bsf
+
+# 2015.11.15 21:01:30 (*) Creating command-line system-generation script: E:/MyProject/My_project/Altera/Q11MultiCore/Nios2Core2_generation_script
+
+# 2015.11.15 21:01:30 (*) Running setup for HDL simulator: modelsim
+
+
+# 2015.11.15 21:01:30 (*) Completed generation for system: Nios2Core2.
+# 2015.11.15 21:01:30 (*) THE FOLLOWING SYSTEM ITEMS HAVE BEEN GENERATED:
   SOPC Builder database : E:/MyProject/My_project/Altera/Q11MultiCore/Nios2Core2.ptf 
   System HDL Model : E:/MyProject/My_project/Altera/Q11MultiCore/Nios2Core2.v 
   System Generation Script : E:/MyProject/My_project/Altera/Q11MultiCore/Nios2Core2_generation_script 
 
-# 2015.11.15 16:42:53 (*) SUCCESS: SYSTEM GENERATION COMPLETED.
+# 2015.11.15 21:01:30 (*) SUCCESS: SYSTEM GENERATION COMPLETED.
 
 
 Press 'Exit' to exit.

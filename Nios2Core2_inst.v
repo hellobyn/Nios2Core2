@@ -5,6 +5,7 @@
       .clk_0                       (clk_0),
       .data_to_and_from_the_cfi    (data_to_and_from_the_cfi),
       .out_port_from_the_pio0      (out_port_from_the_pio0),
+      .out_port_from_the_pio1      (out_port_from_the_pio1),
       .read_n_to_the_cfi           (read_n_to_the_cfi),
       .reset_n                     (reset_n),
       .select_n_to_the_cfi         (select_n_to_the_cfi),

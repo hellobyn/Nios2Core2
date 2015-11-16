@@ -3,7 +3,7 @@
  * Machine generated for a CPU named "cpu0" as defined in:
  * e:\MyProject\My_project\Altera\Q11MultiCore\software\CPU0_syslib\..\..\Nios2Core2.ptf
  *
- * Generated: 2015-11-15 17:25:27.178
+ * Generated: 2015-11-16 10:28:58.586
  *
  */
 
@@ -51,36 +51,6 @@ SECTIONS
     {
         KEEP (*(.entry))
     } > reset
-
-    .exceptions :
-    {
-        PROVIDE (__ram_exceptions_start = ABSOLUTE(.));
-        . = ALIGN(0x20);
-        *(.irq)
-        KEEP (*(.exceptions.entry.label));
-        KEEP (*(.exceptions.entry.user));
-        KEEP (*(.exceptions.entry));
-        KEEP (*(.exceptions.irqtest.user));
-        KEEP (*(.exceptions.irqtest));
-        KEEP (*(.exceptions.irqhandler.user));
-        KEEP (*(.exceptions.irqhandler));
-        KEEP (*(.exceptions.irqreturn.user));
-        KEEP (*(.exceptions.irqreturn));
-        KEEP (*(.exceptions.notirq.label));
-        KEEP (*(.exceptions.notirq.user));
-        KEEP (*(.exceptions.notirq));
-        KEEP (*(.exceptions.soft.user));
-        KEEP (*(.exceptions.soft));
-        KEEP (*(.exceptions.unknown.user));
-        KEEP (*(.exceptions.unknown));
-        KEEP (*(.exceptions.exit.label));
-        KEEP (*(.exceptions.exit.user));
-        KEEP (*(.exceptions.exit));
-        KEEP (*(.exceptions));
-        PROVIDE (__ram_exceptions_end = ABSOLUTE(.));
-    } > sdram
-
-    PROVIDE (__flash_exceptions_start = LOADADDR(.exceptions));
 
     .text :
     {
@@ -173,9 +143,9 @@ SECTIONS
         PROVIDE (__DTOR_END__ = ABSOLUTE(.));
         KEEP (*(.jcr))
         . = ALIGN(32 / 8);
-    } >  sdram =0x3a880100 /* NOP on Nios2 (big endian) */
+    } >  cfi =0x3a880100 /* NOP on Nios2 (big endian) */
 
-    .rodata :
+    .rodata :AT (LOADADDR (.text) + SIZEOF (.text))
     {
         PROVIDE (__ram_rodata_start = ABSOLUTE(.));
         . = ALIGN(32 / 8);
@@ -183,11 +153,43 @@ SECTIONS
         *(.rodata1)
         . = ALIGN(32 / 8);
         PROVIDE (__ram_rodata_end = ABSOLUTE(.));
-    } > sdram
+    } > cfi
 
     PROVIDE (__flash_rodata_start = LOADADDR(.rodata));
 
-    .rwdata  :
+
+    .exceptions :AT (LOADADDR (.rodata) + SIZEOF (.rodata))
+    {
+        PROVIDE (__ram_exceptions_start = ABSOLUTE(.));
+        . = ALIGN(32 / 8);
+        *(.irq)
+        KEEP (*(.exceptions.entry.label));
+        KEEP (*(.exceptions.entry.user));
+        KEEP (*(.exceptions.entry));
+        KEEP (*(.exceptions.irqtest.user));
+        KEEP (*(.exceptions.irqtest));
+        KEEP (*(.exceptions.irqhandler.user));
+        KEEP (*(.exceptions.irqhandler));
+        KEEP (*(.exceptions.irqreturn.user));
+        KEEP (*(.exceptions.irqreturn));
+        KEEP (*(.exceptions.notirq.label));
+        KEEP (*(.exceptions.notirq.user));
+        KEEP (*(.exceptions.notirq));
+        KEEP (*(.exceptions.soft.user));
+        KEEP (*(.exceptions.soft));
+        KEEP (*(.exceptions.unknown.user));
+        KEEP (*(.exceptions.unknown));
+        KEEP (*(.exceptions.exit.label));
+        KEEP (*(.exceptions.exit.user));
+        KEEP (*(.exceptions.exit));
+        KEEP (*(.exceptions));
+        . = ALIGN(32 / 8);
+        PROVIDE (__ram_exceptions_end = ABSOLUTE(.));
+    } > sdram
+
+    PROVIDE (__flash_exceptions_start = LOADADDR(.exceptions));
+
+    .rwdata  :AT (LOADADDR (.exceptions) + SIZEOF (.exceptions))
     {
         PROVIDE (__ram_rwdata_start = ABSOLUTE(.));
         . = ALIGN(32 / 8);
@@ -244,7 +246,7 @@ SECTIONS
      *
      */
 
-    .sdram :
+    .sdram : AT (LOADADDR (.rwdata) + SIZEOF (.rwdata))
     {
         PROVIDE (_alt_partition_sdram_start = ABSOLUTE(.));
         *(.sdram .sdram.*)
@@ -257,7 +259,7 @@ SECTIONS
 
     PROVIDE (_alt_partition_sdram_load_addr = LOADADDR(.sdram));
 
-    .cfi :
+    .cfi LOADADDR (.sdram) + SIZEOF (.sdram): AT (LOADADDR (.sdram) + SIZEOF (.sdram))
     {
         PROVIDE (_alt_partition_cfi_start = ABSOLUTE(.));
         *(.cfi .cfi.*)
@@ -313,7 +315,7 @@ SECTIONS
 /*
  * Don't override this, override the __alt_stack_* symbols instead.
  */
-__alt_data_end = 0x06000000;
+__alt_data_end = 0x05000020;
 
 /*
  * The next two symbols define the location of the default stack.  You can
@@ -329,5 +331,5 @@ PROVIDE( __alt_stack_limit   = __alt_stack_base );
  * Override this symbol to put the heap in a different memory.
  */
 PROVIDE( __alt_heap_start    = end );
-PROVIDE( __alt_heap_limit    = 0x06000000 );
+PROVIDE( __alt_heap_limit    = 0x05000020 );
 

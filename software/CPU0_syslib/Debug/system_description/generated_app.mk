@@ -3,7 +3,7 @@
 # Machine generated for a CPU named "cpu0" as defined in:
 # e:\MyProject\My_project\Altera\Q11MultiCore\software\CPU0_syslib\..\..\Nios2Core2.ptf
 #
-# Generated: 2015-11-15 17:25:08.866
+# Generated: 2015-11-15 21:07:37.179
 
 # DO NOT MODIFY THIS FILE
 #
@@ -60,7 +60,7 @@ $(SIMDIR)/dummy_file: $(ELF)
 	touch $(SIMDIR)/dummy_file
 
 dummy_verifysysid_file:
-	nios2-download $(JTAG_CABLE)                                --sidp=0x00401030 --id=11 --timestamp=1447576925
+	nios2-download $(JTAG_CABLE)                                --sidp=0x00401030 --id=11 --timestamp=1447592398
 .PHONY: dummy_verifysysid_file
 
 

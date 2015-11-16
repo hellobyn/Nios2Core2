@@ -212,8 +212,8 @@ F_CEN                        : J13       : output : 2.5 V             :         
 RESERVED_INPUT               : J14       :        :                   :         : 5         :                
 RESERVED_INPUT               : J15       :        :                   :         : 5         :                
 F_ALSB                       : J16       : output : 2.5 V             :         : 5         : Y              
-RESERVED_INPUT               : K1        :        :                   :         : 2         :                
-RESERVED_INPUT               : K2        :        :                   :         : 2         :                
+PIO1[0]                      : K1        : output : 2.5 V             :         : 2         : Y              
+PIO1[1]                      : K2        : output : 2.5 V             :         : 2         : Y              
 VCCIO2                       : K3        : power  :                   : 2.5V    : 2         :                
 GND                          : K4        : gnd    :                   :         :           :                
 RESERVED_INPUT               : K5        :        :                   :         : 2         :                

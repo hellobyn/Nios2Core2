@@ -4,7 +4,7 @@
 #include "system.h"
 
 #define _LED
-#define _TIMER0
+#define _TIMER
 
 typedef struct
 {
@@ -50,8 +50,8 @@ typedef struct
     volatile unsigned long int SNAPH;               //
 }TIMERSTR;
 
-#ifdef _TIMER0
-#define TIMER0 ((TIMERSTR*)TIMER0_BASE)
+#ifdef _TIMER
+#define TIMER ((TIMERSTR*)TIMER0_BASE)
 #endif
 
 #endif

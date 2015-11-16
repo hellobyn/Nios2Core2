@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.altera.nj.launch.CollectiveLaunch">
+<stringAttribute key="com.altera.nj.launch.COLLECTIVE_LIST" value="CPU0 Nios II HW configuration|CPU1 Nios II HW configuration"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="CPU1"/>
+</launchConfiguration>
