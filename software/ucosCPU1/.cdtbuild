@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 3.1.0?>
+
+<ManagedProjectBuildInfo>
+<project id="ucosCPU1.nios2.exec.1863578018" name="Nios II Executable" projectType="nios2.exec">
+<configuration artifactExtension="elf" artifactName="ucosCPU1" cleanCommand="rm -rf" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser" id="nios2.exec.debug.1021927415" name="Debug" parent="nios2.exec.debug">
+<toolChain id="com.altera.nj.ui.exe.Debug.1972239533" name="com.altera.nj.ui.exe.Debug" superClass="com.altera.nj.ui.exe.Debug">
+<tool id="com.altera.nj.ui.tool.compiler.exe.debug.1124855087" name="Nios II Compiler" superClass="com.altera.nj.ui.tool.compiler.exe.debug"/>
+<tool id="com.altera.nj.ui.tool.linker.exe.debug.1292707715" name="Linker" superClass="com.altera.nj.ui.tool.linker.exe.debug"/>
+</toolChain>
+</configuration>
+<configuration artifactExtension="elf" artifactName="ucosCPU1" cleanCommand="rm -rf" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser" id="nios2.exec.release.789063661" name="Release" parent="nios2.exec.release">
+<toolChain id="com.altera.nj.ui.exe.Release.1362485831" name="com.altera.nj.ui.exe.Release" superClass="com.altera.nj.ui.exe.Release">
+<tool id="com.altera.nj.ui.tool.compiler.exe.release.802448804" name="Nios II Compiler" superClass="com.altera.nj.ui.tool.compiler.exe.release"/>
+<tool id="com.altera.nj.ui.tool.linker.exe.release.1925892373" name="Linker" superClass="com.altera.nj.ui.tool.linker.exe.release"/>
+</toolChain>
+</configuration>
+</project>
+</ManagedProjectBuildInfo>

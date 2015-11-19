@@ -76,19 +76,19 @@
          type = "String";
       }
    }
-   element cpu0.jtag_debug_module
-   {
-      datum baseAddress
-      {
-         value = "4196352";
-         type = "long";
-      }
-   }
    element cpu1.jtag_debug_module
    {
       datum baseAddress
       {
          value = "4200448";
+         type = "long";
+      }
+   }
+   element cpu0.jtag_debug_module
+   {
+      datum baseAddress
+      {
+         value = "4196352";
          type = "long";
       }
    }
@@ -116,35 +116,11 @@
          type = "int";
       }
    }
-   element timer1.s1
-   {
-      datum baseAddress
-      {
-         value = "4198464";
-         type = "long";
-      }
-   }
    element timer0.s1
    {
       datum baseAddress
       {
          value = "4198400";
-         type = "long";
-      }
-   }
-   element pio1.s1
-   {
-      datum baseAddress
-      {
-         value = "4198496";
-         type = "long";
-      }
-   }
-   element pio0.s1
-   {
-      datum baseAddress
-      {
-         value = "4198432";
          type = "long";
       }
    }
@@ -158,6 +134,30 @@
       datum baseAddress
       {
          value = "0";
+         type = "long";
+      }
+   }
+   element pio0.s1
+   {
+      datum baseAddress
+      {
+         value = "4198432";
+         type = "long";
+      }
+   }
+   element pio1.s1
+   {
+      datum baseAddress
+      {
+         value = "4198496";
+         type = "long";
+      }
+   }
+   element timer1.s1
+   {
+      datum baseAddress
+      {
+         value = "4198464";
          type = "long";
       }
    }
@@ -231,8 +231,8 @@
  <parameter name="maxAdditionalLatency" value="0" />
  <parameter name="projectName" value="multiCore.qpf" />
  <parameter name="sopcBorderPoints" value="true" />
- <parameter name="systemHash" value="15399967731" />
- <parameter name="timeStamp" value="1447592397527" />
+ <parameter name="systemHash" value="10419938156" />
+ <parameter name="timeStamp" value="1447854939962" />
  <module kind="clock_source" version="11.0" enabled="1" name="clk_0">
   <parameter name="clockFrequency" value="100000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -408,16 +408,16 @@
   <parameter name="writeIRQThreshold" value="8" />
  </module>
  <module kind="altera_avalon_timer" version="11.0" enabled="1" name="timer0">
-  <parameter name="alwaysRun" value="false" />
+  <parameter name="alwaysRun" value="true" />
   <parameter name="counterSize" value="32" />
-  <parameter name="fixedPeriod" value="false" />
+  <parameter name="fixedPeriod" value="true" />
   <parameter name="period" value="1" />
   <parameter name="periodUnits" value="MSEC" />
   <parameter name="resetOutput" value="false" />
-  <parameter name="snapshot" value="true" />
+  <parameter name="snapshot" value="false" />
   <parameter name="systemFrequency" value="100000000" />
   <parameter name="timeoutPulseOutput" value="false" />
-  <parameter name="timerPreset" value="FULL_FEATURED" />
+  <parameter name="timerPreset">SIMPLE_PERIODIC_INTERRUPT</parameter>
  </module>
  <module kind="altera_avalon_pio" version="11.0" enabled="1" name="pio0">
   <parameter name="bitClearingEdgeCapReg" value="false" />
@@ -500,7 +500,7 @@
   <parameter name="mmu_autoAssignTlbPtrSz" value="true" />
   <parameter name="mmu_TLBMissExcSlave" value="" />
   <parameter name="mmu_TLBMissExcOffset" value="0" />
-  <parameter name="manuallyAssignCpuID" value="false" />
+  <parameter name="manuallyAssignCpuID" value="true" />
   <parameter name="internalIrqMaskSystemInfo" value="1" />
   <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='cfi.s1' start='0x0' end='0x400000' /><slave name='cpu1.jtag_debug_module' start='0x401800' end='0x402000' /><slave name='sdram.s1' start='0x4000000' end='0x6000000' /></address-map>]]></parameter>
   <parameter name="instAddrWidth" value="27" />
@@ -536,16 +536,16 @@
   <parameter name="breakOffset" value="32" />
  </module>
  <module kind="altera_avalon_timer" version="11.0" enabled="1" name="timer1">
-  <parameter name="alwaysRun" value="false" />
+  <parameter name="alwaysRun" value="true" />
   <parameter name="counterSize" value="32" />
-  <parameter name="fixedPeriod" value="false" />
+  <parameter name="fixedPeriod" value="true" />
   <parameter name="period" value="1" />
   <parameter name="periodUnits" value="MSEC" />
   <parameter name="resetOutput" value="false" />
-  <parameter name="snapshot" value="true" />
+  <parameter name="snapshot" value="false" />
   <parameter name="systemFrequency" value="100000000" />
   <parameter name="timeoutPulseOutput" value="false" />
-  <parameter name="timerPreset" value="FULL_FEATURED" />
+  <parameter name="timerPreset">SIMPLE_PERIODIC_INTERRUPT</parameter>
  </module>
  <module kind="altera_avalon_pio" version="11.0" enabled="1" name="pio1">
   <parameter name="bitClearingEdgeCapReg" value="false" />

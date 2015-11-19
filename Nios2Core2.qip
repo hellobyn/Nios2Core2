@@ -9,11 +9,11 @@ set_global_assignment -name SOURCE_FILE [file join $::quartus(qip_path) cpu0.ocp
 # jtag_uart
 # timer0
 # pio0
-# null
 # cpu1
 set_global_assignment -name SDC_FILE [file join $::quartus(qip_path) cpu1.sdc]
 set_global_assignment -name SOURCE_FILE [file join $::quartus(qip_path) cpu1.ocp]
 # timer1
 # pio1
-set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID F46D04FC6EBC000001510B3B8F4E 
+# null
+set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID F46D04FC6EBC000001511AE17C73 
  

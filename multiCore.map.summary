@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Mon Nov 16 09:27:45 2015
+Analysis & Synthesis Status : Successful - Wed Nov 18 21:58:13 2015
 Quartus II 64-Bit Version : 11.0 Build 208 07/03/2011 SP 1 SJ Full Version
 Revision Name : multiCore
 Top-level Entity Name : multiCore
 Family : Cyclone IV E
-Total logic elements : 6,559
-    Total combinational functions : 5,339
-    Dedicated logic registers : 3,867
-Total registers : 3867
+Total logic elements : 6,236
+    Total combinational functions : 5,112
+    Dedicated logic registers : 3,673
+Total registers : 3673
 Total pins : 78
 Total virtual pins : 0
 Total memory bits : 93,952

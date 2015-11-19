@@ -1,0 +1,27 @@
+obj/altera_avalon_cfi_flash_table.o:  \
+ /cygdrive/d/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_cfi_flash/HAL/src/altera_avalon_cfi_flash_table.c \
+  /cygdrive/d/altera/11.0/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/include/errno.h \
+  /cygdrive/d/altera/11.0/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/include/sys/errno.h \
+  /cygdrive/d/altera/11.0/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/include/sys/reent.h \
+  /cygdrive/d/altera/11.0/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/include/_ansi.h \
+  /cygdrive/d/altera/11.0/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/include/newlib.h \
+  /cygdrive/d/altera/11.0/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/include/sys/config.h \
+  /cygdrive/d/altera/11.0/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/include/machine/ieeefp.h \
+  /cygdrive/d/altera/11.0/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/include/sys/_types.h \
+  /cygdrive/d/altera/11.0/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/include/stddef.h \
+  /cygdrive/d/altera/11.0/ip/altera/nios2_ip/altera_nios2/HAL/inc/io.h \
+  /cygdrive/d/altera/11.0/ip/altera/nios2_ip/altera_nios2/HAL/inc/alt_types.h \
+  /cygdrive/d/altera/11.0/ip/altera/nios2_ip/altera_nios2/HAL/inc/alt_types.h \
+  /cygdrive/d/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_cfi_flash/HAL/inc/altera_avalon_cfi_flash.h \
+  /cygdrive/d/altera/11.0/ip/altera/nios2_ip/altera_nios2/HAL/inc/alt_types.h \
+  /cygdrive/d/altera/11.0/nios2eds/components/altera_hal/HAL/inc/sys/alt_flash_dev.h \
+  /cygdrive/d/altera/11.0/nios2eds/components/altera_hal/HAL/inc/sys/alt_flash_types.h \
+  /cygdrive/d/altera/11.0/nios2eds/components/altera_hal/HAL/inc/sys/alt_llist.h \
+  /cygdrive/d/altera/11.0/ip/altera/nios2_ip/altera_nios2/HAL/inc/alt_types.h \
+  /cygdrive/d/altera/11.0/nios2eds/components/altera_hal/HAL/inc/priv/alt_dev_llist.h \
+  /cygdrive/d/altera/11.0/nios2eds/components/altera_hal/HAL/inc/sys/alt_llist.h \
+  /cygdrive/d/altera/11.0/ip/altera/nios2_ip/altera_nios2/HAL/inc/alt_types.h \
+  /cygdrive/d/altera/11.0/nios2eds/components/altera_hal/HAL/inc/sys/alt_llist.h \
+  /cygdrive/d/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_cfi_flash/HAL/inc/altera_avalon_cfi_flash_amd_funcs.h \
+  /cygdrive/d/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_cfi_flash/HAL/inc/altera_avalon_cfi_flash.h \
+  /cygdrive/d/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_cfi_flash/HAL/inc/altera_avalon_cfi_flash_intel_funcs.h

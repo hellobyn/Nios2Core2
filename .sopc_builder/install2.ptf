@@ -1,7 +1,7 @@
 PACKAGE install2 
 {
    # This file informs the Nios II IDE of non-legacy component paths.
-   # Generated 2015.11.15.21:18:07
+   # Generated 2015.11.18.21:59:50
    COMPONENT alt_interlaken_pcs_siv 
    {
       VERSION 11.0 

@@ -2,9 +2,9 @@
 <section name="Workbench">
 	<section name="org.eclipse.debug.ui.LAUNCH_CONFIGURATIONS_DIALOG_SECTION">
 		<item value="1292" key="DIALOG_WIDTH"/>
-		<item value="58" key="DIALOG_Y_ORIGIN"/>
+		<item value="81" key="DIALOG_Y_ORIGIN"/>
 		<item value=", com.altera.nj.launch.HWLaunch, com.altera.nj.launch.CollectiveLaunch, com.altera.nj.launch.FlashLaunch, " key="org.eclipse.debug.ui.EXPANDED_NODES"/>
-		<item value="60" key="DIALOG_X_ORIGIN"/>
+		<item value="98" key="DIALOG_X_ORIGIN"/>
 		<item value="640" key="DIALOG_HEIGHT"/>
 		<item value="313" key="org.eclipse.debug.ui.DIALOG_SASH_WEIGHTS_1"/>
 		<item value="686" key="org.eclipse.debug.ui.DIALOG_SASH_WEIGHTS_2"/>

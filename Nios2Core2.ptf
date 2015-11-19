@@ -645,7 +645,7 @@ SYSTEM Nios2Core2
          address_stall_present = "1";
          dsp_block_supports_shift = "0";
          mrams_present = "0";
-         cpuid_value = "0";
+         cpuid_value = "2";
          dont_overwrite_cpuid = "1";
          allow_legacy_sdk = "1";
          legacy_sdk_support = "1";
@@ -2397,7 +2397,7 @@ SYSTEM Nios2Core2
          Has_Clock = "1";
          View 
          {
-            Settings_Summary = "System ID (at last Generate):<br> <b>0000000B</b>    (unique ID tag) <br> <b>564881CE</b> (timestamp: Sun Nov 15, 2015 @8:59 PM)";
+            Settings_Summary = "System ID (at last Generate):<br> <b>0000000B</b>    (unique ID tag) <br> <b>564C835C</b> (timestamp: Wed Nov 18, 2015 @9:55 PM)";
             MESSAGES 
             {
             }
@@ -2406,7 +2406,7 @@ SYSTEM Nios2Core2
       WIZARD_SCRIPT_ARGUMENTS 
       {
          id = "11u";
-         timestamp = "1447592398u";
+         timestamp = "1447854940u";
          regenerate_values = "0";
          MAKE 
          {
@@ -2415,7 +2415,7 @@ SYSTEM Nios2Core2
                verifysysid 
                {
                   All_Depends_On = "0";
-                  Command = "nios2-download $(JTAG_CABLE)                                --sidp=0x00401030 --id=11 --timestamp=1447592398";
+                  Command = "nios2-download $(JTAG_CABLE)                                --sidp=0x00401030 --id=11 --timestamp=1447854940";
                   Is_Phony = "1";
                   Target_File = "dummy_verifysysid_file";
                }
@@ -2809,9 +2809,9 @@ SYSTEM Nios2Core2
       }
       WIZARD_SCRIPT_ARGUMENTS 
       {
-         always_run = "0";
-         fixed_period = "0";
-         snapshot = "1";
+         always_run = "1";
+         fixed_period = "1";
+         snapshot = "0";
          period = "1";
          period_units = "ms";
          reset_output = "0";
@@ -3595,7 +3595,7 @@ SYSTEM Nios2Core2
          address_stall_present = "1";
          dsp_block_supports_shift = "0";
          mrams_present = "0";
-         cpuid_value = "1";
+         cpuid_value = "0";
          dont_overwrite_cpuid = "1";
          allow_legacy_sdk = "1";
          legacy_sdk_support = "1";
@@ -4535,9 +4535,9 @@ SYSTEM Nios2Core2
       }
       WIZARD_SCRIPT_ARGUMENTS 
       {
-         always_run = "0";
-         fixed_period = "0";
-         snapshot = "1";
+         always_run = "1";
+         fixed_period = "1";
+         snapshot = "0";
          period = "1";
          period_units = "ms";
          reset_output = "0";

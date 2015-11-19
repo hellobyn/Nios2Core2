@@ -1,14 +1,14 @@
-Fitter Status : Successful - Mon Nov 16 09:28:14 2015
+Fitter Status : Successful - Wed Nov 18 21:58:43 2015
 Quartus II 64-Bit Version : 11.0 Build 208 07/03/2011 SP 1 SJ Full Version
 Revision Name : multiCore
 Top-level Entity Name : multiCore
 Family : Cyclone IV E
 Device : EP4CE15F17C8
 Timing Models : Final
-Total logic elements : 5,961 / 15,408 ( 39 % )
-    Total combinational functions : 5,347 / 15,408 ( 35 % )
-    Dedicated logic registers : 3,714 / 15,408 ( 24 % )
-Total registers : 3832
+Total logic elements : 5,697 / 15,408 ( 37 % )
+    Total combinational functions : 5,120 / 15,408 ( 33 % )
+    Dedicated logic registers : 3,520 / 15,408 ( 23 % )
+Total registers : 3638
 Total pins : 78 / 166 ( 47 % )
 Total virtual pins : 0
 Total memory bits : 93,952 / 516,096 ( 18 % )
