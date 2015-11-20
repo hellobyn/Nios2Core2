@@ -585,7 +585,7 @@
    <SOPCModuleParameter>
     <C>117</C>
     <Name>dataSlaveMapParam</Name>
-    <Value><![CDATA[<address-map><slave name='cfi.s1' start='0x0' end='0x400000' /><slave name='cpu0.jtag_debug_module' start='0x400800' end='0x401000' /><slave name='timer0.s1' start='0x401000' end='0x401020' /><slave name='pio0.s1' start='0x401020' end='0x401030' /><slave name='sysid.control_slave' start='0x401030' end='0x401038' /><slave name='jtag_uart.avalon_jtag_slave' start='0x401038' end='0x401040' /><slave name='sdram.s1' start='0x4000000' end='0x6000000' /></address-map>]]></Value>
+    <Value><![CDATA[<address-map><slave name='cfi.s1' start='0x0' end='0x400000' /><slave name='cpu0.jtag_debug_module' start='0x400800' end='0x401000' /><slave name='timer0.s1' start='0x401000' end='0x401020' /><slave name='fifo0.in_csr' start='0x401020' end='0x401040' /><slave name='pio0.s1' start='0x401040' end='0x401050' /><slave name='sysid.control_slave' start='0x401050' end='0x401058' /><slave name='jtag_uart.avalon_jtag_slave' start='0x401058' end='0x401060' /><slave name='fifo0.in' start='0x401060' end='0x401064' /><slave name='fifo0.out' start='0x401068' end='0x40106C' /><slave name='sdram.s1' start='0x4000000' end='0x6000000' /></address-map>]]></Value>
    </SOPCModuleParameter>
    <SOPCModuleParameter>
     <C>118</C>
@@ -826,7 +826,7 @@
    <SOPCModuleParameter>
     <C>166</C>
     <Name>timestamp</Name>
-    <Value>1447854940</Value>
+    <Value>1447922295</Value>
    </SOPCModuleParameter>
   </SOPCModule>
   <SOPCModule>
@@ -1472,7 +1472,7 @@
    <SOPCModuleParameter>
     <C>296</C>
     <Name>dataSlaveMapParam</Name>
-    <Value><![CDATA[<address-map><slave name='cfi.s1' start='0x0' end='0x400000' /><slave name='sysid.control_slave' start='0x401030' end='0x401038' /><slave name='timer1.s1' start='0x401040' end='0x401060' /><slave name='pio1.s1' start='0x401060' end='0x401070' /><slave name='cpu1.jtag_debug_module' start='0x401800' end='0x402000' /><slave name='sdram.s1' start='0x4000000' end='0x6000000' /></address-map>]]></Value>
+    <Value><![CDATA[<address-map><slave name='cfi.s1' start='0x0' end='0x400000' /><slave name='sysid.control_slave' start='0x401050' end='0x401058' /><slave name='pio1.s1' start='0x401070' end='0x401080' /><slave name='timer1.s1' start='0x401080' end='0x4010A0' /><slave name='cpu1.jtag_debug_module' start='0x401800' end='0x402000' /><slave name='sdram.s1' start='0x4000000' end='0x6000000' /></address-map>]]></Value>
    </SOPCModuleParameter>
    <SOPCModuleParameter>
     <C>297</C>
@@ -1628,7 +1628,106 @@
     <Value>2</Value>
    </SOPCModuleParameter>
   </SOPCModule>
-  <SystemID>451045272</SystemID>
+  <SOPCModule>
+   <C>328</C>
+   <ModuleType>altera_avalon_fifo</ModuleType>
+   <SOPCModuleParameter>
+    <C>329</C>
+    <Name>avalonMMAvalonMMDataWidth</Name>
+    <Value>32</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>330</C>
+    <Name>avalonMMAvalonSTDataWidth</Name>
+    <Value>32</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>331</C>
+    <Name>bitsPerSymbol</Name>
+    <Value>16</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>332</C>
+    <Name>channelWidth</Name>
+    <Value>8</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>333</C>
+    <Name>deviceFamilyString</Name>
+    <Value>Cyclone IV E</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>334</C>
+    <Name>errorWidth</Name>
+    <Value>8</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>335</C>
+    <Name>fifoDepth</Name>
+    <Value>256</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>336</C>
+    <Name>fifoInputInterfaceOptions</Name>
+    <Value>AVALONMM_WRITE</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>337</C>
+    <Name>fifoOutputInterfaceOptions</Name>
+    <Value>AVALONMM_READ</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>338</C>
+    <Name>showHiddenFeatures</Name>
+    <Value>false</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>339</C>
+    <Name>singleClockMode</Name>
+    <Value>true</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>340</C>
+    <Name>singleResetMode</Name>
+    <Value>false</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>341</C>
+    <Name>symbolsPerBeat</Name>
+    <Value>2</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>342</C>
+    <Name>useBackpressure</Name>
+    <Value>true</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>343</C>
+    <Name>useIRQ</Name>
+    <Value>false</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>344</C>
+    <Name>usePacket</Name>
+    <Value>true</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>345</C>
+    <Name>useReadControl</Name>
+    <Value>false</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>346</C>
+    <Name>useRegister</Name>
+    <Value>false</Value>
+   </SOPCModuleParameter>
+   <SOPCModuleParameter>
+    <C>347</C>
+    <Name>useWriteControl</Name>
+    <Value>true</Value>
+   </SOPCModuleParameter>
+  </SOPCModule>
+  <SystemID>518427211</SystemID>
  </SOPCSystem>
  <SchemaVersion>schema_2011-03-02</SchemaVersion>
 </ProgramExecution>

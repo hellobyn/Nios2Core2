@@ -1,5 +1,5 @@
 Flow report for multiCore
-Wed Nov 18 21:58:58 2015
+Thu Nov 19 17:09:27 2015
 Quartus II 64-Bit Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
 
 
@@ -38,20 +38,20 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Wed Nov 18 21:58:50 2015          ;
+; Flow Status                        ; Successful - Thu Nov 19 17:09:19 2015          ;
 ; Quartus II 64-Bit Version          ; 11.0 Build 208 07/03/2011 SP 1 SJ Full Version ;
 ; Revision Name                      ; multiCore                                      ;
 ; Top-level Entity Name              ; multiCore                                      ;
 ; Family                             ; Cyclone IV E                                   ;
 ; Device                             ; EP4CE15F17C8                                   ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 5,697 / 15,408 ( 37 % )                        ;
-;     Total combinational functions  ; 5,120 / 15,408 ( 33 % )                        ;
-;     Dedicated logic registers      ; 3,520 / 15,408 ( 23 % )                        ;
-; Total registers                    ; 3638                                           ;
+; Total logic elements               ; 5,869 / 15,408 ( 38 % )                        ;
+;     Total combinational functions  ; 5,297 / 15,408 ( 34 % )                        ;
+;     Dedicated logic registers      ; 3,594 / 15,408 ( 23 % )                        ;
+; Total registers                    ; 3712                                           ;
 ; Total pins                         ; 78 / 166 ( 47 % )                              ;
 ; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 93,952 / 516,096 ( 18 % )                      ;
+; Total memory bits                  ; 102,144 / 516,096 ( 20 % )                     ;
 ; Embedded Multiplier 9-bit elements ; 8 / 112 ( 7 % )                                ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                                 ;
 +------------------------------------+------------------------------------------------+
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/18/2015 21:57:30 ;
+; Start date & time ; 11/19/2015 17:07:54 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; multiCore           ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+-------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                         ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+-------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 1098828803479.144785505014208 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 1098828803479.144792407418152 ; --            ; --          ; --         ;
 ; IP_TOOL_NAME                        ; ALTPLL                        ; --            ; --          ; --         ;
 ; IP_TOOL_VERSION                     ; 11.0                          ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                            ; --            ; --          ; --         ;
@@ -88,7 +88,7 @@ applicable agreement for further details.
 ; PARTITION_COLOR                     ; 16764057                      ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING         ; --            ; --          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; SOURCE                        ; --            ; --          ; Top        ;
-; SOPC_BUILDER_SIGNATURE_ID           ; F46d04fc6ebc000001511ae17c73  ; --            ; --          ; --         ;
+; SOPC_BUILDER_SIGNATURE_ID           ; F46d04fc6ebc000001511ee59758  ; --            ; --          ; --         ;
 +-------------------------------------+-------------------------------+---------------+-------------+------------+
 
 
@@ -97,11 +97,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:40     ; 1.0                     ; 517 MB              ; 00:00:39                           ;
-; Fitter                    ; 00:00:29     ; 1.2                     ; 580 MB              ; 00:00:31                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 362 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:11     ; 1.4                     ; 469 MB              ; 00:00:12                           ;
-; Total                     ; 00:01:23     ; --                      ; --                  ; 00:01:25                           ;
+; Analysis & Synthesis      ; 00:00:42     ; 1.0                     ; 528 MB              ; 00:00:40                           ;
+; Fitter                    ; 00:00:31     ; 1.2                     ; 584 MB              ; 00:00:33                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 363 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:12     ; 1.4                     ; 472 MB              ; 00:00:13                           ;
+; Total                     ; 00:01:28     ; --                      ; --                  ; 00:01:29                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

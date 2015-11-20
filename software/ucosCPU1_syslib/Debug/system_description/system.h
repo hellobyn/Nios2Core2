@@ -3,7 +3,7 @@
  * Machine generated for a CPU named "cpu1" as defined in:
  * e:\MyProject\My_project\Altera\Q11MultiCore\software\ucosCPU1_syslib\..\..\Nios2Core2.ptf
  *
- * Generated: 2015-11-18 22:03:46.147
+ * Generated: 2015-11-19 17:25:50.788
  *
  */
 
@@ -185,10 +185,10 @@ DO NOT MODIFY THIS FILE
 
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_TYPE "altera_avalon_sysid"
-#define SYSID_BASE 0x00401030
+#define SYSID_BASE 0x00401050
 #define SYSID_SPAN 8
 #define SYSID_ID 11u
-#define SYSID_TIMESTAMP 1447854940u
+#define SYSID_TIMESTAMP 1447922295u
 #define SYSID_REGENERATE_VALUES 0
 #define ALT_MODULE_CLASS_sysid altera_avalon_sysid
 
@@ -199,7 +199,7 @@ DO NOT MODIFY THIS FILE
 
 #define TIMER1_NAME "/dev/timer1"
 #define TIMER1_TYPE "altera_avalon_timer"
-#define TIMER1_BASE 0x00401040
+#define TIMER1_BASE 0x00401080
 #define TIMER1_SPAN 32
 #define TIMER1_IRQ 0
 #define TIMER1_IRQ_INTERRUPT_CONTROLLER_ID 0
@@ -224,7 +224,7 @@ DO NOT MODIFY THIS FILE
 
 #define PIO1_NAME "/dev/pio1"
 #define PIO1_TYPE "altera_avalon_pio"
-#define PIO1_BASE 0x00401060
+#define PIO1_BASE 0x00401070
 #define PIO1_SPAN 16
 #define PIO1_DO_TEST_BENCH_WIRING 0
 #define PIO1_DRIVEN_SIM_VALUE 0

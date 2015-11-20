@@ -1,0 +1,60 @@
+#ifndef SOPC_H_
+#define SOPC_H_
+
+#include "system.h"
+
+#define _LED
+#define _TIMER
+#define _FIFO
+
+typedef struct
+{
+    unsigned long int data;
+    unsigned long int direction;
+    unsigned long int interruptMask;
+    unsigned long int edgeCapture;
+}PIOSTR;
+
+#ifdef _LED
+#define led ((PIOSTR*)PIO0_BASE)
+#endif
+
+typedef struct
+{
+    union
+    {
+        struct
+        {
+            volatile unsigned long int to   :1;     //计数到0 被置1
+            volatile unsigned long int run  :1;     //1：正在计数
+            volatile unsigned long int nc   :30;
+        }bits;
+        volatile unsigned long int word;
+    }status;    //状态寄存器
+
+    union
+    {
+        struct
+        {
+            volatile unsigned long int ito      :1; //使能中断
+            volatile unsigned long int cont     :1; //连续计数
+            volatile unsigned long int start    :1; //开始计数
+            volatile unsigned long int stop     :1; //停止计数
+            volatile unsigned long int nc       :28;
+        }bits;
+        volatile unsigned long int word;
+    }control;   //控制寄存器
+
+    volatile unsigned long int periodL;             //计数频率 低位
+    volatile unsigned long int periodH;             //计数频率 高位
+    volatile unsigned long int snapL;               //
+    volatile unsigned long int snapH;               //
+}TIMERSTR;
+
+#ifdef _TIMER
+#define timer ((TIMERSTR*)TIMER0_BASE)
+#endif
+
+
+#endif
+

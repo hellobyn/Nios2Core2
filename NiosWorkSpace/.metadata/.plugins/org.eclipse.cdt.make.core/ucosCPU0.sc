@@ -13,6 +13,8 @@
 <includePath path="d:/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_timer/HAL/inc"/>
 <includePath path="d:/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_timer/inc"/>
 <includePath path="d:/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_pio/inc"/>
+<includePath path="d:/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_fifo/HAL/inc"/>
+<includePath path="d:/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_fifo/inc"/>
 <includePath path="d:/altera/11.0/ip/altera/nios2_ip/altera_nios2/UCOSII/inc"/>
 <includePath path="d:/altera/11.0/ip/altera/nios2_ip/altera_nios2/HAL/inc"/>
 <includePath path="d:/altera/11.0/nios2eds/components/micrium_uc_osii/UCOSII/inc"/>

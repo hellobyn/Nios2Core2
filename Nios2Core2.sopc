@@ -9,7 +9,7 @@
    {
       datum baseAddress
       {
-         value = "4198456";
+         value = "4198488";
          type = "long";
       }
    }
@@ -17,7 +17,7 @@
    {
       datum _sortIndex
       {
-         value = "8";
+         value = "9";
          type = "int";
       }
       datum megawizard_uipreferences
@@ -38,7 +38,7 @@
    {
       datum baseAddress
       {
-         value = "4198448";
+         value = "4198480";
          type = "long";
       }
    }
@@ -59,12 +59,12 @@
    {
       datum _sortIndex
       {
-         value = "9";
+         value = "10";
          type = "int";
       }
       datum megawizard_uipreferences
       {
-         value = "{output_language=VERILOG, output_directory=E:\\MyProject\\My_project\\Altera\\Q11MultiCore}";
+         value = "{}";
          type = "String";
       }
    }
@@ -74,6 +74,30 @@
       {
          value = "";
          type = "String";
+      }
+   }
+   element fifo0
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element fifo0.in
+   {
+      datum baseAddress
+      {
+         value = "4198496";
+         type = "long";
+      }
+   }
+   element fifo0.in_csr
+   {
+      datum baseAddress
+      {
+         value = "4198432";
+         type = "long";
       }
    }
    element cpu1.jtag_debug_module
@@ -96,8 +120,16 @@
    {
       datum _sortIndex
       {
-         value = "4";
+         value = "5";
          type = "int";
+      }
+   }
+   element fifo0.out
+   {
+      datum baseAddress
+      {
+         value = "4198504";
+         type = "long";
       }
    }
    element pio0
@@ -112,16 +144,8 @@
    {
       datum _sortIndex
       {
-         value = "11";
+         value = "12";
          type = "int";
-      }
-   }
-   element timer0.s1
-   {
-      datum baseAddress
-      {
-         value = "4198400";
-         type = "long";
       }
    }
    element cfi.s1
@@ -141,15 +165,7 @@
    {
       datum baseAddress
       {
-         value = "4198432";
-         type = "long";
-      }
-   }
-   element pio1.s1
-   {
-      datum baseAddress
-      {
-         value = "4198496";
+         value = "4198464";
          type = "long";
       }
    }
@@ -157,7 +173,23 @@
    {
       datum baseAddress
       {
-         value = "4198464";
+         value = "4198528";
+         type = "long";
+      }
+   }
+   element pio1.s1
+   {
+      datum baseAddress
+      {
+         value = "4198512";
+         type = "long";
+      }
+   }
+   element timer0.s1
+   {
+      datum baseAddress
+      {
+         value = "4198400";
          type = "long";
       }
    }
@@ -173,7 +205,7 @@
    {
       datum _sortIndex
       {
-         value = "6";
+         value = "7";
          type = "int";
       }
       datum megawizard_uipreferences
@@ -186,7 +218,7 @@
    {
       datum _sortIndex
       {
-         value = "5";
+         value = "6";
          type = "int";
       }
    }
@@ -202,7 +234,7 @@
    {
       datum _sortIndex
       {
-         value = "10";
+         value = "11";
          type = "int";
       }
    }
@@ -210,7 +242,7 @@
    {
       datum _sortIndex
       {
-         value = "7";
+         value = "8";
          type = "int";
       }
       datum megawizard_uipreferences
@@ -231,8 +263,8 @@
  <parameter name="maxAdditionalLatency" value="0" />
  <parameter name="projectName" value="multiCore.qpf" />
  <parameter name="sopcBorderPoints" value="true" />
- <parameter name="systemHash" value="10419938156" />
- <parameter name="timeStamp" value="1447854939962" />
+ <parameter name="systemHash" value="2447710756" />
+ <parameter name="timeStamp" value="1447922294572" />
  <module kind="clock_source" version="11.0" enabled="1" name="clk_0">
   <parameter name="clockFrequency" value="100000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -332,7 +364,7 @@
   <parameter name="dcache_numTCDM" value="_0" />
   <parameter name="dcache_lineSize" value="_32" />
   <parameter name="dcache_bursts" value="false" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='cfi.s1' start='0x0' end='0x400000' /><slave name='cpu0.jtag_debug_module' start='0x400800' end='0x401000' /><slave name='timer0.s1' start='0x401000' end='0x401020' /><slave name='pio0.s1' start='0x401020' end='0x401030' /><slave name='sysid.control_slave' start='0x401030' end='0x401038' /><slave name='jtag_uart.avalon_jtag_slave' start='0x401038' end='0x401040' /><slave name='sdram.s1' start='0x4000000' end='0x6000000' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='cfi.s1' start='0x0' end='0x400000' /><slave name='cpu0.jtag_debug_module' start='0x400800' end='0x401000' /><slave name='timer0.s1' start='0x401000' end='0x401020' /><slave name='fifo0.in_csr' start='0x401020' end='0x401040' /><slave name='pio0.s1' start='0x401040' end='0x401050' /><slave name='sysid.control_slave' start='0x401050' end='0x401058' /><slave name='jtag_uart.avalon_jtag_slave' start='0x401058' end='0x401060' /><slave name='fifo0.in' start='0x401060' end='0x401064' /><slave name='fifo0.out' start='0x401068' end='0x40106C' /><slave name='sdram.s1' start='0x4000000' end='0x6000000' /></address-map>]]></parameter>
   <parameter name="dataAddrWidth" value="27" />
   <parameter name="customInstSlavesSystemInfo" value="&lt;info/&gt;" />
   <parameter name="cpuReset" value="false" />
@@ -526,7 +558,7 @@
   <parameter name="dcache_numTCDM" value="_0" />
   <parameter name="dcache_lineSize" value="_32" />
   <parameter name="dcache_bursts" value="false" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='cfi.s1' start='0x0' end='0x400000' /><slave name='sysid.control_slave' start='0x401030' end='0x401038' /><slave name='timer1.s1' start='0x401040' end='0x401060' /><slave name='pio1.s1' start='0x401060' end='0x401070' /><slave name='cpu1.jtag_debug_module' start='0x401800' end='0x402000' /><slave name='sdram.s1' start='0x4000000' end='0x6000000' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='cfi.s1' start='0x0' end='0x400000' /><slave name='sysid.control_slave' start='0x401050' end='0x401058' /><slave name='pio1.s1' start='0x401070' end='0x401080' /><slave name='timer1.s1' start='0x401080' end='0x4010A0' /><slave name='cpu1.jtag_debug_module' start='0x401800' end='0x402000' /><slave name='sdram.s1' start='0x4000000' end='0x6000000' /></address-map>]]></parameter>
   <parameter name="dataAddrWidth" value="27" />
   <parameter name="customInstSlavesSystemInfo" value="&lt;info/&gt;" />
   <parameter name="cpuReset" value="false" />
@@ -560,6 +592,27 @@
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="2" />
+ </module>
+ <module kind="altera_avalon_fifo" version="11.0" enabled="1" name="fifo0">
+  <parameter name="avalonMMAvalonMMDataWidth" value="32" />
+  <parameter name="avalonMMAvalonSTDataWidth" value="32" />
+  <parameter name="bitsPerSymbol" value="16" />
+  <parameter name="channelWidth" value="8" />
+  <parameter name="deviceFamilyString" value="Cyclone IV E" />
+  <parameter name="errorWidth" value="8" />
+  <parameter name="fifoDepth" value="256" />
+  <parameter name="fifoInputInterfaceOptions" value="AVALONMM_WRITE" />
+  <parameter name="fifoOutputInterfaceOptions" value="AVALONMM_READ" />
+  <parameter name="showHiddenFeatures" value="false" />
+  <parameter name="singleClockMode" value="true" />
+  <parameter name="singleResetMode" value="false" />
+  <parameter name="symbolsPerBeat" value="2" />
+  <parameter name="useBackpressure" value="true" />
+  <parameter name="useIRQ" value="false" />
+  <parameter name="usePacket" value="true" />
+  <parameter name="useReadControl" value="false" />
+  <parameter name="useRegister" value="false" />
+  <parameter name="useWriteControl" value="true" />
  </module>
  <connection kind="clock" version="11.0" start="clk_0.clk" end="cpu0.clk" />
  <connection
@@ -620,7 +673,7 @@
    start="cpu0.data_master"
    end="sysid.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00401030" />
+  <parameter name="baseAddress" value="0x00401050" />
  </connection>
  <connection kind="clock" version="11.0" start="clk_0.clk" end="jtag_uart.clk" />
  <connection
@@ -641,7 +694,7 @@
  <connection kind="clock" version="11.0" start="clk_0.clk" end="pio0.clk" />
  <connection kind="avalon" version="11.0" start="cpu0.data_master" end="pio0.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00401020" />
+  <parameter name="baseAddress" value="0x00401040" />
  </connection>
  <connection
    kind="avalon_tristate"
@@ -702,12 +755,12 @@
    start="cpu1.data_master"
    end="sysid.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00401030" />
+  <parameter name="baseAddress" value="0x00401050" />
  </connection>
  <connection kind="clock" version="11.0" start="clk_0.clk" end="timer1.clk" />
  <connection kind="avalon" version="11.0" start="cpu1.data_master" end="timer1.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00401040" />
+  <parameter name="baseAddress" value="0x00401080" />
  </connection>
  <connection kind="interrupt" version="11.0" start="cpu1.d_irq" end="timer1.irq">
   <parameter name="irqNumber" value="0" />
@@ -715,7 +768,7 @@
  <connection kind="clock" version="11.0" start="clk_0.clk" end="pio1.clk" />
  <connection kind="avalon" version="11.0" start="cpu1.data_master" end="pio1.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00401060" />
+  <parameter name="baseAddress" value="0x00401070" />
  </connection>
  <connection
    kind="avalon"
@@ -723,6 +776,23 @@
    start="cpu0.data_master"
    end="jtag_uart.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00401038" />
+  <parameter name="baseAddress" value="0x00401058" />
+ </connection>
+ <connection kind="clock" version="11.0" start="clk_0.clk" end="fifo0.clk_in" />
+ <connection kind="avalon" version="11.0" start="cpu0.data_master" end="fifo0.in">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00401060" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="11.0"
+   start="cpu0.data_master"
+   end="fifo0.in_csr">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00401020" />
+ </connection>
+ <connection kind="avalon" version="11.0" start="cpu0.data_master" end="fifo0.out">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00401068" />
  </connection>
 </system>

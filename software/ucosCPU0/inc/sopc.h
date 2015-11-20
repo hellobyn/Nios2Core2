@@ -5,17 +5,18 @@
 
 #define _LED
 #define _TIMER
+#define _FIFO
 
 typedef struct
 {
-    unsigned long int DATA;
-    unsigned long int DIRECTION;
-    unsigned long int INTERRUPT_MASK;
-    unsigned long int EDGE_CAPTURE;
+    unsigned long int data;
+    unsigned long int direction;
+    unsigned long int interruptMask;
+    unsigned long int edgeCapture;
 }PIOSTR;
 
 #ifdef _LED
-#define LED ((PIOSTR*)PIO0_BASE)
+#define led ((PIOSTR*)PIO0_BASE)
 #endif
 
 typedef struct
@@ -24,34 +25,65 @@ typedef struct
     {
         struct
         {
-            volatile unsigned long int TO   :1;     //计数到0 被置1
-            volatile unsigned long int RUN  :1;     //1：正在计数
-            volatile unsigned long int NC   :30;
-        }BITS;
-        volatile unsigned long int WORD;
-    }STATUS;    //状态寄存器
+            volatile unsigned long int to   :1;     //计数到0 被置1
+            volatile unsigned long int run  :1;     //1：正在计数
+            volatile unsigned long int nc   :30;
+        }bits;
+        volatile unsigned long int word;
+    }status;    //状态寄存器
 
     union
     {
         struct
         {
-            volatile unsigned long int ITO      :1; //使能中断
-            volatile unsigned long int CONT     :1; //连续计数
-            volatile unsigned long int START    :1; //开始计数
-            volatile unsigned long int STOP     :1; //停止计数
-            volatile unsigned long int NC       :28;
-        }BITS;
-        volatile unsigned long int WORD;
-    }CONTROL;   //控制寄存器
+            volatile unsigned long int ito      :1; //使能中断
+            volatile unsigned long int cont     :1; //连续计数
+            volatile unsigned long int start    :1; //开始计数
+            volatile unsigned long int stop     :1; //停止计数
+            volatile unsigned long int nc       :28;
+        }bits;
+        volatile unsigned long int word;
+    }control;   //控制寄存器
 
-    volatile unsigned long int PERIODL;             //计数频率 低位
-    volatile unsigned long int PERIODH;             //计数频率 高位
-    volatile unsigned long int SNAPL;               //
-    volatile unsigned long int SNAPH;               //
+    volatile unsigned long int periodL;             //计数频率 低位
+    volatile unsigned long int periodH;             //计数频率 高位
+    volatile unsigned long int snapL;               //
+    volatile unsigned long int snapH;               //
 }TIMERSTR;
 
 #ifdef _TIMER
-#define TIMER ((TIMERSTR*)TIMER0_BASE)
+#define timer ((TIMERSTR*)TIMER0_BASE)
+#endif
+
+typedef struct
+{
+    volatile unsigned long int fillLevel;
+    union
+    {
+        struct
+        {
+            volatile unsigned long int full         :1;     
+            volatile unsigned long int empty        :1;     
+            volatile unsigned long int almostFull   :1;
+            volatile unsigned long int almostEmpty  :1;
+            volatile unsigned long int overFlow     :1;
+            volatile unsigned long int underFlow    :1;
+            volatile unsigned long int nc           :26;
+        }bits;
+        volatile unsigned long int word;
+    }status;    //状态寄存器
+
+    volatile unsigned long int event;             
+    volatile unsigned long int irqEn;             
+    volatile unsigned long int almostFull;               
+    volatile unsigned long int almostEmpty;               
+}FIFOSTR;
+
+#define ALMOSRFULL  (FIFO0_IN_CSR_FIFO_DEPTH - 4) 
+#define ALMOSTEMPTY 4
+
+#ifdef _FIFO
+#define fifo ((FIFOSTR*)FIFO0_IN_CSR_BASE)
 #endif
 
 #endif

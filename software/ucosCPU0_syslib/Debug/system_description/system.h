@@ -3,7 +3,7 @@
  * Machine generated for a CPU named "cpu0" as defined in:
  * e:\MyProject\My_project\Altera\Q11MultiCore\software\ucosCPU0_syslib\..\..\Nios2Core2.ptf
  *
- * Generated: 2015-11-18 22:00:21.301
+ * Generated: 2015-11-19 17:22:24.688
  *
  */
 
@@ -65,17 +65,17 @@ DO NOT MODIFY THIS FILE
 #define ALT_DEVICE_FAMILY "CYCLONEIVE"
 #define ALT_STDIN "/dev/jtag_uart"
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
-#define ALT_STDIN_BASE 0x00401038
+#define ALT_STDIN_BASE 0x00401058
 #define ALT_STDIN_DEV jtag_uart
 #define ALT_STDIN_PRESENT
 #define ALT_STDOUT "/dev/jtag_uart"
 #define ALT_STDOUT_TYPE "altera_avalon_jtag_uart"
-#define ALT_STDOUT_BASE 0x00401038
+#define ALT_STDOUT_BASE 0x00401058
 #define ALT_STDOUT_DEV jtag_uart
 #define ALT_STDOUT_PRESENT
 #define ALT_STDERR "/dev/jtag_uart"
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
-#define ALT_STDERR_BASE 0x00401038
+#define ALT_STDERR_BASE 0x00401058
 #define ALT_STDERR_DEV jtag_uart
 #define ALT_STDERR_PRESENT
 #define ALT_CPU_FREQ 100000000
@@ -120,6 +120,7 @@ DO NOT MODIFY THIS FILE
 #define __ALTERA_AVALON_JTAG_UART
 #define __ALTERA_AVALON_TIMER
 #define __ALTERA_AVALON_PIO
+#define __ALTERA_AVALON_FIFO
 
 /*
  * sdram configuration
@@ -189,10 +190,10 @@ DO NOT MODIFY THIS FILE
 
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_TYPE "altera_avalon_sysid"
-#define SYSID_BASE 0x00401030
+#define SYSID_BASE 0x00401050
 #define SYSID_SPAN 8
 #define SYSID_ID 11u
-#define SYSID_TIMESTAMP 1447854940u
+#define SYSID_TIMESTAMP 1447922295u
 #define SYSID_REGENERATE_VALUES 0
 #define ALT_MODULE_CLASS_sysid altera_avalon_sysid
 
@@ -203,7 +204,7 @@ DO NOT MODIFY THIS FILE
 
 #define JTAG_UART_NAME "/dev/jtag_uart"
 #define JTAG_UART_TYPE "altera_avalon_jtag_uart"
-#define JTAG_UART_BASE 0x00401038
+#define JTAG_UART_BASE 0x00401058
 #define JTAG_UART_SPAN 8
 #define JTAG_UART_IRQ 1
 #define JTAG_UART_IRQ_INTERRUPT_CONTROLLER_ID 0
@@ -251,7 +252,7 @@ DO NOT MODIFY THIS FILE
 
 #define PIO0_NAME "/dev/pio0"
 #define PIO0_TYPE "altera_avalon_pio"
-#define PIO0_BASE 0x00401020
+#define PIO0_BASE 0x00401040
 #define PIO0_SPAN 16
 #define PIO0_DO_TEST_BENCH_WIRING 0
 #define PIO0_DRIVEN_SIM_VALUE 0
@@ -267,6 +268,96 @@ DO NOT MODIFY THIS FILE
 #define PIO0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO0_FREQ 100000000
 #define ALT_MODULE_CLASS_pio0 altera_avalon_pio
+
+/*
+ * fifo0/in configuration
+ *
+ */
+
+#define FIFO0_IN_NAME "/dev/fifo0"
+#define FIFO0_IN_TYPE "altera_avalon_fifo"
+#define FIFO0_IN_BASE 0x00401060
+#define FIFO0_IN_SPAN 4
+#define FIFO0_IN_DEVICE_FAMILY "CYCLONEIVE"
+#define FIFO0_IN_USE_REGISTER 0
+#define FIFO0_IN_SINGLE_CLOCK_MODE 1
+#define FIFO0_IN_FIFO_DEPTH 256
+#define FIFO0_IN_USE_WRITE_CONTROL 1
+#define FIFO0_IN_USE_READ_CONTROL 0
+#define FIFO0_IN_USE_IRQ 0
+#define FIFO0_IN_USE_AVALONMM_WRITE_SLAVE 1
+#define FIFO0_IN_USE_AVALONMM_READ_SLAVE 1
+#define FIFO0_IN_USE_AVALONST_SINK 0
+#define FIFO0_IN_USE_AVALONST_SOURCE 0
+#define FIFO0_IN_USE_BACKPRESSURE 1
+#define FIFO0_IN_AVALONMM_AVALONMM_DATA_WIDTH 32
+#define FIFO0_IN_BITS_PER_SYMBOL 16
+#define FIFO0_IN_SYMBOLS_PER_BEAT 2
+#define FIFO0_IN_AVALONMM_AVALONST_DATA_WIDTH 32
+#define FIFO0_IN_ERROR_WIDTH 8
+#define FIFO0_IN_CHANNEL_WIDTH 8
+#define FIFO0_IN_USE_PACKET 1
+#define ALT_MODULE_CLASS_fifo0 altera_avalon_fifo
+
+/*
+ * fifo0/out configuration
+ *
+ */
+
+#define FIFO0_OUT_NAME "/dev/fifo0"
+#define FIFO0_OUT_TYPE "altera_avalon_fifo"
+#define FIFO0_OUT_BASE 0x00401068
+#define FIFO0_OUT_SPAN 4
+#define FIFO0_OUT_DEVICE_FAMILY "CYCLONEIVE"
+#define FIFO0_OUT_USE_REGISTER 0
+#define FIFO0_OUT_SINGLE_CLOCK_MODE 1
+#define FIFO0_OUT_FIFO_DEPTH 256
+#define FIFO0_OUT_USE_WRITE_CONTROL 1
+#define FIFO0_OUT_USE_READ_CONTROL 0
+#define FIFO0_OUT_USE_IRQ 0
+#define FIFO0_OUT_USE_AVALONMM_WRITE_SLAVE 1
+#define FIFO0_OUT_USE_AVALONMM_READ_SLAVE 1
+#define FIFO0_OUT_USE_AVALONST_SINK 0
+#define FIFO0_OUT_USE_AVALONST_SOURCE 0
+#define FIFO0_OUT_USE_BACKPRESSURE 1
+#define FIFO0_OUT_AVALONMM_AVALONMM_DATA_WIDTH 32
+#define FIFO0_OUT_BITS_PER_SYMBOL 16
+#define FIFO0_OUT_SYMBOLS_PER_BEAT 2
+#define FIFO0_OUT_AVALONMM_AVALONST_DATA_WIDTH 32
+#define FIFO0_OUT_ERROR_WIDTH 8
+#define FIFO0_OUT_CHANNEL_WIDTH 8
+#define FIFO0_OUT_USE_PACKET 1
+#define ALT_MODULE_CLASS_fifo0 altera_avalon_fifo
+
+/*
+ * fifo0/in_csr configuration
+ *
+ */
+
+#define FIFO0_IN_CSR_NAME "/dev/fifo0"
+#define FIFO0_IN_CSR_TYPE "altera_avalon_fifo"
+#define FIFO0_IN_CSR_BASE 0x00401020
+#define FIFO0_IN_CSR_SPAN 32
+#define FIFO0_IN_CSR_DEVICE_FAMILY "CYCLONEIVE"
+#define FIFO0_IN_CSR_USE_REGISTER 0
+#define FIFO0_IN_CSR_SINGLE_CLOCK_MODE 1
+#define FIFO0_IN_CSR_FIFO_DEPTH 256
+#define FIFO0_IN_CSR_USE_WRITE_CONTROL 1
+#define FIFO0_IN_CSR_USE_READ_CONTROL 0
+#define FIFO0_IN_CSR_USE_IRQ 0
+#define FIFO0_IN_CSR_USE_AVALONMM_WRITE_SLAVE 1
+#define FIFO0_IN_CSR_USE_AVALONMM_READ_SLAVE 1
+#define FIFO0_IN_CSR_USE_AVALONST_SINK 0
+#define FIFO0_IN_CSR_USE_AVALONST_SOURCE 0
+#define FIFO0_IN_CSR_USE_BACKPRESSURE 1
+#define FIFO0_IN_CSR_AVALONMM_AVALONMM_DATA_WIDTH 32
+#define FIFO0_IN_CSR_BITS_PER_SYMBOL 16
+#define FIFO0_IN_CSR_SYMBOLS_PER_BEAT 2
+#define FIFO0_IN_CSR_AVALONMM_AVALONST_DATA_WIDTH 32
+#define FIFO0_IN_CSR_ERROR_WIDTH 8
+#define FIFO0_IN_CSR_CHANNEL_WIDTH 8
+#define FIFO0_IN_CSR_USE_PACKET 1
+#define ALT_MODULE_CLASS_fifo0 altera_avalon_fifo
 
 /*
  * MicroC/OS-II configuration

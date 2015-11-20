@@ -9,6 +9,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|multiCore|Nios2Core2:CPU|cpu0:the_cpu0|cpu0_mult_cell:the_cpu0_mult_cell|altmult_add:the_altmult_add_part_1" CBX_FILE_NAME="mult_add_mgr2.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|multiCore|Nios2Core2:CPU|cpu1:the_cpu1|cpu1_mult_cell:the_cpu1_mult_cell|altmult_add:the_altmult_add_part_1" CBX_FILE_NAME="mult_add_mgr2.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|multiCore|Nios2Core2:CPU|cpu1:the_cpu1|lpm_add_sub:Add10" CBX_FILE_NAME="add_sub_qvi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|multiCore|Nios2Core2:CPU|fifo0:the_fifo0|fifo0_scfifo_with_controls:the_scfifo_with_controls|fifo0_single_clock_fifo:the_scfifo|scfifo:single_clock_fifo" CBX_FILE_NAME="scfifo_s341.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|multiCore|Nios2Core2:CPU|jtag_uart:the_jtag_uart|jtag_uart_scfifo_r:the_jtag_uart_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_jr21.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|multiCore|Nios2Core2:CPU|cpu0:the_cpu0|cpu0_ic_data_module:cpu0_ic_data|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_cjd1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|multiCore|Nios2Core2:CPU|cpu0:the_cpu0|cpu0_ic_tag_module:cpu0_ic_tag|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_47g1.tdf"/>
