@@ -543,24 +543,6 @@ SYSTEM Nios2Core2
                span = "0x00000008";
                is_bridge = "0";
             }
-            Entry fifo0/in
-            {
-               address = "0x00401060";
-               span = "0x00000004";
-               is_bridge = "0";
-            }
-            Entry fifo0/in_csr
-            {
-               address = "0x00401020";
-               span = "0x00000020";
-               is_bridge = "0";
-            }
-            Entry fifo0/out
-            {
-               address = "0x00401068";
-               span = "0x00000004";
-               is_bridge = "0";
-            }
          }
       }
       WIZARD_SCRIPT_ARGUMENTS 
@@ -663,7 +645,7 @@ SYSTEM Nios2Core2
          address_stall_present = "1";
          dsp_block_supports_shift = "0";
          mrams_present = "0";
-         cpuid_value = "2";
+         cpuid_value = "0";
          dont_overwrite_cpuid = "1";
          allow_legacy_sdk = "1";
          legacy_sdk_support = "1";
@@ -2415,7 +2397,7 @@ SYSTEM Nios2Core2
          Has_Clock = "1";
          View 
          {
-            Settings_Summary = "System ID (at last Generate):<br> <b>0000000B</b>    (unique ID tag) <br> <b>564D8A77</b> (timestamp: Thu Nov 19, 2015 @4:38 PM)";
+            Settings_Summary = "System ID (at last Generate):<br> <b>0000000B</b>    (unique ID tag) <br> <b>56582551</b> (timestamp: Fri Nov 27, 2015 @5:41 PM)";
             MESSAGES 
             {
             }
@@ -2424,7 +2406,7 @@ SYSTEM Nios2Core2
       WIZARD_SCRIPT_ARGUMENTS 
       {
          id = "11u";
-         timestamp = "1447922295u";
+         timestamp = "1448617297u";
          regenerate_values = "0";
          MAKE 
          {
@@ -2433,7 +2415,7 @@ SYSTEM Nios2Core2
                verifysysid 
                {
                   All_Depends_On = "0";
-                  Command = "nios2-download $(JTAG_CABLE)                                --sidp=0x00401050 --id=11 --timestamp=1447922295";
+                  Command = "nios2-download $(JTAG_CABLE)                                --sidp=0x00401050 --id=11 --timestamp=1448617297";
                   Is_Phony = "1";
                   Target_File = "dummy_verifysysid_file";
                }
@@ -3613,7 +3595,7 @@ SYSTEM Nios2Core2
          address_stall_present = "1";
          dsp_block_supports_shift = "0";
          mrams_present = "0";
-         cpuid_value = "0";
+         cpuid_value = "1";
          dont_overwrite_cpuid = "1";
          allow_legacy_sdk = "1";
          legacy_sdk_support = "1";
@@ -4742,368 +4724,6 @@ SYSTEM Nios2Core2
          Simulation_HDL_Files = "";
          Synthesis_HDL_Files = "__PROJECT_DIRECTORY__/pio1.v";
          Synthesis_Only_Files = "";
-      }
-   }
-   MODULE fifo0
-   {
-      SLAVE in
-      {
-         PORT_WIRING 
-         {
-            PORT wrclock
-            {
-               type = "clk";
-               width = "1";
-               direction = "input";
-               Is_Enabled = "1";
-            }
-            PORT reset_n
-            {
-               type = "reset_n";
-               width = "1";
-               direction = "input";
-               Is_Enabled = "1";
-            }
-            PORT avalonmm_write_slave_writedata
-            {
-               type = "writedata";
-               width = "32";
-               direction = "input";
-               Is_Enabled = "1";
-            }
-            PORT avalonmm_write_slave_write
-            {
-               type = "write";
-               width = "1";
-               direction = "input";
-               Is_Enabled = "1";
-            }
-            PORT avalonmm_write_slave_waitrequest
-            {
-               type = "waitrequest";
-               width = "1";
-               direction = "output";
-               Is_Enabled = "1";
-            }
-         }
-         SYSTEM_BUILDER_INFO 
-         {
-            Bus_Type = "avalon";
-            Read_Wait_States = "peripheral_controlled";
-            Write_Wait_States = "peripheral_controlled";
-            Hold_Time = "0cycles";
-            Setup_Time = "0cycles";
-            Is_Printable_Device = "0";
-            Address_Alignment = "dynamic";
-            Well_Behaved_Waitrequest = "0";
-            Is_Nonvolatile_Storage = "0";
-            Address_Span = "4";
-            Read_Latency = "0";
-            Is_Memory_Device = "0";
-            Maximum_Pending_Read_Transactions = "0";
-            Minimum_Uninterrupted_Run_Length = "1";
-            Accepts_Internal_Connections = "1";
-            Write_Latency = "0";
-            Is_Flash = "0";
-            Data_Width = "32";
-            Address_Width = "0";
-            Maximum_Burst_Size = "1";
-            Register_Incoming_Signals = "0";
-            Register_Outgoing_Signals = "0";
-            Interleave_Bursts = "0";
-            Linewrap_Bursts = "0";
-            Burst_On_Burst_Boundaries_Only = "0";
-            Always_Burst_Max_Burst = "0";
-            Is_Big_Endian = "0";
-            Is_Enabled = "1";
-            MASTERED_BY cpu0/data_master
-            {
-               priority = "1";
-               Offset_Address = "0x00401060";
-            }
-            Base_Address = "0x00401060";
-            Address_Group = "0";
-            IRQ_MASTER cpu0/data_master
-            {
-               IRQ_Number = "NC";
-            }
-         }
-      }
-      SLAVE out
-      {
-         SYSTEM_BUILDER_INFO 
-         {
-            Bus_Type = "avalon";
-            Read_Wait_States = "peripheral_controlled";
-            Write_Wait_States = "peripheral_controlled";
-            Hold_Time = "0cycles";
-            Setup_Time = "0cycles";
-            Is_Printable_Device = "0";
-            Address_Alignment = "dynamic";
-            Well_Behaved_Waitrequest = "0";
-            Is_Nonvolatile_Storage = "0";
-            Address_Span = "4";
-            Read_Latency = "1";
-            Is_Memory_Device = "0";
-            Maximum_Pending_Read_Transactions = "0";
-            Minimum_Uninterrupted_Run_Length = "1";
-            Accepts_Internal_Connections = "1";
-            Write_Latency = "0";
-            Is_Flash = "0";
-            Data_Width = "32";
-            Address_Width = "0";
-            Maximum_Burst_Size = "1";
-            Register_Incoming_Signals = "0";
-            Register_Outgoing_Signals = "0";
-            Interleave_Bursts = "0";
-            Linewrap_Bursts = "0";
-            Burst_On_Burst_Boundaries_Only = "0";
-            Always_Burst_Max_Burst = "0";
-            Is_Big_Endian = "0";
-            Is_Enabled = "1";
-            MASTERED_BY cpu0/data_master
-            {
-               priority = "1";
-               Offset_Address = "0x00401068";
-            }
-            Base_Address = "0x00401068";
-            Address_Group = "1";
-            IRQ_MASTER cpu0/data_master
-            {
-               IRQ_Number = "NC";
-            }
-         }
-         PORT_WIRING 
-         {
-            PORT avalonmm_read_slave_readdata
-            {
-               type = "readdata";
-               width = "32";
-               direction = "output";
-               Is_Enabled = "1";
-            }
-            PORT avalonmm_read_slave_read
-            {
-               type = "read";
-               width = "1";
-               direction = "input";
-               Is_Enabled = "1";
-            }
-            PORT avalonmm_read_slave_waitrequest
-            {
-               type = "waitrequest";
-               width = "1";
-               direction = "output";
-               Is_Enabled = "1";
-            }
-         }
-      }
-      SLAVE in_csr
-      {
-         SYSTEM_BUILDER_INFO 
-         {
-            Bus_Type = "avalon";
-            Write_Wait_States = "0cycles";
-            Read_Wait_States = "1cycles";
-            Hold_Time = "0cycles";
-            Setup_Time = "0cycles";
-            Is_Printable_Device = "0";
-            Address_Alignment = "dynamic";
-            Well_Behaved_Waitrequest = "0";
-            Is_Nonvolatile_Storage = "0";
-            Address_Span = "32";
-            Read_Latency = "0";
-            Is_Memory_Device = "0";
-            Maximum_Pending_Read_Transactions = "0";
-            Minimum_Uninterrupted_Run_Length = "1";
-            Accepts_Internal_Connections = "1";
-            Write_Latency = "0";
-            Is_Flash = "0";
-            Data_Width = "32";
-            Address_Width = "3";
-            Maximum_Burst_Size = "1";
-            Register_Incoming_Signals = "0";
-            Register_Outgoing_Signals = "0";
-            Interleave_Bursts = "0";
-            Linewrap_Bursts = "0";
-            Burst_On_Burst_Boundaries_Only = "0";
-            Always_Burst_Max_Burst = "0";
-            Is_Big_Endian = "0";
-            Is_Enabled = "1";
-            MASTERED_BY cpu0/data_master
-            {
-               priority = "1";
-               Offset_Address = "0x00401020";
-            }
-            Base_Address = "0x00401020";
-            Address_Group = "2";
-            IRQ_MASTER cpu0/data_master
-            {
-               IRQ_Number = "NC";
-            }
-         }
-         PORT_WIRING 
-         {
-            PORT wrclk_control_slave_address
-            {
-               type = "address";
-               width = "3";
-               direction = "input";
-               Is_Enabled = "1";
-            }
-            PORT wrclk_control_slave_read
-            {
-               type = "read";
-               width = "1";
-               direction = "input";
-               Is_Enabled = "1";
-            }
-            PORT wrclk_control_slave_writedata
-            {
-               type = "writedata";
-               width = "32";
-               direction = "input";
-               Is_Enabled = "1";
-            }
-            PORT wrclk_control_slave_write
-            {
-               type = "write";
-               width = "1";
-               direction = "input";
-               Is_Enabled = "1";
-            }
-            PORT wrclk_control_slave_readdata
-            {
-               type = "readdata";
-               width = "32";
-               direction = "output";
-               Is_Enabled = "1";
-            }
-         }
-      }
-      class = "altera_avalon_fifo";
-      class_version = "7.08110";
-      iss_model_name = "altera_avalon_fifo";
-      WIZARD_SCRIPT_ARGUMENTS 
-      {
-         Device_Family = "CYCLONEIVE";
-         Use_Register = "0";
-         Single_Clock_Mode = "1";
-         FIFO_Depth = "256";
-         Use_Write_Control = "1";
-         Use_Read_Control = "0";
-         Use_IRQ = "0";
-         Use_AvalonMM_Write_Slave = "1";
-         Use_AvalonMM_Read_Slave = "1";
-         Use_AvalonST_Sink = "0";
-         Use_AvalonST_Source = "0";
-         Use_Backpressure = "1";
-         AvalonMM_AvalonMM_Data_Width = "32";
-         Bits_Per_Symbol = "16";
-         Symbols_Per_Beat = "2";
-         AvalonMM_AvalonST_Data_Width = "32";
-         Error_Width = "8";
-         Channel_Width = "8";
-         Use_Packet = "1";
-      }
-      SIMULATION 
-      {
-         DISPLAY 
-         {
-            SIGNAL signal_0
-            {
-               name = "wrclock";
-               conditional = "1";
-            }
-            SIGNAL signal_1
-            {
-               name = "reset_n";
-               conditional = "1";
-            }
-            SIGNAL signal_2
-            {
-               name = "avalonmm_write_slave_writedata";
-               conditional = "1";
-               radix = "hexadecimal";
-            }
-            SIGNAL signal_3
-            {
-               name = "avalonmm_write_slave_write";
-               conditional = "1";
-            }
-            SIGNAL signal_4
-            {
-               name = "avalonmm_write_slave_waitrequest";
-               conditional = "1";
-            }
-            SIGNAL signal_5
-            {
-               name = "wrclk_control_slave_address";
-               conditional = "1";
-            }
-            SIGNAL signal_6
-            {
-               name = "wrclk_control_slave_read";
-               conditional = "1";
-            }
-            SIGNAL signal_7
-            {
-               name = "wrclk_control_slave_writedata";
-               conditional = "1";
-               radix = "hexadecimal";
-            }
-            SIGNAL signal_8
-            {
-               name = "wrclk_control_slave_write";
-               conditional = "1";
-            }
-            SIGNAL signal_9
-            {
-               name = "wrclk_control_slave_readdata";
-               conditional = "1";
-               radix = "hexadecimal";
-            }
-            SIGNAL signal_10
-            {
-               name = "avalonmm_read_slave_readdata";
-               conditional = "1";
-               radix = "hexadecimal";
-            }
-            SIGNAL signal_11
-            {
-               name = "avalonmm_read_slave_read";
-               conditional = "1";
-            }
-            SIGNAL signal_12
-            {
-               name = "avalonmm_read_slave_waitrequest";
-               conditional = "1";
-            }
-         }
-      }
-      SYSTEM_BUILDER_INFO 
-      {
-         Is_Enabled = "1";
-         Clock_Source = "clk_0";
-         Has_Clock = "1";
-         Instantiate_In_System_Module = "1";
-         Top_Level_Ports_Are_Enumerated = "1";
-         View 
-         {
-            MESSAGES 
-            {
-            }
-         }
-      }
-      HDL_INFO 
-      {
-         Precompiled_Simulation_Library_Files = "";
-         Simulation_HDL_Files = "";
-         Synthesis_HDL_Files = "__PROJECT_DIRECTORY__/fifo0.v";
-         Synthesis_Only_Files = "";
-      }
-      PORT_WIRING 
-      {
       }
    }
 }

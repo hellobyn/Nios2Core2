@@ -108,6 +108,13 @@ set_location_assignment	PIN_K2	-to PIO1[1]
 #set_location_assignment	PIN_M2	-to KEY_LEFT
 #set_location_assignment	PIN_T9	-to KEY_RIGHT
 
+#比较器输出管脚
+set_location_assignment	PIN_N11	-to relayCtrl_1
+set_location_assignment	PIN_P11	-to relayCtrl_2
+set_location_assignment	PIN_M10	-to switchCtrl_1
+set_location_assignment	PIN_M9	-to switchCtrl_2
+set_location_assignment	PIN_N9	-to c3
+
 
 
 

@@ -59,5 +59,4 @@ obj/alt_sys_init.o: system_description/alt_sys_init.c \
   /cygdrive/d/altera/11.0/nios2eds/bin/nios2-gnutools/H-i686-pc-cygwin/bin/../lib/gcc/nios2-elf/3.4.6/../../../../nios2-elf/include/_ansi.h \
   /cygdrive/d/altera/11.0/ip/altera/nios2_ip/altera_nios2/HAL/inc/alt_types.h \
   /cygdrive/d/altera/11.0/nios2eds/components/altera_hal/HAL/inc/sys/alt_dev.h \
-  /cygdrive/d/altera/11.0/ip/altera/nios2_ip/altera_nios2/HAL/inc/sys/alt_warning.h \
-  /cygdrive/d/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_fifo/HAL/inc/altera_avalon_fifo.h
+  /cygdrive/d/altera/11.0/ip/altera/nios2_ip/altera_nios2/HAL/inc/sys/alt_warning.h

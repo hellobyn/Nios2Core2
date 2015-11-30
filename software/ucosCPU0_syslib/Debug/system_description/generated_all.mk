@@ -3,7 +3,7 @@
 # Machine generated for a CPU named "cpu0" as defined in:
 # e:\MyProject\My_project\Altera\Q11MultiCore\software\ucosCPU0_syslib\..\..\Nios2Core2.ptf
 #
-# Generated: 2015-11-19 17:21:55.355
+# Generated: 2015-11-27 17:46:51.275
 
 # ******************************************************************************
 # *                                                                            *
@@ -65,8 +65,7 @@ COMPONENTS_DEVICE_DRIVERS := /cygdrive/d/altera/11.0/ip/altera/sopc_builder_ip/a
                              /cygdrive/d/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_sysid \
                              /cygdrive/d/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_jtag_uart \
                              /cygdrive/d/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_timer \
-                             /cygdrive/d/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_pio \
-                             /cygdrive/d/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_fifo
+                             /cygdrive/d/altera/11.0/ip/altera/sopc_builder_ip/altera_avalon_pio
 
 
 CPU = cpu0

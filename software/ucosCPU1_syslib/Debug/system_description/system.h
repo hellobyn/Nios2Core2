@@ -3,7 +3,7 @@
  * Machine generated for a CPU named "cpu1" as defined in:
  * e:\MyProject\My_project\Altera\Q11MultiCore\software\ucosCPU1_syslib\..\..\Nios2Core2.ptf
  *
- * Generated: 2015-11-19 17:25:50.788
+ * Generated: 2015-11-27 17:51:17.772
  *
  */
 
@@ -103,7 +103,7 @@ DO NOT MODIFY THIS FILE
 #define NIOS2_HAS_DEBUG_STUB
 
 #define NIOS2_CPU_ID_SIZE 1
-#define NIOS2_CPU_ID_VALUE 0
+#define NIOS2_CPU_ID_VALUE 1
 
 /*
  * A define for each class of peripheral
@@ -188,7 +188,7 @@ DO NOT MODIFY THIS FILE
 #define SYSID_BASE 0x00401050
 #define SYSID_SPAN 8
 #define SYSID_ID 11u
-#define SYSID_TIMESTAMP 1447922295u
+#define SYSID_TIMESTAMP 1448617297u
 #define SYSID_REGENERATE_VALUES 0
 #define ALT_MODULE_CLASS_sysid altera_avalon_sysid
 

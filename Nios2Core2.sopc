@@ -17,12 +17,12 @@
    {
       datum _sortIndex
       {
-         value = "9";
+         value = "12";
          type = "int";
       }
       datum megawizard_uipreferences
       {
-         value = "{output_language=VERILOG, output_directory=E:\\MyProject\\My_project\\Altera\\Q11MultiCore}";
+         value = "{}";
          type = "String";
       }
    }
@@ -31,6 +31,54 @@
       datum _sortIndex
       {
          value = "0";
+         type = "int";
+      }
+   }
+   element compCtrl0
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element compCtrl1
+   {
+      datum _sortIndex
+      {
+         value = "19";
+         type = "int";
+      }
+   }
+   element compData0H
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element compData0L
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element compData1H
+   {
+      datum _sortIndex
+      {
+         value = "17";
+         type = "int";
+      }
+   }
+   element compData1L
+   {
+      datum _sortIndex
+      {
+         value = "18";
          type = "int";
       }
    }
@@ -51,7 +99,7 @@
       }
       datum megawizard_uipreferences
       {
-         value = "{}";
+         value = "{output_language=VERILOG, output_directory=E:\\MyProject\\My_project\\Altera\\Q11MultiCore}";
          type = "String";
       }
    }
@@ -59,12 +107,12 @@
    {
       datum _sortIndex
       {
-         value = "10";
+         value = "13";
          type = "int";
       }
       datum megawizard_uipreferences
       {
-         value = "{}";
+         value = "{output_language=VERILOG, output_directory=E:\\MyProject\\My_project\\Altera\\Q11MultiCore}";
          type = "String";
       }
    }
@@ -83,12 +131,41 @@
          value = "4";
          type = "int";
       }
+      datum sopceditor_expanded
+      {
+         value = "1";
+         type = "boolean";
+      }
+   }
+   element fifo1
+   {
+      datum _sortIndex
+      {
+         value = "16";
+         type = "int";
+      }
+   }
+   element fifo1.in
+   {
+      datum baseAddress
+      {
+         value = "4198504";
+         type = "long";
+      }
    }
    element fifo0.in
    {
       datum baseAddress
       {
          value = "4198496";
+         type = "long";
+      }
+   }
+   element fifo1.in_csr
+   {
+      datum baseAddress
+      {
+         value = "4198560";
          type = "long";
       }
    }
@@ -120,15 +197,23 @@
    {
       datum _sortIndex
       {
-         value = "5";
+         value = "8";
          type = "int";
+      }
+   }
+   element fifo1.out
+   {
+      datum baseAddress
+      {
+         value = "4198508";
+         type = "long";
       }
    }
    element fifo0.out
    {
       datum baseAddress
       {
-         value = "4198504";
+         value = "4198500";
          type = "long";
       }
    }
@@ -144,8 +229,56 @@
    {
       datum _sortIndex
       {
-         value = "12";
+         value = "15";
          type = "int";
+      }
+   }
+   element timer1.s1
+   {
+      datum baseAddress
+      {
+         value = "4198528";
+         type = "long";
+      }
+   }
+   element timer0.s1
+   {
+      datum baseAddress
+      {
+         value = "4198400";
+         type = "long";
+      }
+   }
+   element compData0L.s1
+   {
+      datum baseAddress
+      {
+         value = "4198480";
+         type = "long";
+      }
+   }
+   element pio1.s1
+   {
+      datum baseAddress
+      {
+         value = "4198512";
+         type = "long";
+      }
+   }
+   element compCtrl0.s1
+   {
+      datum baseAddress
+      {
+         value = "4198496";
+         type = "long";
+      }
+   }
+   element compData0H.s1
+   {
+      datum baseAddress
+      {
+         value = "4198512";
+         type = "long";
       }
    }
    element cfi.s1
@@ -161,35 +294,27 @@
          type = "long";
       }
    }
-   element pio0.s1
+   element compCtrl1.s1
    {
       datum baseAddress
       {
-         value = "4198464";
+         value = "4198672";
          type = "long";
       }
    }
-   element timer1.s1
+   element compData1H.s1
    {
       datum baseAddress
       {
-         value = "4198528";
+         value = "4198640";
          type = "long";
       }
    }
-   element pio1.s1
+   element compData1L.s1
    {
       datum baseAddress
       {
-         value = "4198512";
-         type = "long";
-      }
-   }
-   element timer0.s1
-   {
-      datum baseAddress
-      {
-         value = "4198400";
+         value = "4198656";
          type = "long";
       }
    }
@@ -201,11 +326,19 @@
          type = "long";
       }
    }
+   element pio0.s1
+   {
+      datum baseAddress
+      {
+         value = "4198464";
+         type = "long";
+      }
+   }
    element sdram
    {
       datum _sortIndex
       {
-         value = "7";
+         value = "10";
          type = "int";
       }
       datum megawizard_uipreferences
@@ -218,7 +351,7 @@
    {
       datum _sortIndex
       {
-         value = "6";
+         value = "9";
          type = "int";
       }
    }
@@ -234,7 +367,7 @@
    {
       datum _sortIndex
       {
-         value = "11";
+         value = "14";
          type = "int";
       }
    }
@@ -242,12 +375,12 @@
    {
       datum _sortIndex
       {
-         value = "8";
+         value = "11";
          type = "int";
       }
       datum megawizard_uipreferences
       {
-         value = "{}";
+         value = "{output_language=VERILOG, output_directory=E:\\MyProject\\My_project\\Altera\\Q11MultiCore}";
          type = "String";
       }
    }
@@ -263,8 +396,8 @@
  <parameter name="maxAdditionalLatency" value="0" />
  <parameter name="projectName" value="multiCore.qpf" />
  <parameter name="sopcBorderPoints" value="true" />
- <parameter name="systemHash" value="2447710756" />
- <parameter name="timeStamp" value="1447922294572" />
+ <parameter name="systemHash" value="13107550529" />
+ <parameter name="timeStamp" value="1448617297362" />
  <module kind="clock_source" version="11.0" enabled="1" name="clk_0">
   <parameter name="clockFrequency" value="100000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -338,7 +471,7 @@
   <parameter name="mmu_autoAssignTlbPtrSz" value="true" />
   <parameter name="mmu_TLBMissExcSlave" value="" />
   <parameter name="mmu_TLBMissExcOffset" value="0" />
-  <parameter name="manuallyAssignCpuID" value="false" />
+  <parameter name="manuallyAssignCpuID" value="true" />
   <parameter name="internalIrqMaskSystemInfo" value="3" />
   <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='cfi.s1' start='0x0' end='0x400000' /><slave name='cpu0.jtag_debug_module' start='0x400800' end='0x401000' /><slave name='sdram.s1' start='0x4000000' end='0x6000000' /></address-map>]]></parameter>
   <parameter name="instAddrWidth" value="27" />
@@ -364,7 +497,7 @@
   <parameter name="dcache_numTCDM" value="_0" />
   <parameter name="dcache_lineSize" value="_32" />
   <parameter name="dcache_bursts" value="false" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='cfi.s1' start='0x0' end='0x400000' /><slave name='cpu0.jtag_debug_module' start='0x400800' end='0x401000' /><slave name='timer0.s1' start='0x401000' end='0x401020' /><slave name='fifo0.in_csr' start='0x401020' end='0x401040' /><slave name='pio0.s1' start='0x401040' end='0x401050' /><slave name='sysid.control_slave' start='0x401050' end='0x401058' /><slave name='jtag_uart.avalon_jtag_slave' start='0x401058' end='0x401060' /><slave name='fifo0.in' start='0x401060' end='0x401064' /><slave name='fifo0.out' start='0x401068' end='0x40106C' /><slave name='sdram.s1' start='0x4000000' end='0x6000000' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='cfi.s1' start='0x0' end='0x400000' /><slave name='cpu0.jtag_debug_module' start='0x400800' end='0x401000' /><slave name='timer0.s1' start='0x401000' end='0x401020' /><slave name='pio0.s1' start='0x401040' end='0x401050' /><slave name='sysid.control_slave' start='0x401050' end='0x401058' /><slave name='jtag_uart.avalon_jtag_slave' start='0x401058' end='0x401060' /><slave name='sdram.s1' start='0x4000000' end='0x6000000' /></address-map>]]></parameter>
   <parameter name="dataAddrWidth" value="27" />
   <parameter name="customInstSlavesSystemInfo" value="&lt;info/&gt;" />
   <parameter name="cpuReset" value="false" />
@@ -562,7 +695,7 @@
   <parameter name="dataAddrWidth" value="27" />
   <parameter name="customInstSlavesSystemInfo" value="&lt;info/&gt;" />
   <parameter name="cpuReset" value="false" />
-  <parameter name="cpuID" value="0" />
+  <parameter name="cpuID" value="1" />
   <parameter name="clockFrequency" value="100000000" />
   <parameter name="breakSlave">cpu1.jtag_debug_module</parameter>
   <parameter name="breakOffset" value="32" />
@@ -593,7 +726,7 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="2" />
  </module>
- <module kind="altera_avalon_fifo" version="11.0" enabled="1" name="fifo0">
+ <module kind="altera_avalon_fifo" version="11.0" enabled="0" name="fifo0">
   <parameter name="avalonMMAvalonMMDataWidth" value="32" />
   <parameter name="avalonMMAvalonSTDataWidth" value="32" />
   <parameter name="bitsPerSymbol" value="16" />
@@ -613,6 +746,111 @@
   <parameter name="useReadControl" value="false" />
   <parameter name="useRegister" value="false" />
   <parameter name="useWriteControl" value="true" />
+ </module>
+ <module kind="altera_avalon_fifo" version="11.0" enabled="0" name="fifo1">
+  <parameter name="avalonMMAvalonMMDataWidth" value="32" />
+  <parameter name="avalonMMAvalonSTDataWidth" value="32" />
+  <parameter name="bitsPerSymbol" value="16" />
+  <parameter name="channelWidth" value="8" />
+  <parameter name="deviceFamilyString" value="Cyclone IV E" />
+  <parameter name="errorWidth" value="8" />
+  <parameter name="fifoDepth" value="256" />
+  <parameter name="fifoInputInterfaceOptions" value="AVALONMM_WRITE" />
+  <parameter name="fifoOutputInterfaceOptions" value="AVALONMM_READ" />
+  <parameter name="showHiddenFeatures" value="false" />
+  <parameter name="singleClockMode" value="true" />
+  <parameter name="singleResetMode" value="false" />
+  <parameter name="symbolsPerBeat" value="2" />
+  <parameter name="useBackpressure" value="true" />
+  <parameter name="useIRQ" value="false" />
+  <parameter name="usePacket" value="true" />
+  <parameter name="useReadControl" value="false" />
+  <parameter name="useRegister" value="false" />
+  <parameter name="useWriteControl" value="true" />
+ </module>
+ <module kind="altera_avalon_pio" version="11.0" enabled="0" name="compData0H">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module kind="altera_avalon_pio" version="11.0" enabled="0" name="compData0L">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module kind="altera_avalon_pio" version="11.0" enabled="0" name="compData1H">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module kind="altera_avalon_pio" version="11.0" enabled="0" name="compData1L">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module kind="altera_avalon_pio" version="11.0" enabled="0" name="compCtrl0">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="3" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="3" />
+ </module>
+ <module kind="altera_avalon_pio" version="11.0" enabled="0" name="compCtrl1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="7" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="3" />
  </module>
  <connection kind="clock" version="11.0" start="clk_0.clk" end="cpu0.clk" />
  <connection
@@ -683,7 +921,6 @@
    end="jtag_uart.irq">
   <parameter name="irqNumber" value="1" />
  </connection>
- <connection kind="clock" version="11.0" start="clk_0.clk" end="timer0.clk" />
  <connection kind="avalon" version="11.0" start="cpu0.data_master" end="timer0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00401000" />
@@ -691,7 +928,6 @@
  <connection kind="interrupt" version="11.0" start="cpu0.d_irq" end="timer0.irq">
   <parameter name="irqNumber" value="0" />
  </connection>
- <connection kind="clock" version="11.0" start="clk_0.clk" end="pio0.clk" />
  <connection kind="avalon" version="11.0" start="cpu0.data_master" end="pio0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00401040" />
@@ -793,6 +1029,79 @@
  </connection>
  <connection kind="avalon" version="11.0" start="cpu0.data_master" end="fifo0.out">
   <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00401064" />
+ </connection>
+ <connection kind="clock" version="11.0" start="clk_0.clk" end="fifo1.clk_in" />
+ <connection kind="avalon" version="11.0" start="cpu1.data_master" end="fifo1.in">
+  <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00401068" />
  </connection>
+ <connection
+   kind="avalon"
+   version="11.0"
+   start="cpu1.data_master"
+   end="fifo1.in_csr">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x004010a0" />
+ </connection>
+ <connection kind="avalon" version="11.0" start="cpu1.data_master" end="fifo1.out">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0040106c" />
+ </connection>
+ <connection kind="clock" version="11.0" start="clk_0.clk" end="compData0H.clk" />
+ <connection kind="clock" version="11.0" start="clk_0.clk" end="compData0L.clk" />
+ <connection
+   kind="avalon"
+   version="11.0"
+   start="cpu0.data_master"
+   end="compData0L.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00401050" />
+ </connection>
+ <connection kind="clock" version="11.0" start="clk_0.clk" end="compData1H.clk" />
+ <connection
+   kind="avalon"
+   version="11.0"
+   start="cpu1.data_master"
+   end="compData1H.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x004010f0" />
+ </connection>
+ <connection kind="clock" version="11.0" start="clk_0.clk" end="compData1L.clk" />
+ <connection
+   kind="avalon"
+   version="11.0"
+   start="cpu1.data_master"
+   end="compData1L.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00401100" />
+ </connection>
+ <connection kind="clock" version="11.0" start="clk_0.clk" end="compCtrl0.clk" />
+ <connection
+   kind="avalon"
+   version="11.0"
+   start="cpu0.data_master"
+   end="compCtrl0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00401060" />
+ </connection>
+ <connection kind="clock" version="11.0" start="clk_0.clk" end="compCtrl1.clk" />
+ <connection
+   kind="avalon"
+   version="11.0"
+   start="cpu1.data_master"
+   end="compCtrl1.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00401110" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="11.0"
+   start="cpu0.data_master"
+   end="compData0H.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00401070" />
+ </connection>
+ <connection kind="clock" version="11.0" start="clk_0.clk" end="timer0.clk" />
+ <connection kind="clock" version="11.0" start="clk_0.clk" end="pio0.clk" />
 </system>

@@ -3,7 +3,7 @@
  * Machine generated for a CPU named "cpu0" as defined in:
  * e:\MyProject\My_project\Altera\Q11MultiCore\software\ucosCPU0_syslib\..\..\Nios2Core2.ptf
  *
- * Generated: 2015-11-19 17:23:47.454
+ * Generated: 2015-11-27 17:48:54.04
  *
  */
 
@@ -67,7 +67,6 @@ DO NOT MODIFY THIS FILE
 #include "altera_avalon_sysid.h"
 #include "altera_avalon_jtag_uart.h"
 #include "altera_avalon_timer.h"
-#include "altera_avalon_fifo.h"
 
 /*
  * Allocate the device storage
@@ -78,7 +77,6 @@ ALTERA_AVALON_CFI_FLASH_INSTANCE( CFI, cfi );
 ALTERA_AVALON_SYSID_INSTANCE( SYSID, sysid );
 ALTERA_AVALON_JTAG_UART_INSTANCE( JTAG_UART, jtag_uart );
 ALTERA_AVALON_TIMER_INSTANCE( TIMER0, timer0 );
-ALTERA_AVALON_FIFO_INSTANCE( FIFO0, fifo0 );
 
 /*
  * Initialize the interrupt controller devices
@@ -105,5 +103,4 @@ void alt_sys_init( void )
     ALTERA_AVALON_CFI_FLASH_INIT( CFI, cfi );
     ALTERA_AVALON_SYSID_INIT( SYSID, sysid );
     ALTERA_AVALON_JTAG_UART_INIT( JTAG_UART, jtag_uart );
-    ALTERA_AVALON_FIFO_INIT( FIFO0, fifo0 );
 }

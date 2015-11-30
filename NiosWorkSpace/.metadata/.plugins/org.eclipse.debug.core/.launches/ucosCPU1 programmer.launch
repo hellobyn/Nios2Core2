@@ -6,10 +6,10 @@
 <intAttribute key="com.altera.nj.launch.DEVICE_INDEX" value="-1"/>
 <stringAttribute key="com.altera.nj.launch.PTF_CPU" value="cpu1"/>
 <stringAttribute key="com.altera.nj.launch.FLASH_SOF_OFFSET" value="0x0"/>
-<stringAttribute key="com.altera.nj.launch.FLASH_DATAFILE_OFFSET" value="0x0"/>
-<stringAttribute key="com.altera.nj.launch.FLASH_DATAFILE_MEMORY_61" value="cfi"/>
+<stringAttribute key="com.altera.nj.launch.DOWNLOAD_ARGS" value="--instance=0"/>
 <stringAttribute key="com.altera.nj.launch.CABLE_NAME" value="automatic"/>
-<stringAttribute key="com.altera.nj.launch.DOWNLOAD_ARGS" value="--instance=1"/>
+<stringAttribute key="com.altera.nj.launch.FLASH_DATAFILE_MEMORY_61" value="cfi"/>
+<stringAttribute key="com.altera.nj.launch.FLASH_DATAFILE_OFFSET" value="0x0"/>
 <stringAttribute key="com.altera.nj.launch.FLASH_DATAFILE_MEMORY_60" value=""/>
 <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Debug/ucosCPU1.elf"/>
 <stringAttribute key="com.altera.nj.launch.FLASH_DATAFILE_FILENAME" value=""/>

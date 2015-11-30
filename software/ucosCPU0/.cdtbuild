@@ -7,6 +7,7 @@
 <toolChain id="com.altera.nj.ui.exe.Debug.1250959600" name="com.altera.nj.ui.exe.Debug" superClass="com.altera.nj.ui.exe.Debug">
 <tool id="com.altera.nj.ui.tool.compiler.exe.debug.1860035745" name="Nios II Compiler" superClass="com.altera.nj.ui.tool.compiler.exe.debug"/>
 <tool id="com.altera.nj.ui.tool.linker.exe.debug.1396632140" name="Linker" superClass="com.altera.nj.ui.tool.linker.exe.debug"/>
+<macros expandEnvironmentMacros="true"/>
 </toolChain>
 </configuration>
 <configuration artifactExtension="elf" artifactName="ucosCPU0" cleanCommand="rm -rf" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser" id="nios2.exec.release.1115561498" name="Release" parent="nios2.exec.release">
@@ -15,5 +16,6 @@
 <tool id="com.altera.nj.ui.tool.linker.exe.release.1696208315" name="Linker" superClass="com.altera.nj.ui.tool.linker.exe.release"/>
 </toolChain>
 </configuration>
+<macros/>
 </project>
 </ManagedProjectBuildInfo>

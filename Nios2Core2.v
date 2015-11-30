@@ -474,9 +474,6 @@ module cpu0_data_master_arbitrator (
                                       cpu0_data_master_byteenable_sdram_s1,
                                       cpu0_data_master_granted_cfi_s1,
                                       cpu0_data_master_granted_cpu0_jtag_debug_module,
-                                      cpu0_data_master_granted_fifo0_in,
-                                      cpu0_data_master_granted_fifo0_in_csr,
-                                      cpu0_data_master_granted_fifo0_out,
                                       cpu0_data_master_granted_jtag_uart_avalon_jtag_slave,
                                       cpu0_data_master_granted_pio0_s1,
                                       cpu0_data_master_granted_sdram_s1,
@@ -484,9 +481,6 @@ module cpu0_data_master_arbitrator (
                                       cpu0_data_master_granted_timer0_s1,
                                       cpu0_data_master_qualified_request_cfi_s1,
                                       cpu0_data_master_qualified_request_cpu0_jtag_debug_module,
-                                      cpu0_data_master_qualified_request_fifo0_in,
-                                      cpu0_data_master_qualified_request_fifo0_in_csr,
-                                      cpu0_data_master_qualified_request_fifo0_out,
                                       cpu0_data_master_qualified_request_jtag_uart_avalon_jtag_slave,
                                       cpu0_data_master_qualified_request_pio0_s1,
                                       cpu0_data_master_qualified_request_sdram_s1,
@@ -495,9 +489,6 @@ module cpu0_data_master_arbitrator (
                                       cpu0_data_master_read,
                                       cpu0_data_master_read_data_valid_cfi_s1,
                                       cpu0_data_master_read_data_valid_cpu0_jtag_debug_module,
-                                      cpu0_data_master_read_data_valid_fifo0_in,
-                                      cpu0_data_master_read_data_valid_fifo0_in_csr,
-                                      cpu0_data_master_read_data_valid_fifo0_out,
                                       cpu0_data_master_read_data_valid_jtag_uart_avalon_jtag_slave,
                                       cpu0_data_master_read_data_valid_pio0_s1,
                                       cpu0_data_master_read_data_valid_sdram_s1,
@@ -506,9 +497,6 @@ module cpu0_data_master_arbitrator (
                                       cpu0_data_master_read_data_valid_timer0_s1,
                                       cpu0_data_master_requests_cfi_s1,
                                       cpu0_data_master_requests_cpu0_jtag_debug_module,
-                                      cpu0_data_master_requests_fifo0_in,
-                                      cpu0_data_master_requests_fifo0_in_csr,
-                                      cpu0_data_master_requests_fifo0_out,
                                       cpu0_data_master_requests_jtag_uart_avalon_jtag_slave,
                                       cpu0_data_master_requests_pio0_s1,
                                       cpu0_data_master_requests_sdram_s1,
@@ -518,26 +506,18 @@ module cpu0_data_master_arbitrator (
                                       cpu0_data_master_writedata,
                                       cpu0_jtag_debug_module_readdata_from_sa,
                                       d1_cpu0_jtag_debug_module_end_xfer,
-                                      d1_fifo0_in_csr_end_xfer,
-                                      d1_fifo0_in_end_xfer,
-                                      d1_fifo0_out_end_xfer,
                                       d1_jtag_uart_avalon_jtag_slave_end_xfer,
                                       d1_pio0_s1_end_xfer,
                                       d1_sdram_s1_end_xfer,
                                       d1_sysid_control_slave_end_xfer,
                                       d1_timer0_s1_end_xfer,
                                       d1_triStateBridge_avalon_slave_end_xfer,
-                                      fifo0_in_csr_readdata_from_sa,
-                                      fifo0_in_waitrequest_from_sa,
-                                      fifo0_out_readdata_from_sa,
-                                      fifo0_out_waitrequest_from_sa,
                                       incoming_data_to_and_from_the_cfi_with_Xs_converted_to_0,
                                       jtag_uart_avalon_jtag_slave_irq_from_sa,
                                       jtag_uart_avalon_jtag_slave_readdata_from_sa,
                                       jtag_uart_avalon_jtag_slave_waitrequest_from_sa,
                                       pio0_s1_readdata_from_sa,
                                       registered_cpu0_data_master_read_data_valid_cfi_s1,
-                                      registered_cpu0_data_master_read_data_valid_fifo0_out,
                                       reset_n,
                                       sdram_s1_readdata_from_sa,
                                       sdram_s1_waitrequest_from_sa,
@@ -573,9 +553,6 @@ module cpu0_data_master_arbitrator (
   input   [  1: 0] cpu0_data_master_byteenable_sdram_s1;
   input            cpu0_data_master_granted_cfi_s1;
   input            cpu0_data_master_granted_cpu0_jtag_debug_module;
-  input            cpu0_data_master_granted_fifo0_in;
-  input            cpu0_data_master_granted_fifo0_in_csr;
-  input            cpu0_data_master_granted_fifo0_out;
   input            cpu0_data_master_granted_jtag_uart_avalon_jtag_slave;
   input            cpu0_data_master_granted_pio0_s1;
   input            cpu0_data_master_granted_sdram_s1;
@@ -583,9 +560,6 @@ module cpu0_data_master_arbitrator (
   input            cpu0_data_master_granted_timer0_s1;
   input            cpu0_data_master_qualified_request_cfi_s1;
   input            cpu0_data_master_qualified_request_cpu0_jtag_debug_module;
-  input            cpu0_data_master_qualified_request_fifo0_in;
-  input            cpu0_data_master_qualified_request_fifo0_in_csr;
-  input            cpu0_data_master_qualified_request_fifo0_out;
   input            cpu0_data_master_qualified_request_jtag_uart_avalon_jtag_slave;
   input            cpu0_data_master_qualified_request_pio0_s1;
   input            cpu0_data_master_qualified_request_sdram_s1;
@@ -594,9 +568,6 @@ module cpu0_data_master_arbitrator (
   input            cpu0_data_master_read;
   input            cpu0_data_master_read_data_valid_cfi_s1;
   input            cpu0_data_master_read_data_valid_cpu0_jtag_debug_module;
-  input            cpu0_data_master_read_data_valid_fifo0_in;
-  input            cpu0_data_master_read_data_valid_fifo0_in_csr;
-  input            cpu0_data_master_read_data_valid_fifo0_out;
   input            cpu0_data_master_read_data_valid_jtag_uart_avalon_jtag_slave;
   input            cpu0_data_master_read_data_valid_pio0_s1;
   input            cpu0_data_master_read_data_valid_sdram_s1;
@@ -605,9 +576,6 @@ module cpu0_data_master_arbitrator (
   input            cpu0_data_master_read_data_valid_timer0_s1;
   input            cpu0_data_master_requests_cfi_s1;
   input            cpu0_data_master_requests_cpu0_jtag_debug_module;
-  input            cpu0_data_master_requests_fifo0_in;
-  input            cpu0_data_master_requests_fifo0_in_csr;
-  input            cpu0_data_master_requests_fifo0_out;
   input            cpu0_data_master_requests_jtag_uart_avalon_jtag_slave;
   input            cpu0_data_master_requests_pio0_s1;
   input            cpu0_data_master_requests_sdram_s1;
@@ -617,26 +585,18 @@ module cpu0_data_master_arbitrator (
   input   [ 31: 0] cpu0_data_master_writedata;
   input   [ 31: 0] cpu0_jtag_debug_module_readdata_from_sa;
   input            d1_cpu0_jtag_debug_module_end_xfer;
-  input            d1_fifo0_in_csr_end_xfer;
-  input            d1_fifo0_in_end_xfer;
-  input            d1_fifo0_out_end_xfer;
   input            d1_jtag_uart_avalon_jtag_slave_end_xfer;
   input            d1_pio0_s1_end_xfer;
   input            d1_sdram_s1_end_xfer;
   input            d1_sysid_control_slave_end_xfer;
   input            d1_timer0_s1_end_xfer;
   input            d1_triStateBridge_avalon_slave_end_xfer;
-  input   [ 31: 0] fifo0_in_csr_readdata_from_sa;
-  input            fifo0_in_waitrequest_from_sa;
-  input   [ 31: 0] fifo0_out_readdata_from_sa;
-  input            fifo0_out_waitrequest_from_sa;
   input   [  7: 0] incoming_data_to_and_from_the_cfi_with_Xs_converted_to_0;
   input            jtag_uart_avalon_jtag_slave_irq_from_sa;
   input   [ 31: 0] jtag_uart_avalon_jtag_slave_readdata_from_sa;
   input            jtag_uart_avalon_jtag_slave_waitrequest_from_sa;
   input   [ 31: 0] pio0_s1_readdata_from_sa;
   input            registered_cpu0_data_master_read_data_valid_cfi_s1;
-  input            registered_cpu0_data_master_read_data_valid_fifo0_out;
   input            reset_n;
   input   [ 15: 0] sdram_s1_readdata_from_sa;
   input            sdram_s1_waitrequest_from_sa;
@@ -670,19 +630,15 @@ module cpu0_data_master_arbitrator (
   wire             pre_dbs_count_enable;
   wire             r_0;
   wire             r_1;
-  wire             r_2;
   reg     [ 31: 0] registered_cpu0_data_master_readdata;
   //r_0 master_run cascaded wait assignment, which is an e_assign
-  assign r_0 = 1 & (cpu0_data_master_qualified_request_cpu0_jtag_debug_module | ~cpu0_data_master_requests_cpu0_jtag_debug_module) & (cpu0_data_master_granted_cpu0_jtag_debug_module | ~cpu0_data_master_qualified_request_cpu0_jtag_debug_module) & ((~cpu0_data_master_qualified_request_cpu0_jtag_debug_module | ~cpu0_data_master_read | (1 & 1 & cpu0_data_master_read))) & ((~cpu0_data_master_qualified_request_cpu0_jtag_debug_module | ~cpu0_data_master_write | (1 & cpu0_data_master_write))) & 1 & (cpu0_data_master_qualified_request_fifo0_in | ~cpu0_data_master_requests_fifo0_in) & ((~cpu0_data_master_qualified_request_fifo0_in | ~(cpu0_data_master_read | cpu0_data_master_write) | (1 & ~fifo0_in_waitrequest_from_sa & (cpu0_data_master_read | cpu0_data_master_write)))) & ((~cpu0_data_master_qualified_request_fifo0_in | ~(cpu0_data_master_read | cpu0_data_master_write) | (1 & ~fifo0_in_waitrequest_from_sa & (cpu0_data_master_read | cpu0_data_master_write)))) & 1 & (cpu0_data_master_qualified_request_fifo0_in_csr | ~cpu0_data_master_requests_fifo0_in_csr) & ((~cpu0_data_master_qualified_request_fifo0_in_csr | ~cpu0_data_master_read | (1 & 1 & cpu0_data_master_read))) & ((~cpu0_data_master_qualified_request_fifo0_in_csr | ~cpu0_data_master_write | (1 & cpu0_data_master_write))) & 1 & (cpu0_data_master_qualified_request_fifo0_out | registered_cpu0_data_master_read_data_valid_fifo0_out | ~cpu0_data_master_requests_fifo0_out) & ((~cpu0_data_master_qualified_request_fifo0_out | ~cpu0_data_master_read | (registered_cpu0_data_master_read_data_valid_fifo0_out & cpu0_data_master_read))) & ((~cpu0_data_master_qualified_request_fifo0_out | ~(cpu0_data_master_read | cpu0_data_master_write) | (1 & ~fifo0_out_waitrequest_from_sa & (cpu0_data_master_read | cpu0_data_master_write)))) & 1 & (cpu0_data_master_qualified_request_jtag_uart_avalon_jtag_slave | ~cpu0_data_master_requests_jtag_uart_avalon_jtag_slave) & ((~cpu0_data_master_qualified_request_jtag_uart_avalon_jtag_slave | ~(cpu0_data_master_read | cpu0_data_master_write) | (1 & ~jtag_uart_avalon_jtag_slave_waitrequest_from_sa & (cpu0_data_master_read | cpu0_data_master_write))));
+  assign r_0 = 1 & (cpu0_data_master_qualified_request_cpu0_jtag_debug_module | ~cpu0_data_master_requests_cpu0_jtag_debug_module) & (cpu0_data_master_granted_cpu0_jtag_debug_module | ~cpu0_data_master_qualified_request_cpu0_jtag_debug_module) & ((~cpu0_data_master_qualified_request_cpu0_jtag_debug_module | ~cpu0_data_master_read | (1 & 1 & cpu0_data_master_read))) & ((~cpu0_data_master_qualified_request_cpu0_jtag_debug_module | ~cpu0_data_master_write | (1 & cpu0_data_master_write))) & 1 & (cpu0_data_master_qualified_request_jtag_uart_avalon_jtag_slave | ~cpu0_data_master_requests_jtag_uart_avalon_jtag_slave) & ((~cpu0_data_master_qualified_request_jtag_uart_avalon_jtag_slave | ~(cpu0_data_master_read | cpu0_data_master_write) | (1 & ~jtag_uart_avalon_jtag_slave_waitrequest_from_sa & (cpu0_data_master_read | cpu0_data_master_write)))) & ((~cpu0_data_master_qualified_request_jtag_uart_avalon_jtag_slave | ~(cpu0_data_master_read | cpu0_data_master_write) | (1 & ~jtag_uart_avalon_jtag_slave_waitrequest_from_sa & (cpu0_data_master_read | cpu0_data_master_write)))) & 1 & (cpu0_data_master_qualified_request_pio0_s1 | ~cpu0_data_master_requests_pio0_s1) & ((~cpu0_data_master_qualified_request_pio0_s1 | ~cpu0_data_master_read | (1 & 1 & cpu0_data_master_read))) & ((~cpu0_data_master_qualified_request_pio0_s1 | ~cpu0_data_master_write | (1 & cpu0_data_master_write))) & 1 & (cpu0_data_master_qualified_request_sdram_s1 | (cpu0_data_master_read_data_valid_sdram_s1 & cpu0_data_master_dbs_address[1]) | (cpu0_data_master_write & !cpu0_data_master_byteenable_sdram_s1 & cpu0_data_master_dbs_address[1]) | ~cpu0_data_master_requests_sdram_s1) & (cpu0_data_master_granted_sdram_s1 | ~cpu0_data_master_qualified_request_sdram_s1) & ((~cpu0_data_master_qualified_request_sdram_s1 | ~cpu0_data_master_read | (cpu0_data_master_read_data_valid_sdram_s1 & (cpu0_data_master_dbs_address[1]) & cpu0_data_master_read))) & ((~cpu0_data_master_qualified_request_sdram_s1 | ~cpu0_data_master_write | (1 & ~sdram_s1_waitrequest_from_sa & (cpu0_data_master_dbs_address[1]) & cpu0_data_master_write))) & 1 & (cpu0_data_master_qualified_request_sysid_control_slave | ~cpu0_data_master_requests_sysid_control_slave);
 
   //cascaded wait assignment, which is an e_assign
-  assign cpu0_data_master_run = r_0 & r_1 & r_2;
+  assign cpu0_data_master_run = r_0 & r_1;
 
   //r_1 master_run cascaded wait assignment, which is an e_assign
-  assign r_1 = ((~cpu0_data_master_qualified_request_jtag_uart_avalon_jtag_slave | ~(cpu0_data_master_read | cpu0_data_master_write) | (1 & ~jtag_uart_avalon_jtag_slave_waitrequest_from_sa & (cpu0_data_master_read | cpu0_data_master_write)))) & 1 & (cpu0_data_master_qualified_request_pio0_s1 | ~cpu0_data_master_requests_pio0_s1) & ((~cpu0_data_master_qualified_request_pio0_s1 | ~cpu0_data_master_read | (1 & 1 & cpu0_data_master_read))) & ((~cpu0_data_master_qualified_request_pio0_s1 | ~cpu0_data_master_write | (1 & cpu0_data_master_write))) & 1 & (cpu0_data_master_qualified_request_sdram_s1 | (cpu0_data_master_read_data_valid_sdram_s1 & cpu0_data_master_dbs_address[1]) | (cpu0_data_master_write & !cpu0_data_master_byteenable_sdram_s1 & cpu0_data_master_dbs_address[1]) | ~cpu0_data_master_requests_sdram_s1) & (cpu0_data_master_granted_sdram_s1 | ~cpu0_data_master_qualified_request_sdram_s1) & ((~cpu0_data_master_qualified_request_sdram_s1 | ~cpu0_data_master_read | (cpu0_data_master_read_data_valid_sdram_s1 & (cpu0_data_master_dbs_address[1]) & cpu0_data_master_read))) & ((~cpu0_data_master_qualified_request_sdram_s1 | ~cpu0_data_master_write | (1 & ~sdram_s1_waitrequest_from_sa & (cpu0_data_master_dbs_address[1]) & cpu0_data_master_write))) & 1 & (cpu0_data_master_qualified_request_sysid_control_slave | ~cpu0_data_master_requests_sysid_control_slave) & (cpu0_data_master_granted_sysid_control_slave | ~cpu0_data_master_qualified_request_sysid_control_slave) & ((~cpu0_data_master_qualified_request_sysid_control_slave | ~cpu0_data_master_read | (1 & 1 & cpu0_data_master_read))) & ((~cpu0_data_master_qualified_request_sysid_control_slave | ~cpu0_data_master_write | (1 & cpu0_data_master_write))) & 1 & (cpu0_data_master_qualified_request_timer0_s1 | ~cpu0_data_master_requests_timer0_s1) & ((~cpu0_data_master_qualified_request_timer0_s1 | ~cpu0_data_master_read | (1 & 1 & cpu0_data_master_read))) & ((~cpu0_data_master_qualified_request_timer0_s1 | ~cpu0_data_master_write | (1 & cpu0_data_master_write))) & 1;
-
-  //r_2 master_run cascaded wait assignment, which is an e_assign
-  assign r_2 = ((cpu0_data_master_qualified_request_cfi_s1 | (registered_cpu0_data_master_read_data_valid_cfi_s1 & cpu0_data_master_dbs_address[1] & cpu0_data_master_dbs_address[0]) | ((cpu0_data_master_write & !cpu0_data_master_byteenable_cfi_s1 & cpu0_data_master_dbs_address[1] & cpu0_data_master_dbs_address[0])) | ~cpu0_data_master_requests_cfi_s1)) & (cpu0_data_master_granted_cfi_s1 | ~cpu0_data_master_qualified_request_cfi_s1) & ((~cpu0_data_master_qualified_request_cfi_s1 | ~cpu0_data_master_read | (registered_cpu0_data_master_read_data_valid_cfi_s1 & (cpu0_data_master_dbs_address[1] & cpu0_data_master_dbs_address[0]) & cpu0_data_master_read))) & ((~cpu0_data_master_qualified_request_cfi_s1 | ~cpu0_data_master_write | (1 & cfi_s1_wait_counter_eq_1 & (cpu0_data_master_dbs_address[1] & cpu0_data_master_dbs_address[0]) & cpu0_data_master_write)));
+  assign r_1 = (cpu0_data_master_granted_sysid_control_slave | ~cpu0_data_master_qualified_request_sysid_control_slave) & ((~cpu0_data_master_qualified_request_sysid_control_slave | ~cpu0_data_master_read | (1 & 1 & cpu0_data_master_read))) & ((~cpu0_data_master_qualified_request_sysid_control_slave | ~cpu0_data_master_write | (1 & cpu0_data_master_write))) & 1 & (cpu0_data_master_qualified_request_timer0_s1 | ~cpu0_data_master_requests_timer0_s1) & ((~cpu0_data_master_qualified_request_timer0_s1 | ~cpu0_data_master_read | (1 & 1 & cpu0_data_master_read))) & ((~cpu0_data_master_qualified_request_timer0_s1 | ~cpu0_data_master_write | (1 & cpu0_data_master_write))) & 1 & ((cpu0_data_master_qualified_request_cfi_s1 | (registered_cpu0_data_master_read_data_valid_cfi_s1 & cpu0_data_master_dbs_address[1] & cpu0_data_master_dbs_address[0]) | ((cpu0_data_master_write & !cpu0_data_master_byteenable_cfi_s1 & cpu0_data_master_dbs_address[1] & cpu0_data_master_dbs_address[0])) | ~cpu0_data_master_requests_cfi_s1)) & (cpu0_data_master_granted_cfi_s1 | ~cpu0_data_master_qualified_request_cfi_s1) & ((~cpu0_data_master_qualified_request_cfi_s1 | ~cpu0_data_master_read | (registered_cpu0_data_master_read_data_valid_cfi_s1 & (cpu0_data_master_dbs_address[1] & cpu0_data_master_dbs_address[0]) & cpu0_data_master_read))) & ((~cpu0_data_master_qualified_request_cfi_s1 | ~cpu0_data_master_write | (1 & cfi_s1_wait_counter_eq_1 & (cpu0_data_master_dbs_address[1] & cpu0_data_master_dbs_address[0]) & cpu0_data_master_write)));
 
   //optimize select-logic by passing only those address bits which matter.
   assign cpu0_data_master_address_to_slave = {cpu0_data_master_address[26],
@@ -691,8 +647,6 @@ module cpu0_data_master_arbitrator (
 
   //cpu0/data_master readdata mux, which is an e_mux
   assign cpu0_data_master_readdata = ({32 {~cpu0_data_master_requests_cpu0_jtag_debug_module}} | cpu0_jtag_debug_module_readdata_from_sa) &
-    ({32 {~cpu0_data_master_requests_fifo0_in_csr}} | fifo0_in_csr_readdata_from_sa) &
-    ({32 {~cpu0_data_master_requests_fifo0_out}} | fifo0_out_readdata_from_sa) &
     ({32 {~cpu0_data_master_requests_jtag_uart_avalon_jtag_slave}} | registered_cpu0_data_master_readdata) &
     ({32 {~cpu0_data_master_requests_pio0_s1}} | pio0_s1_readdata_from_sa) &
     ({32 {~cpu0_data_master_requests_sdram_s1}} | registered_cpu0_data_master_readdata) &
@@ -990,18 +944,14 @@ module cpu0_instruction_master_arbitrator (
   wire             pre_flush_cpu0_instruction_master_readdatavalid;
   wire             r_0;
   wire             r_1;
-  wire             r_2;
   //r_0 master_run cascaded wait assignment, which is an e_assign
-  assign r_0 = 1 & (cpu0_instruction_master_qualified_request_cpu0_jtag_debug_module | ~cpu0_instruction_master_requests_cpu0_jtag_debug_module) & (cpu0_instruction_master_granted_cpu0_jtag_debug_module | ~cpu0_instruction_master_qualified_request_cpu0_jtag_debug_module) & ((~cpu0_instruction_master_qualified_request_cpu0_jtag_debug_module | ~cpu0_instruction_master_read | (1 & ~d1_cpu0_jtag_debug_module_end_xfer & cpu0_instruction_master_read)));
+  assign r_0 = 1 & (cpu0_instruction_master_qualified_request_cpu0_jtag_debug_module | ~cpu0_instruction_master_requests_cpu0_jtag_debug_module) & (cpu0_instruction_master_granted_cpu0_jtag_debug_module | ~cpu0_instruction_master_qualified_request_cpu0_jtag_debug_module) & ((~cpu0_instruction_master_qualified_request_cpu0_jtag_debug_module | ~cpu0_instruction_master_read | (1 & ~d1_cpu0_jtag_debug_module_end_xfer & cpu0_instruction_master_read))) & 1 & (cpu0_instruction_master_qualified_request_sdram_s1 | ~cpu0_instruction_master_requests_sdram_s1) & (cpu0_instruction_master_granted_sdram_s1 | ~cpu0_instruction_master_qualified_request_sdram_s1) & ((~cpu0_instruction_master_qualified_request_sdram_s1 | ~cpu0_instruction_master_read | (1 & ~sdram_s1_waitrequest_from_sa & (cpu0_instruction_master_dbs_address[1]) & cpu0_instruction_master_read)));
 
   //cascaded wait assignment, which is an e_assign
-  assign cpu0_instruction_master_run = r_0 & r_1 & r_2;
+  assign cpu0_instruction_master_run = r_0 & r_1;
 
   //r_1 master_run cascaded wait assignment, which is an e_assign
-  assign r_1 = 1 & (cpu0_instruction_master_qualified_request_sdram_s1 | ~cpu0_instruction_master_requests_sdram_s1) & (cpu0_instruction_master_granted_sdram_s1 | ~cpu0_instruction_master_qualified_request_sdram_s1) & ((~cpu0_instruction_master_qualified_request_sdram_s1 | ~cpu0_instruction_master_read | (1 & ~sdram_s1_waitrequest_from_sa & (cpu0_instruction_master_dbs_address[1]) & cpu0_instruction_master_read)));
-
-  //r_2 master_run cascaded wait assignment, which is an e_assign
-  assign r_2 = 1 & (cpu0_instruction_master_qualified_request_cfi_s1 | ~cpu0_instruction_master_requests_cfi_s1) & (cpu0_instruction_master_granted_cfi_s1 | ~cpu0_instruction_master_qualified_request_cfi_s1) & ((~cpu0_instruction_master_qualified_request_cfi_s1 | ~cpu0_instruction_master_read | (1 & ((cfi_s1_wait_counter_eq_0 & ~d1_triStateBridge_avalon_slave_end_xfer)) & (cpu0_instruction_master_dbs_address[1] & cpu0_instruction_master_dbs_address[0]) & cpu0_instruction_master_read)));
+  assign r_1 = 1 & (cpu0_instruction_master_qualified_request_cfi_s1 | ~cpu0_instruction_master_requests_cfi_s1) & (cpu0_instruction_master_granted_cfi_s1 | ~cpu0_instruction_master_qualified_request_cfi_s1) & ((~cpu0_instruction_master_qualified_request_cfi_s1 | ~cpu0_instruction_master_read | (1 & ((cfi_s1_wait_counter_eq_0 & ~d1_triStateBridge_avalon_slave_end_xfer)) & (cpu0_instruction_master_dbs_address[1] & cpu0_instruction_master_dbs_address[0]) & cpu0_instruction_master_read)));
 
   //optimize select-logic by passing only those address bits which matter.
   assign cpu0_instruction_master_address_to_slave = {cpu0_instruction_master_address[26],
@@ -1832,19 +1782,15 @@ module cpu1_data_master_arbitrator (
   wire             pre_dbs_count_enable;
   wire             r_0;
   wire             r_1;
-  wire             r_2;
   reg     [ 31: 0] registered_cpu1_data_master_readdata;
   //r_0 master_run cascaded wait assignment, which is an e_assign
-  assign r_0 = 1 & (cpu1_data_master_qualified_request_cpu1_jtag_debug_module | ~cpu1_data_master_requests_cpu1_jtag_debug_module) & (cpu1_data_master_granted_cpu1_jtag_debug_module | ~cpu1_data_master_qualified_request_cpu1_jtag_debug_module) & ((~cpu1_data_master_qualified_request_cpu1_jtag_debug_module | ~cpu1_data_master_read | (1 & 1 & cpu1_data_master_read))) & ((~cpu1_data_master_qualified_request_cpu1_jtag_debug_module | ~cpu1_data_master_write | (1 & cpu1_data_master_write)));
+  assign r_0 = 1 & (cpu1_data_master_qualified_request_cpu1_jtag_debug_module | ~cpu1_data_master_requests_cpu1_jtag_debug_module) & (cpu1_data_master_granted_cpu1_jtag_debug_module | ~cpu1_data_master_qualified_request_cpu1_jtag_debug_module) & ((~cpu1_data_master_qualified_request_cpu1_jtag_debug_module | ~cpu1_data_master_read | (1 & 1 & cpu1_data_master_read))) & ((~cpu1_data_master_qualified_request_cpu1_jtag_debug_module | ~cpu1_data_master_write | (1 & cpu1_data_master_write))) & 1 & (cpu1_data_master_qualified_request_pio1_s1 | ~cpu1_data_master_requests_pio1_s1) & ((~cpu1_data_master_qualified_request_pio1_s1 | ~cpu1_data_master_read | (1 & 1 & cpu1_data_master_read))) & ((~cpu1_data_master_qualified_request_pio1_s1 | ~cpu1_data_master_write | (1 & cpu1_data_master_write))) & 1 & (cpu1_data_master_qualified_request_sdram_s1 | (cpu1_data_master_read_data_valid_sdram_s1 & cpu1_data_master_dbs_address[1]) | (cpu1_data_master_write & !cpu1_data_master_byteenable_sdram_s1 & cpu1_data_master_dbs_address[1]) | ~cpu1_data_master_requests_sdram_s1) & (cpu1_data_master_granted_sdram_s1 | ~cpu1_data_master_qualified_request_sdram_s1) & ((~cpu1_data_master_qualified_request_sdram_s1 | ~cpu1_data_master_read | (cpu1_data_master_read_data_valid_sdram_s1 & (cpu1_data_master_dbs_address[1]) & cpu1_data_master_read))) & ((~cpu1_data_master_qualified_request_sdram_s1 | ~cpu1_data_master_write | (1 & ~sdram_s1_waitrequest_from_sa & (cpu1_data_master_dbs_address[1]) & cpu1_data_master_write)));
 
   //cascaded wait assignment, which is an e_assign
-  assign cpu1_data_master_run = r_0 & r_1 & r_2;
+  assign cpu1_data_master_run = r_0 & r_1;
 
   //r_1 master_run cascaded wait assignment, which is an e_assign
-  assign r_1 = 1 & (cpu1_data_master_qualified_request_pio1_s1 | ~cpu1_data_master_requests_pio1_s1) & ((~cpu1_data_master_qualified_request_pio1_s1 | ~cpu1_data_master_read | (1 & 1 & cpu1_data_master_read))) & ((~cpu1_data_master_qualified_request_pio1_s1 | ~cpu1_data_master_write | (1 & cpu1_data_master_write))) & 1 & (cpu1_data_master_qualified_request_sdram_s1 | (cpu1_data_master_read_data_valid_sdram_s1 & cpu1_data_master_dbs_address[1]) | (cpu1_data_master_write & !cpu1_data_master_byteenable_sdram_s1 & cpu1_data_master_dbs_address[1]) | ~cpu1_data_master_requests_sdram_s1) & (cpu1_data_master_granted_sdram_s1 | ~cpu1_data_master_qualified_request_sdram_s1) & ((~cpu1_data_master_qualified_request_sdram_s1 | ~cpu1_data_master_read | (cpu1_data_master_read_data_valid_sdram_s1 & (cpu1_data_master_dbs_address[1]) & cpu1_data_master_read))) & ((~cpu1_data_master_qualified_request_sdram_s1 | ~cpu1_data_master_write | (1 & ~sdram_s1_waitrequest_from_sa & (cpu1_data_master_dbs_address[1]) & cpu1_data_master_write))) & 1 & (cpu1_data_master_qualified_request_sysid_control_slave | ~cpu1_data_master_requests_sysid_control_slave) & (cpu1_data_master_granted_sysid_control_slave | ~cpu1_data_master_qualified_request_sysid_control_slave) & ((~cpu1_data_master_qualified_request_sysid_control_slave | ~cpu1_data_master_read | (1 & 1 & cpu1_data_master_read))) & ((~cpu1_data_master_qualified_request_sysid_control_slave | ~cpu1_data_master_write | (1 & cpu1_data_master_write))) & 1 & (cpu1_data_master_qualified_request_timer1_s1 | ~cpu1_data_master_requests_timer1_s1) & ((~cpu1_data_master_qualified_request_timer1_s1 | ~cpu1_data_master_read | (1 & 1 & cpu1_data_master_read))) & ((~cpu1_data_master_qualified_request_timer1_s1 | ~cpu1_data_master_write | (1 & cpu1_data_master_write)));
-
-  //r_2 master_run cascaded wait assignment, which is an e_assign
-  assign r_2 = 1 & ((cpu1_data_master_qualified_request_cfi_s1 | (registered_cpu1_data_master_read_data_valid_cfi_s1 & cpu1_data_master_dbs_address[1] & cpu1_data_master_dbs_address[0]) | ((cpu1_data_master_write & !cpu1_data_master_byteenable_cfi_s1 & cpu1_data_master_dbs_address[1] & cpu1_data_master_dbs_address[0])) | ~cpu1_data_master_requests_cfi_s1)) & (cpu1_data_master_granted_cfi_s1 | ~cpu1_data_master_qualified_request_cfi_s1) & ((~cpu1_data_master_qualified_request_cfi_s1 | ~cpu1_data_master_read | (registered_cpu1_data_master_read_data_valid_cfi_s1 & (cpu1_data_master_dbs_address[1] & cpu1_data_master_dbs_address[0]) & cpu1_data_master_read))) & ((~cpu1_data_master_qualified_request_cfi_s1 | ~cpu1_data_master_write | (1 & cfi_s1_wait_counter_eq_1 & (cpu1_data_master_dbs_address[1] & cpu1_data_master_dbs_address[0]) & cpu1_data_master_write)));
+  assign r_1 = 1 & (cpu1_data_master_qualified_request_sysid_control_slave | ~cpu1_data_master_requests_sysid_control_slave) & (cpu1_data_master_granted_sysid_control_slave | ~cpu1_data_master_qualified_request_sysid_control_slave) & ((~cpu1_data_master_qualified_request_sysid_control_slave | ~cpu1_data_master_read | (1 & 1 & cpu1_data_master_read))) & ((~cpu1_data_master_qualified_request_sysid_control_slave | ~cpu1_data_master_write | (1 & cpu1_data_master_write))) & 1 & (cpu1_data_master_qualified_request_timer1_s1 | ~cpu1_data_master_requests_timer1_s1) & ((~cpu1_data_master_qualified_request_timer1_s1 | ~cpu1_data_master_read | (1 & 1 & cpu1_data_master_read))) & ((~cpu1_data_master_qualified_request_timer1_s1 | ~cpu1_data_master_write | (1 & cpu1_data_master_write))) & 1 & ((cpu1_data_master_qualified_request_cfi_s1 | (registered_cpu1_data_master_read_data_valid_cfi_s1 & cpu1_data_master_dbs_address[1] & cpu1_data_master_dbs_address[0]) | ((cpu1_data_master_write & !cpu1_data_master_byteenable_cfi_s1 & cpu1_data_master_dbs_address[1] & cpu1_data_master_dbs_address[0])) | ~cpu1_data_master_requests_cfi_s1)) & (cpu1_data_master_granted_cfi_s1 | ~cpu1_data_master_qualified_request_cfi_s1) & ((~cpu1_data_master_qualified_request_cfi_s1 | ~cpu1_data_master_read | (registered_cpu1_data_master_read_data_valid_cfi_s1 & (cpu1_data_master_dbs_address[1] & cpu1_data_master_dbs_address[0]) & cpu1_data_master_read))) & ((~cpu1_data_master_qualified_request_cfi_s1 | ~cpu1_data_master_write | (1 & cfi_s1_wait_counter_eq_1 & (cpu1_data_master_dbs_address[1] & cpu1_data_master_dbs_address[0]) & cpu1_data_master_write)));
 
   //optimize select-logic by passing only those address bits which matter.
   assign cpu1_data_master_address_to_slave = {cpu1_data_master_address[26],
@@ -2148,18 +2094,14 @@ module cpu1_instruction_master_arbitrator (
   wire             pre_flush_cpu1_instruction_master_readdatavalid;
   wire             r_0;
   wire             r_1;
-  wire             r_2;
   //r_0 master_run cascaded wait assignment, which is an e_assign
-  assign r_0 = 1 & (cpu1_instruction_master_qualified_request_cpu1_jtag_debug_module | ~cpu1_instruction_master_requests_cpu1_jtag_debug_module) & (cpu1_instruction_master_granted_cpu1_jtag_debug_module | ~cpu1_instruction_master_qualified_request_cpu1_jtag_debug_module) & ((~cpu1_instruction_master_qualified_request_cpu1_jtag_debug_module | ~cpu1_instruction_master_read | (1 & ~d1_cpu1_jtag_debug_module_end_xfer & cpu1_instruction_master_read)));
+  assign r_0 = 1 & (cpu1_instruction_master_qualified_request_cpu1_jtag_debug_module | ~cpu1_instruction_master_requests_cpu1_jtag_debug_module) & (cpu1_instruction_master_granted_cpu1_jtag_debug_module | ~cpu1_instruction_master_qualified_request_cpu1_jtag_debug_module) & ((~cpu1_instruction_master_qualified_request_cpu1_jtag_debug_module | ~cpu1_instruction_master_read | (1 & ~d1_cpu1_jtag_debug_module_end_xfer & cpu1_instruction_master_read))) & 1 & (cpu1_instruction_master_qualified_request_sdram_s1 | ~cpu1_instruction_master_requests_sdram_s1) & (cpu1_instruction_master_granted_sdram_s1 | ~cpu1_instruction_master_qualified_request_sdram_s1) & ((~cpu1_instruction_master_qualified_request_sdram_s1 | ~cpu1_instruction_master_read | (1 & ~sdram_s1_waitrequest_from_sa & (cpu1_instruction_master_dbs_address[1]) & cpu1_instruction_master_read)));
 
   //cascaded wait assignment, which is an e_assign
-  assign cpu1_instruction_master_run = r_0 & r_1 & r_2;
+  assign cpu1_instruction_master_run = r_0 & r_1;
 
   //r_1 master_run cascaded wait assignment, which is an e_assign
-  assign r_1 = 1 & (cpu1_instruction_master_qualified_request_sdram_s1 | ~cpu1_instruction_master_requests_sdram_s1) & (cpu1_instruction_master_granted_sdram_s1 | ~cpu1_instruction_master_qualified_request_sdram_s1) & ((~cpu1_instruction_master_qualified_request_sdram_s1 | ~cpu1_instruction_master_read | (1 & ~sdram_s1_waitrequest_from_sa & (cpu1_instruction_master_dbs_address[1]) & cpu1_instruction_master_read)));
-
-  //r_2 master_run cascaded wait assignment, which is an e_assign
-  assign r_2 = 1 & (cpu1_instruction_master_qualified_request_cfi_s1 | ~cpu1_instruction_master_requests_cfi_s1) & (cpu1_instruction_master_granted_cfi_s1 | ~cpu1_instruction_master_qualified_request_cfi_s1) & ((~cpu1_instruction_master_qualified_request_cfi_s1 | ~cpu1_instruction_master_read | (1 & ((cfi_s1_wait_counter_eq_0 & ~d1_triStateBridge_avalon_slave_end_xfer)) & (cpu1_instruction_master_dbs_address[1] & cpu1_instruction_master_dbs_address[0]) & cpu1_instruction_master_read)));
+  assign r_1 = 1 & (cpu1_instruction_master_qualified_request_cfi_s1 | ~cpu1_instruction_master_requests_cfi_s1) & (cpu1_instruction_master_granted_cfi_s1 | ~cpu1_instruction_master_qualified_request_cfi_s1) & ((~cpu1_instruction_master_qualified_request_cfi_s1 | ~cpu1_instruction_master_read | (1 & ((cfi_s1_wait_counter_eq_0 & ~d1_triStateBridge_avalon_slave_end_xfer)) & (cpu1_instruction_master_dbs_address[1] & cpu1_instruction_master_dbs_address[0]) & cpu1_instruction_master_read)));
 
   //optimize select-logic by passing only those address bits which matter.
   assign cpu1_instruction_master_address_to_slave = {cpu1_instruction_master_address[26],
@@ -2380,815 +2322,6 @@ module cpu1_instruction_master_arbitrator (
           $write("%0d ns: cpu1_instruction_master_read did not heed wait!!!", $time);
           $stop;
         end
-    end
-
-
-
-//////////////// END SIMULATION-ONLY CONTENTS
-
-//synthesis translate_on
-
-endmodule
-
-
-// synthesis translate_off
-`timescale 1ns / 1ps
-// synthesis translate_on
-
-// turn off superfluous verilog processor warnings 
-// altera message_level Level1 
-// altera message_off 10034 10035 10036 10037 10230 10240 10030 
-
-module fifo0_in_arbitrator (
-                             // inputs:
-                              clk,
-                              cpu0_data_master_address_to_slave,
-                              cpu0_data_master_read,
-                              cpu0_data_master_waitrequest,
-                              cpu0_data_master_write,
-                              cpu0_data_master_writedata,
-                              fifo0_in_waitrequest,
-                              reset_n,
-
-                             // outputs:
-                              cpu0_data_master_granted_fifo0_in,
-                              cpu0_data_master_qualified_request_fifo0_in,
-                              cpu0_data_master_read_data_valid_fifo0_in,
-                              cpu0_data_master_requests_fifo0_in,
-                              d1_fifo0_in_end_xfer,
-                              fifo0_in_reset_n,
-                              fifo0_in_waitrequest_from_sa,
-                              fifo0_in_write,
-                              fifo0_in_writedata
-                           )
-;
-
-  output           cpu0_data_master_granted_fifo0_in;
-  output           cpu0_data_master_qualified_request_fifo0_in;
-  output           cpu0_data_master_read_data_valid_fifo0_in;
-  output           cpu0_data_master_requests_fifo0_in;
-  output           d1_fifo0_in_end_xfer;
-  output           fifo0_in_reset_n;
-  output           fifo0_in_waitrequest_from_sa;
-  output           fifo0_in_write;
-  output  [ 31: 0] fifo0_in_writedata;
-  input            clk;
-  input   [ 26: 0] cpu0_data_master_address_to_slave;
-  input            cpu0_data_master_read;
-  input            cpu0_data_master_waitrequest;
-  input            cpu0_data_master_write;
-  input   [ 31: 0] cpu0_data_master_writedata;
-  input            fifo0_in_waitrequest;
-  input            reset_n;
-
-  wire             cpu0_data_master_arbiterlock;
-  wire             cpu0_data_master_arbiterlock2;
-  wire             cpu0_data_master_continuerequest;
-  wire             cpu0_data_master_granted_fifo0_in;
-  wire             cpu0_data_master_qualified_request_fifo0_in;
-  wire             cpu0_data_master_read_data_valid_fifo0_in;
-  wire             cpu0_data_master_requests_fifo0_in;
-  wire             cpu0_data_master_saved_grant_fifo0_in;
-  reg              d1_fifo0_in_end_xfer;
-  reg              d1_reasons_to_wait;
-  reg              enable_nonzero_assertions;
-  wire             end_xfer_arb_share_counter_term_fifo0_in;
-  wire             fifo0_in_allgrants;
-  wire             fifo0_in_allow_new_arb_cycle;
-  wire             fifo0_in_any_bursting_master_saved_grant;
-  wire             fifo0_in_any_continuerequest;
-  wire             fifo0_in_arb_counter_enable;
-  reg     [  2: 0] fifo0_in_arb_share_counter;
-  wire    [  2: 0] fifo0_in_arb_share_counter_next_value;
-  wire    [  2: 0] fifo0_in_arb_share_set_values;
-  wire             fifo0_in_beginbursttransfer_internal;
-  wire             fifo0_in_begins_xfer;
-  wire             fifo0_in_end_xfer;
-  wire             fifo0_in_firsttransfer;
-  wire             fifo0_in_grant_vector;
-  wire             fifo0_in_in_a_read_cycle;
-  wire             fifo0_in_in_a_write_cycle;
-  wire             fifo0_in_master_qreq_vector;
-  wire             fifo0_in_non_bursting_master_requests;
-  reg              fifo0_in_reg_firsttransfer;
-  wire             fifo0_in_reset_n;
-  reg              fifo0_in_slavearbiterlockenable;
-  wire             fifo0_in_slavearbiterlockenable2;
-  wire             fifo0_in_unreg_firsttransfer;
-  wire             fifo0_in_waitrequest_from_sa;
-  wire             fifo0_in_waits_for_read;
-  wire             fifo0_in_waits_for_write;
-  wire             fifo0_in_write;
-  wire    [ 31: 0] fifo0_in_writedata;
-  wire             in_a_read_cycle;
-  wire             in_a_write_cycle;
-  wire    [ 26: 0] shifted_address_to_fifo0_in_from_cpu0_data_master;
-  wire             wait_for_fifo0_in_counter;
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          d1_reasons_to_wait <= 0;
-      else 
-        d1_reasons_to_wait <= ~fifo0_in_end_xfer;
-    end
-
-
-  assign fifo0_in_begins_xfer = ~d1_reasons_to_wait & ((cpu0_data_master_qualified_request_fifo0_in));
-  assign cpu0_data_master_requests_fifo0_in = (({cpu0_data_master_address_to_slave[26 : 2] , 2'b0} == 27'h401060) & (cpu0_data_master_read | cpu0_data_master_write)) & cpu0_data_master_write;
-  //assign fifo0_in_waitrequest_from_sa = fifo0_in_waitrequest so that symbol knows where to group signals which may go to master only, which is an e_assign
-  assign fifo0_in_waitrequest_from_sa = fifo0_in_waitrequest;
-
-  //fifo0_in_arb_share_counter set values, which is an e_mux
-  assign fifo0_in_arb_share_set_values = 1;
-
-  //fifo0_in_non_bursting_master_requests mux, which is an e_mux
-  assign fifo0_in_non_bursting_master_requests = cpu0_data_master_requests_fifo0_in;
-
-  //fifo0_in_any_bursting_master_saved_grant mux, which is an e_mux
-  assign fifo0_in_any_bursting_master_saved_grant = 0;
-
-  //fifo0_in_arb_share_counter_next_value assignment, which is an e_assign
-  assign fifo0_in_arb_share_counter_next_value = fifo0_in_firsttransfer ? (fifo0_in_arb_share_set_values - 1) : |fifo0_in_arb_share_counter ? (fifo0_in_arb_share_counter - 1) : 0;
-
-  //fifo0_in_allgrants all slave grants, which is an e_mux
-  assign fifo0_in_allgrants = |fifo0_in_grant_vector;
-
-  //fifo0_in_end_xfer assignment, which is an e_assign
-  assign fifo0_in_end_xfer = ~(fifo0_in_waits_for_read | fifo0_in_waits_for_write);
-
-  //end_xfer_arb_share_counter_term_fifo0_in arb share counter enable term, which is an e_assign
-  assign end_xfer_arb_share_counter_term_fifo0_in = fifo0_in_end_xfer & (~fifo0_in_any_bursting_master_saved_grant | in_a_read_cycle | in_a_write_cycle);
-
-  //fifo0_in_arb_share_counter arbitration counter enable, which is an e_assign
-  assign fifo0_in_arb_counter_enable = (end_xfer_arb_share_counter_term_fifo0_in & fifo0_in_allgrants) | (end_xfer_arb_share_counter_term_fifo0_in & ~fifo0_in_non_bursting_master_requests);
-
-  //fifo0_in_arb_share_counter counter, which is an e_register
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          fifo0_in_arb_share_counter <= 0;
-      else if (fifo0_in_arb_counter_enable)
-          fifo0_in_arb_share_counter <= fifo0_in_arb_share_counter_next_value;
-    end
-
-
-  //fifo0_in_slavearbiterlockenable slave enables arbiterlock, which is an e_register
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          fifo0_in_slavearbiterlockenable <= 0;
-      else if ((|fifo0_in_master_qreq_vector & end_xfer_arb_share_counter_term_fifo0_in) | (end_xfer_arb_share_counter_term_fifo0_in & ~fifo0_in_non_bursting_master_requests))
-          fifo0_in_slavearbiterlockenable <= |fifo0_in_arb_share_counter_next_value;
-    end
-
-
-  //cpu0/data_master fifo0/in arbiterlock, which is an e_assign
-  assign cpu0_data_master_arbiterlock = fifo0_in_slavearbiterlockenable & cpu0_data_master_continuerequest;
-
-  //fifo0_in_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
-  assign fifo0_in_slavearbiterlockenable2 = |fifo0_in_arb_share_counter_next_value;
-
-  //cpu0/data_master fifo0/in arbiterlock2, which is an e_assign
-  assign cpu0_data_master_arbiterlock2 = fifo0_in_slavearbiterlockenable2 & cpu0_data_master_continuerequest;
-
-  //fifo0_in_any_continuerequest at least one master continues requesting, which is an e_assign
-  assign fifo0_in_any_continuerequest = 1;
-
-  //cpu0_data_master_continuerequest continued request, which is an e_assign
-  assign cpu0_data_master_continuerequest = 1;
-
-  assign cpu0_data_master_qualified_request_fifo0_in = cpu0_data_master_requests_fifo0_in & ~(((~cpu0_data_master_waitrequest) & cpu0_data_master_write));
-  //fifo0_in_writedata mux, which is an e_mux
-  assign fifo0_in_writedata = cpu0_data_master_writedata;
-
-  //master is always granted when requested
-  assign cpu0_data_master_granted_fifo0_in = cpu0_data_master_qualified_request_fifo0_in;
-
-  //cpu0/data_master saved-grant fifo0/in, which is an e_assign
-  assign cpu0_data_master_saved_grant_fifo0_in = cpu0_data_master_requests_fifo0_in;
-
-  //allow new arb cycle for fifo0/in, which is an e_assign
-  assign fifo0_in_allow_new_arb_cycle = 1;
-
-  //placeholder chosen master
-  assign fifo0_in_grant_vector = 1;
-
-  //placeholder vector of master qualified-requests
-  assign fifo0_in_master_qreq_vector = 1;
-
-  //fifo0_in_reset_n assignment, which is an e_assign
-  assign fifo0_in_reset_n = reset_n;
-
-  //fifo0_in_firsttransfer first transaction, which is an e_assign
-  assign fifo0_in_firsttransfer = fifo0_in_begins_xfer ? fifo0_in_unreg_firsttransfer : fifo0_in_reg_firsttransfer;
-
-  //fifo0_in_unreg_firsttransfer first transaction, which is an e_assign
-  assign fifo0_in_unreg_firsttransfer = ~(fifo0_in_slavearbiterlockenable & fifo0_in_any_continuerequest);
-
-  //fifo0_in_reg_firsttransfer first transaction, which is an e_register
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          fifo0_in_reg_firsttransfer <= 1'b1;
-      else if (fifo0_in_begins_xfer)
-          fifo0_in_reg_firsttransfer <= fifo0_in_unreg_firsttransfer;
-    end
-
-
-  //fifo0_in_beginbursttransfer_internal begin burst transfer, which is an e_assign
-  assign fifo0_in_beginbursttransfer_internal = fifo0_in_begins_xfer;
-
-  //fifo0_in_write assignment, which is an e_mux
-  assign fifo0_in_write = cpu0_data_master_granted_fifo0_in & cpu0_data_master_write;
-
-  assign shifted_address_to_fifo0_in_from_cpu0_data_master = cpu0_data_master_address_to_slave;
-  //d1_fifo0_in_end_xfer register, which is an e_register
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          d1_fifo0_in_end_xfer <= 1;
-      else 
-        d1_fifo0_in_end_xfer <= fifo0_in_end_xfer;
-    end
-
-
-  //fifo0_in_waits_for_read in a cycle, which is an e_mux
-  assign fifo0_in_waits_for_read = fifo0_in_in_a_read_cycle & fifo0_in_waitrequest_from_sa;
-
-  //fifo0_in_in_a_read_cycle assignment, which is an e_assign
-  assign fifo0_in_in_a_read_cycle = cpu0_data_master_granted_fifo0_in & cpu0_data_master_read;
-
-  //in_a_read_cycle assignment, which is an e_mux
-  assign in_a_read_cycle = fifo0_in_in_a_read_cycle;
-
-  //fifo0_in_waits_for_write in a cycle, which is an e_mux
-  assign fifo0_in_waits_for_write = fifo0_in_in_a_write_cycle & fifo0_in_waitrequest_from_sa;
-
-  //fifo0_in_in_a_write_cycle assignment, which is an e_assign
-  assign fifo0_in_in_a_write_cycle = cpu0_data_master_granted_fifo0_in & cpu0_data_master_write;
-
-  //in_a_write_cycle assignment, which is an e_mux
-  assign in_a_write_cycle = fifo0_in_in_a_write_cycle;
-
-  assign wait_for_fifo0_in_counter = 0;
-
-//synthesis translate_off
-//////////////// SIMULATION-ONLY CONTENTS
-  //fifo0/in enable non-zero assertions, which is an e_register
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          enable_nonzero_assertions <= 0;
-      else 
-        enable_nonzero_assertions <= 1'b1;
-    end
-
-
-
-//////////////// END SIMULATION-ONLY CONTENTS
-
-//synthesis translate_on
-
-endmodule
-
-
-// synthesis translate_off
-`timescale 1ns / 1ps
-// synthesis translate_on
-
-// turn off superfluous verilog processor warnings 
-// altera message_level Level1 
-// altera message_off 10034 10035 10036 10037 10230 10240 10030 
-
-module fifo0_in_csr_arbitrator (
-                                 // inputs:
-                                  clk,
-                                  cpu0_data_master_address_to_slave,
-                                  cpu0_data_master_read,
-                                  cpu0_data_master_waitrequest,
-                                  cpu0_data_master_write,
-                                  cpu0_data_master_writedata,
-                                  fifo0_in_csr_readdata,
-                                  reset_n,
-
-                                 // outputs:
-                                  cpu0_data_master_granted_fifo0_in_csr,
-                                  cpu0_data_master_qualified_request_fifo0_in_csr,
-                                  cpu0_data_master_read_data_valid_fifo0_in_csr,
-                                  cpu0_data_master_requests_fifo0_in_csr,
-                                  d1_fifo0_in_csr_end_xfer,
-                                  fifo0_in_csr_address,
-                                  fifo0_in_csr_read,
-                                  fifo0_in_csr_readdata_from_sa,
-                                  fifo0_in_csr_write,
-                                  fifo0_in_csr_writedata
-                               )
-;
-
-  output           cpu0_data_master_granted_fifo0_in_csr;
-  output           cpu0_data_master_qualified_request_fifo0_in_csr;
-  output           cpu0_data_master_read_data_valid_fifo0_in_csr;
-  output           cpu0_data_master_requests_fifo0_in_csr;
-  output           d1_fifo0_in_csr_end_xfer;
-  output  [  2: 0] fifo0_in_csr_address;
-  output           fifo0_in_csr_read;
-  output  [ 31: 0] fifo0_in_csr_readdata_from_sa;
-  output           fifo0_in_csr_write;
-  output  [ 31: 0] fifo0_in_csr_writedata;
-  input            clk;
-  input   [ 26: 0] cpu0_data_master_address_to_slave;
-  input            cpu0_data_master_read;
-  input            cpu0_data_master_waitrequest;
-  input            cpu0_data_master_write;
-  input   [ 31: 0] cpu0_data_master_writedata;
-  input   [ 31: 0] fifo0_in_csr_readdata;
-  input            reset_n;
-
-  wire             cpu0_data_master_arbiterlock;
-  wire             cpu0_data_master_arbiterlock2;
-  wire             cpu0_data_master_continuerequest;
-  wire             cpu0_data_master_granted_fifo0_in_csr;
-  wire             cpu0_data_master_qualified_request_fifo0_in_csr;
-  wire             cpu0_data_master_read_data_valid_fifo0_in_csr;
-  wire             cpu0_data_master_requests_fifo0_in_csr;
-  wire             cpu0_data_master_saved_grant_fifo0_in_csr;
-  reg              d1_fifo0_in_csr_end_xfer;
-  reg              d1_reasons_to_wait;
-  reg              enable_nonzero_assertions;
-  wire             end_xfer_arb_share_counter_term_fifo0_in_csr;
-  wire    [  2: 0] fifo0_in_csr_address;
-  wire             fifo0_in_csr_allgrants;
-  wire             fifo0_in_csr_allow_new_arb_cycle;
-  wire             fifo0_in_csr_any_bursting_master_saved_grant;
-  wire             fifo0_in_csr_any_continuerequest;
-  wire             fifo0_in_csr_arb_counter_enable;
-  reg     [  2: 0] fifo0_in_csr_arb_share_counter;
-  wire    [  2: 0] fifo0_in_csr_arb_share_counter_next_value;
-  wire    [  2: 0] fifo0_in_csr_arb_share_set_values;
-  wire             fifo0_in_csr_beginbursttransfer_internal;
-  wire             fifo0_in_csr_begins_xfer;
-  wire             fifo0_in_csr_end_xfer;
-  wire             fifo0_in_csr_firsttransfer;
-  wire             fifo0_in_csr_grant_vector;
-  wire             fifo0_in_csr_in_a_read_cycle;
-  wire             fifo0_in_csr_in_a_write_cycle;
-  wire             fifo0_in_csr_master_qreq_vector;
-  wire             fifo0_in_csr_non_bursting_master_requests;
-  wire             fifo0_in_csr_read;
-  wire    [ 31: 0] fifo0_in_csr_readdata_from_sa;
-  reg              fifo0_in_csr_reg_firsttransfer;
-  reg              fifo0_in_csr_slavearbiterlockenable;
-  wire             fifo0_in_csr_slavearbiterlockenable2;
-  wire             fifo0_in_csr_unreg_firsttransfer;
-  wire             fifo0_in_csr_waits_for_read;
-  wire             fifo0_in_csr_waits_for_write;
-  wire             fifo0_in_csr_write;
-  wire    [ 31: 0] fifo0_in_csr_writedata;
-  wire             in_a_read_cycle;
-  wire             in_a_write_cycle;
-  wire    [ 26: 0] shifted_address_to_fifo0_in_csr_from_cpu0_data_master;
-  wire             wait_for_fifo0_in_csr_counter;
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          d1_reasons_to_wait <= 0;
-      else 
-        d1_reasons_to_wait <= ~fifo0_in_csr_end_xfer;
-    end
-
-
-  assign fifo0_in_csr_begins_xfer = ~d1_reasons_to_wait & ((cpu0_data_master_qualified_request_fifo0_in_csr));
-  //assign fifo0_in_csr_readdata_from_sa = fifo0_in_csr_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
-  assign fifo0_in_csr_readdata_from_sa = fifo0_in_csr_readdata;
-
-  assign cpu0_data_master_requests_fifo0_in_csr = ({cpu0_data_master_address_to_slave[26 : 5] , 5'b0} == 27'h401020) & (cpu0_data_master_read | cpu0_data_master_write);
-  //fifo0_in_csr_arb_share_counter set values, which is an e_mux
-  assign fifo0_in_csr_arb_share_set_values = 1;
-
-  //fifo0_in_csr_non_bursting_master_requests mux, which is an e_mux
-  assign fifo0_in_csr_non_bursting_master_requests = cpu0_data_master_requests_fifo0_in_csr;
-
-  //fifo0_in_csr_any_bursting_master_saved_grant mux, which is an e_mux
-  assign fifo0_in_csr_any_bursting_master_saved_grant = 0;
-
-  //fifo0_in_csr_arb_share_counter_next_value assignment, which is an e_assign
-  assign fifo0_in_csr_arb_share_counter_next_value = fifo0_in_csr_firsttransfer ? (fifo0_in_csr_arb_share_set_values - 1) : |fifo0_in_csr_arb_share_counter ? (fifo0_in_csr_arb_share_counter - 1) : 0;
-
-  //fifo0_in_csr_allgrants all slave grants, which is an e_mux
-  assign fifo0_in_csr_allgrants = |fifo0_in_csr_grant_vector;
-
-  //fifo0_in_csr_end_xfer assignment, which is an e_assign
-  assign fifo0_in_csr_end_xfer = ~(fifo0_in_csr_waits_for_read | fifo0_in_csr_waits_for_write);
-
-  //end_xfer_arb_share_counter_term_fifo0_in_csr arb share counter enable term, which is an e_assign
-  assign end_xfer_arb_share_counter_term_fifo0_in_csr = fifo0_in_csr_end_xfer & (~fifo0_in_csr_any_bursting_master_saved_grant | in_a_read_cycle | in_a_write_cycle);
-
-  //fifo0_in_csr_arb_share_counter arbitration counter enable, which is an e_assign
-  assign fifo0_in_csr_arb_counter_enable = (end_xfer_arb_share_counter_term_fifo0_in_csr & fifo0_in_csr_allgrants) | (end_xfer_arb_share_counter_term_fifo0_in_csr & ~fifo0_in_csr_non_bursting_master_requests);
-
-  //fifo0_in_csr_arb_share_counter counter, which is an e_register
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          fifo0_in_csr_arb_share_counter <= 0;
-      else if (fifo0_in_csr_arb_counter_enable)
-          fifo0_in_csr_arb_share_counter <= fifo0_in_csr_arb_share_counter_next_value;
-    end
-
-
-  //fifo0_in_csr_slavearbiterlockenable slave enables arbiterlock, which is an e_register
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          fifo0_in_csr_slavearbiterlockenable <= 0;
-      else if ((|fifo0_in_csr_master_qreq_vector & end_xfer_arb_share_counter_term_fifo0_in_csr) | (end_xfer_arb_share_counter_term_fifo0_in_csr & ~fifo0_in_csr_non_bursting_master_requests))
-          fifo0_in_csr_slavearbiterlockenable <= |fifo0_in_csr_arb_share_counter_next_value;
-    end
-
-
-  //cpu0/data_master fifo0/in_csr arbiterlock, which is an e_assign
-  assign cpu0_data_master_arbiterlock = fifo0_in_csr_slavearbiterlockenable & cpu0_data_master_continuerequest;
-
-  //fifo0_in_csr_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
-  assign fifo0_in_csr_slavearbiterlockenable2 = |fifo0_in_csr_arb_share_counter_next_value;
-
-  //cpu0/data_master fifo0/in_csr arbiterlock2, which is an e_assign
-  assign cpu0_data_master_arbiterlock2 = fifo0_in_csr_slavearbiterlockenable2 & cpu0_data_master_continuerequest;
-
-  //fifo0_in_csr_any_continuerequest at least one master continues requesting, which is an e_assign
-  assign fifo0_in_csr_any_continuerequest = 1;
-
-  //cpu0_data_master_continuerequest continued request, which is an e_assign
-  assign cpu0_data_master_continuerequest = 1;
-
-  assign cpu0_data_master_qualified_request_fifo0_in_csr = cpu0_data_master_requests_fifo0_in_csr & ~(((~cpu0_data_master_waitrequest) & cpu0_data_master_write));
-  //fifo0_in_csr_writedata mux, which is an e_mux
-  assign fifo0_in_csr_writedata = cpu0_data_master_writedata;
-
-  //master is always granted when requested
-  assign cpu0_data_master_granted_fifo0_in_csr = cpu0_data_master_qualified_request_fifo0_in_csr;
-
-  //cpu0/data_master saved-grant fifo0/in_csr, which is an e_assign
-  assign cpu0_data_master_saved_grant_fifo0_in_csr = cpu0_data_master_requests_fifo0_in_csr;
-
-  //allow new arb cycle for fifo0/in_csr, which is an e_assign
-  assign fifo0_in_csr_allow_new_arb_cycle = 1;
-
-  //placeholder chosen master
-  assign fifo0_in_csr_grant_vector = 1;
-
-  //placeholder vector of master qualified-requests
-  assign fifo0_in_csr_master_qreq_vector = 1;
-
-  //fifo0_in_csr_firsttransfer first transaction, which is an e_assign
-  assign fifo0_in_csr_firsttransfer = fifo0_in_csr_begins_xfer ? fifo0_in_csr_unreg_firsttransfer : fifo0_in_csr_reg_firsttransfer;
-
-  //fifo0_in_csr_unreg_firsttransfer first transaction, which is an e_assign
-  assign fifo0_in_csr_unreg_firsttransfer = ~(fifo0_in_csr_slavearbiterlockenable & fifo0_in_csr_any_continuerequest);
-
-  //fifo0_in_csr_reg_firsttransfer first transaction, which is an e_register
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          fifo0_in_csr_reg_firsttransfer <= 1'b1;
-      else if (fifo0_in_csr_begins_xfer)
-          fifo0_in_csr_reg_firsttransfer <= fifo0_in_csr_unreg_firsttransfer;
-    end
-
-
-  //fifo0_in_csr_beginbursttransfer_internal begin burst transfer, which is an e_assign
-  assign fifo0_in_csr_beginbursttransfer_internal = fifo0_in_csr_begins_xfer;
-
-  //fifo0_in_csr_read assignment, which is an e_mux
-  assign fifo0_in_csr_read = cpu0_data_master_granted_fifo0_in_csr & cpu0_data_master_read;
-
-  //fifo0_in_csr_write assignment, which is an e_mux
-  assign fifo0_in_csr_write = cpu0_data_master_granted_fifo0_in_csr & cpu0_data_master_write;
-
-  assign shifted_address_to_fifo0_in_csr_from_cpu0_data_master = cpu0_data_master_address_to_slave;
-  //fifo0_in_csr_address mux, which is an e_mux
-  assign fifo0_in_csr_address = shifted_address_to_fifo0_in_csr_from_cpu0_data_master >> 2;
-
-  //d1_fifo0_in_csr_end_xfer register, which is an e_register
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          d1_fifo0_in_csr_end_xfer <= 1;
-      else 
-        d1_fifo0_in_csr_end_xfer <= fifo0_in_csr_end_xfer;
-    end
-
-
-  //fifo0_in_csr_waits_for_read in a cycle, which is an e_mux
-  assign fifo0_in_csr_waits_for_read = fifo0_in_csr_in_a_read_cycle & fifo0_in_csr_begins_xfer;
-
-  //fifo0_in_csr_in_a_read_cycle assignment, which is an e_assign
-  assign fifo0_in_csr_in_a_read_cycle = cpu0_data_master_granted_fifo0_in_csr & cpu0_data_master_read;
-
-  //in_a_read_cycle assignment, which is an e_mux
-  assign in_a_read_cycle = fifo0_in_csr_in_a_read_cycle;
-
-  //fifo0_in_csr_waits_for_write in a cycle, which is an e_mux
-  assign fifo0_in_csr_waits_for_write = fifo0_in_csr_in_a_write_cycle & 0;
-
-  //fifo0_in_csr_in_a_write_cycle assignment, which is an e_assign
-  assign fifo0_in_csr_in_a_write_cycle = cpu0_data_master_granted_fifo0_in_csr & cpu0_data_master_write;
-
-  //in_a_write_cycle assignment, which is an e_mux
-  assign in_a_write_cycle = fifo0_in_csr_in_a_write_cycle;
-
-  assign wait_for_fifo0_in_csr_counter = 0;
-
-//synthesis translate_off
-//////////////// SIMULATION-ONLY CONTENTS
-  //fifo0/in_csr enable non-zero assertions, which is an e_register
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          enable_nonzero_assertions <= 0;
-      else 
-        enable_nonzero_assertions <= 1'b1;
-    end
-
-
-
-//////////////// END SIMULATION-ONLY CONTENTS
-
-//synthesis translate_on
-
-endmodule
-
-
-// synthesis translate_off
-`timescale 1ns / 1ps
-// synthesis translate_on
-
-// turn off superfluous verilog processor warnings 
-// altera message_level Level1 
-// altera message_off 10034 10035 10036 10037 10230 10240 10030 
-
-module fifo0_out_arbitrator (
-                              // inputs:
-                               clk,
-                               cpu0_data_master_address_to_slave,
-                               cpu0_data_master_read,
-                               cpu0_data_master_write,
-                               fifo0_out_readdata,
-                               fifo0_out_waitrequest,
-                               reset_n,
-
-                              // outputs:
-                               cpu0_data_master_granted_fifo0_out,
-                               cpu0_data_master_qualified_request_fifo0_out,
-                               cpu0_data_master_read_data_valid_fifo0_out,
-                               cpu0_data_master_requests_fifo0_out,
-                               d1_fifo0_out_end_xfer,
-                               fifo0_out_read,
-                               fifo0_out_readdata_from_sa,
-                               fifo0_out_waitrequest_from_sa,
-                               registered_cpu0_data_master_read_data_valid_fifo0_out
-                            )
-;
-
-  output           cpu0_data_master_granted_fifo0_out;
-  output           cpu0_data_master_qualified_request_fifo0_out;
-  output           cpu0_data_master_read_data_valid_fifo0_out;
-  output           cpu0_data_master_requests_fifo0_out;
-  output           d1_fifo0_out_end_xfer;
-  output           fifo0_out_read;
-  output  [ 31: 0] fifo0_out_readdata_from_sa;
-  output           fifo0_out_waitrequest_from_sa;
-  output           registered_cpu0_data_master_read_data_valid_fifo0_out;
-  input            clk;
-  input   [ 26: 0] cpu0_data_master_address_to_slave;
-  input            cpu0_data_master_read;
-  input            cpu0_data_master_write;
-  input   [ 31: 0] fifo0_out_readdata;
-  input            fifo0_out_waitrequest;
-  input            reset_n;
-
-  wire             cpu0_data_master_arbiterlock;
-  wire             cpu0_data_master_arbiterlock2;
-  wire             cpu0_data_master_continuerequest;
-  wire             cpu0_data_master_granted_fifo0_out;
-  wire             cpu0_data_master_qualified_request_fifo0_out;
-  wire             cpu0_data_master_read_data_valid_fifo0_out;
-  reg              cpu0_data_master_read_data_valid_fifo0_out_shift_register;
-  wire             cpu0_data_master_read_data_valid_fifo0_out_shift_register_in;
-  wire             cpu0_data_master_requests_fifo0_out;
-  wire             cpu0_data_master_saved_grant_fifo0_out;
-  reg              d1_fifo0_out_end_xfer;
-  reg              d1_reasons_to_wait;
-  reg              enable_nonzero_assertions;
-  wire             end_xfer_arb_share_counter_term_fifo0_out;
-  wire             fifo0_out_allgrants;
-  wire             fifo0_out_allow_new_arb_cycle;
-  wire             fifo0_out_any_bursting_master_saved_grant;
-  wire             fifo0_out_any_continuerequest;
-  wire             fifo0_out_arb_counter_enable;
-  reg     [  2: 0] fifo0_out_arb_share_counter;
-  wire    [  2: 0] fifo0_out_arb_share_counter_next_value;
-  wire    [  2: 0] fifo0_out_arb_share_set_values;
-  wire             fifo0_out_beginbursttransfer_internal;
-  wire             fifo0_out_begins_xfer;
-  wire             fifo0_out_end_xfer;
-  wire             fifo0_out_firsttransfer;
-  wire             fifo0_out_grant_vector;
-  wire             fifo0_out_in_a_read_cycle;
-  wire             fifo0_out_in_a_write_cycle;
-  wire             fifo0_out_master_qreq_vector;
-  wire             fifo0_out_non_bursting_master_requests;
-  wire             fifo0_out_read;
-  wire    [ 31: 0] fifo0_out_readdata_from_sa;
-  reg              fifo0_out_reg_firsttransfer;
-  reg              fifo0_out_slavearbiterlockenable;
-  wire             fifo0_out_slavearbiterlockenable2;
-  wire             fifo0_out_unreg_firsttransfer;
-  wire             fifo0_out_waitrequest_from_sa;
-  wire             fifo0_out_waits_for_read;
-  wire             fifo0_out_waits_for_write;
-  wire             in_a_read_cycle;
-  wire             in_a_write_cycle;
-  wire             p1_cpu0_data_master_read_data_valid_fifo0_out_shift_register;
-  wire             registered_cpu0_data_master_read_data_valid_fifo0_out;
-  wire    [ 26: 0] shifted_address_to_fifo0_out_from_cpu0_data_master;
-  wire             wait_for_fifo0_out_counter;
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          d1_reasons_to_wait <= 0;
-      else 
-        d1_reasons_to_wait <= ~fifo0_out_end_xfer;
-    end
-
-
-  assign fifo0_out_begins_xfer = ~d1_reasons_to_wait & ((cpu0_data_master_qualified_request_fifo0_out));
-  //assign fifo0_out_readdata_from_sa = fifo0_out_readdata so that symbol knows where to group signals which may go to master only, which is an e_assign
-  assign fifo0_out_readdata_from_sa = fifo0_out_readdata;
-
-  assign cpu0_data_master_requests_fifo0_out = (({cpu0_data_master_address_to_slave[26 : 2] , 2'b0} == 27'h401068) & (cpu0_data_master_read | cpu0_data_master_write)) & cpu0_data_master_read;
-  //assign fifo0_out_waitrequest_from_sa = fifo0_out_waitrequest so that symbol knows where to group signals which may go to master only, which is an e_assign
-  assign fifo0_out_waitrequest_from_sa = fifo0_out_waitrequest;
-
-  //registered rdv signal_name registered_cpu0_data_master_read_data_valid_fifo0_out assignment, which is an e_assign
-  assign registered_cpu0_data_master_read_data_valid_fifo0_out = cpu0_data_master_read_data_valid_fifo0_out_shift_register_in;
-
-  //fifo0_out_arb_share_counter set values, which is an e_mux
-  assign fifo0_out_arb_share_set_values = 1;
-
-  //fifo0_out_non_bursting_master_requests mux, which is an e_mux
-  assign fifo0_out_non_bursting_master_requests = cpu0_data_master_requests_fifo0_out;
-
-  //fifo0_out_any_bursting_master_saved_grant mux, which is an e_mux
-  assign fifo0_out_any_bursting_master_saved_grant = 0;
-
-  //fifo0_out_arb_share_counter_next_value assignment, which is an e_assign
-  assign fifo0_out_arb_share_counter_next_value = fifo0_out_firsttransfer ? (fifo0_out_arb_share_set_values - 1) : |fifo0_out_arb_share_counter ? (fifo0_out_arb_share_counter - 1) : 0;
-
-  //fifo0_out_allgrants all slave grants, which is an e_mux
-  assign fifo0_out_allgrants = |fifo0_out_grant_vector;
-
-  //fifo0_out_end_xfer assignment, which is an e_assign
-  assign fifo0_out_end_xfer = ~(fifo0_out_waits_for_read | fifo0_out_waits_for_write);
-
-  //end_xfer_arb_share_counter_term_fifo0_out arb share counter enable term, which is an e_assign
-  assign end_xfer_arb_share_counter_term_fifo0_out = fifo0_out_end_xfer & (~fifo0_out_any_bursting_master_saved_grant | in_a_read_cycle | in_a_write_cycle);
-
-  //fifo0_out_arb_share_counter arbitration counter enable, which is an e_assign
-  assign fifo0_out_arb_counter_enable = (end_xfer_arb_share_counter_term_fifo0_out & fifo0_out_allgrants) | (end_xfer_arb_share_counter_term_fifo0_out & ~fifo0_out_non_bursting_master_requests);
-
-  //fifo0_out_arb_share_counter counter, which is an e_register
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          fifo0_out_arb_share_counter <= 0;
-      else if (fifo0_out_arb_counter_enable)
-          fifo0_out_arb_share_counter <= fifo0_out_arb_share_counter_next_value;
-    end
-
-
-  //fifo0_out_slavearbiterlockenable slave enables arbiterlock, which is an e_register
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          fifo0_out_slavearbiterlockenable <= 0;
-      else if ((|fifo0_out_master_qreq_vector & end_xfer_arb_share_counter_term_fifo0_out) | (end_xfer_arb_share_counter_term_fifo0_out & ~fifo0_out_non_bursting_master_requests))
-          fifo0_out_slavearbiterlockenable <= |fifo0_out_arb_share_counter_next_value;
-    end
-
-
-  //cpu0/data_master fifo0/out arbiterlock, which is an e_assign
-  assign cpu0_data_master_arbiterlock = fifo0_out_slavearbiterlockenable & cpu0_data_master_continuerequest;
-
-  //fifo0_out_slavearbiterlockenable2 slave enables arbiterlock2, which is an e_assign
-  assign fifo0_out_slavearbiterlockenable2 = |fifo0_out_arb_share_counter_next_value;
-
-  //cpu0/data_master fifo0/out arbiterlock2, which is an e_assign
-  assign cpu0_data_master_arbiterlock2 = fifo0_out_slavearbiterlockenable2 & cpu0_data_master_continuerequest;
-
-  //fifo0_out_any_continuerequest at least one master continues requesting, which is an e_assign
-  assign fifo0_out_any_continuerequest = 1;
-
-  //cpu0_data_master_continuerequest continued request, which is an e_assign
-  assign cpu0_data_master_continuerequest = 1;
-
-  assign cpu0_data_master_qualified_request_fifo0_out = cpu0_data_master_requests_fifo0_out & ~((cpu0_data_master_read & ((|cpu0_data_master_read_data_valid_fifo0_out_shift_register))));
-  //cpu0_data_master_read_data_valid_fifo0_out_shift_register_in mux for readlatency shift register, which is an e_mux
-  assign cpu0_data_master_read_data_valid_fifo0_out_shift_register_in = cpu0_data_master_granted_fifo0_out & cpu0_data_master_read & ~fifo0_out_waits_for_read & ~(|cpu0_data_master_read_data_valid_fifo0_out_shift_register);
-
-  //shift register p1 cpu0_data_master_read_data_valid_fifo0_out_shift_register in if flush, otherwise shift left, which is an e_mux
-  assign p1_cpu0_data_master_read_data_valid_fifo0_out_shift_register = {cpu0_data_master_read_data_valid_fifo0_out_shift_register, cpu0_data_master_read_data_valid_fifo0_out_shift_register_in};
-
-  //cpu0_data_master_read_data_valid_fifo0_out_shift_register for remembering which master asked for a fixed latency read, which is an e_register
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          cpu0_data_master_read_data_valid_fifo0_out_shift_register <= 0;
-      else 
-        cpu0_data_master_read_data_valid_fifo0_out_shift_register <= p1_cpu0_data_master_read_data_valid_fifo0_out_shift_register;
-    end
-
-
-  //local readdatavalid cpu0_data_master_read_data_valid_fifo0_out, which is an e_mux
-  assign cpu0_data_master_read_data_valid_fifo0_out = cpu0_data_master_read_data_valid_fifo0_out_shift_register;
-
-  //master is always granted when requested
-  assign cpu0_data_master_granted_fifo0_out = cpu0_data_master_qualified_request_fifo0_out;
-
-  //cpu0/data_master saved-grant fifo0/out, which is an e_assign
-  assign cpu0_data_master_saved_grant_fifo0_out = cpu0_data_master_requests_fifo0_out;
-
-  //allow new arb cycle for fifo0/out, which is an e_assign
-  assign fifo0_out_allow_new_arb_cycle = 1;
-
-  //placeholder chosen master
-  assign fifo0_out_grant_vector = 1;
-
-  //placeholder vector of master qualified-requests
-  assign fifo0_out_master_qreq_vector = 1;
-
-  //fifo0_out_firsttransfer first transaction, which is an e_assign
-  assign fifo0_out_firsttransfer = fifo0_out_begins_xfer ? fifo0_out_unreg_firsttransfer : fifo0_out_reg_firsttransfer;
-
-  //fifo0_out_unreg_firsttransfer first transaction, which is an e_assign
-  assign fifo0_out_unreg_firsttransfer = ~(fifo0_out_slavearbiterlockenable & fifo0_out_any_continuerequest);
-
-  //fifo0_out_reg_firsttransfer first transaction, which is an e_register
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          fifo0_out_reg_firsttransfer <= 1'b1;
-      else if (fifo0_out_begins_xfer)
-          fifo0_out_reg_firsttransfer <= fifo0_out_unreg_firsttransfer;
-    end
-
-
-  //fifo0_out_beginbursttransfer_internal begin burst transfer, which is an e_assign
-  assign fifo0_out_beginbursttransfer_internal = fifo0_out_begins_xfer;
-
-  //fifo0_out_read assignment, which is an e_mux
-  assign fifo0_out_read = cpu0_data_master_granted_fifo0_out & cpu0_data_master_read;
-
-  assign shifted_address_to_fifo0_out_from_cpu0_data_master = cpu0_data_master_address_to_slave;
-  //d1_fifo0_out_end_xfer register, which is an e_register
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          d1_fifo0_out_end_xfer <= 1;
-      else 
-        d1_fifo0_out_end_xfer <= fifo0_out_end_xfer;
-    end
-
-
-  //fifo0_out_waits_for_read in a cycle, which is an e_mux
-  assign fifo0_out_waits_for_read = fifo0_out_in_a_read_cycle & fifo0_out_waitrequest_from_sa;
-
-  //fifo0_out_in_a_read_cycle assignment, which is an e_assign
-  assign fifo0_out_in_a_read_cycle = cpu0_data_master_granted_fifo0_out & cpu0_data_master_read;
-
-  //in_a_read_cycle assignment, which is an e_mux
-  assign in_a_read_cycle = fifo0_out_in_a_read_cycle;
-
-  //fifo0_out_waits_for_write in a cycle, which is an e_mux
-  assign fifo0_out_waits_for_write = fifo0_out_in_a_write_cycle & fifo0_out_waitrequest_from_sa;
-
-  //fifo0_out_in_a_write_cycle assignment, which is an e_assign
-  assign fifo0_out_in_a_write_cycle = cpu0_data_master_granted_fifo0_out & cpu0_data_master_write;
-
-  //in_a_write_cycle assignment, which is an e_mux
-  assign in_a_write_cycle = fifo0_out_in_a_write_cycle;
-
-  assign wait_for_fifo0_out_counter = 0;
-
-//synthesis translate_off
-//////////////// SIMULATION-ONLY CONTENTS
-  //fifo0/out enable non-zero assertions, which is an e_register
-  always @(posedge clk or negedge reset_n)
-    begin
-      if (reset_n == 0)
-          enable_nonzero_assertions <= 0;
-      else 
-        enable_nonzero_assertions <= 1'b1;
     end
 
 
@@ -8213,9 +7346,6 @@ module Nios2Core2 (
   wire             cpu0_data_master_debugaccess;
   wire             cpu0_data_master_granted_cfi_s1;
   wire             cpu0_data_master_granted_cpu0_jtag_debug_module;
-  wire             cpu0_data_master_granted_fifo0_in;
-  wire             cpu0_data_master_granted_fifo0_in_csr;
-  wire             cpu0_data_master_granted_fifo0_out;
   wire             cpu0_data_master_granted_jtag_uart_avalon_jtag_slave;
   wire             cpu0_data_master_granted_pio0_s1;
   wire             cpu0_data_master_granted_sdram_s1;
@@ -8225,9 +7355,6 @@ module Nios2Core2 (
   wire             cpu0_data_master_no_byte_enables_and_last_term;
   wire             cpu0_data_master_qualified_request_cfi_s1;
   wire             cpu0_data_master_qualified_request_cpu0_jtag_debug_module;
-  wire             cpu0_data_master_qualified_request_fifo0_in;
-  wire             cpu0_data_master_qualified_request_fifo0_in_csr;
-  wire             cpu0_data_master_qualified_request_fifo0_out;
   wire             cpu0_data_master_qualified_request_jtag_uart_avalon_jtag_slave;
   wire             cpu0_data_master_qualified_request_pio0_s1;
   wire             cpu0_data_master_qualified_request_sdram_s1;
@@ -8236,9 +7363,6 @@ module Nios2Core2 (
   wire             cpu0_data_master_read;
   wire             cpu0_data_master_read_data_valid_cfi_s1;
   wire             cpu0_data_master_read_data_valid_cpu0_jtag_debug_module;
-  wire             cpu0_data_master_read_data_valid_fifo0_in;
-  wire             cpu0_data_master_read_data_valid_fifo0_in_csr;
-  wire             cpu0_data_master_read_data_valid_fifo0_out;
   wire             cpu0_data_master_read_data_valid_jtag_uart_avalon_jtag_slave;
   wire             cpu0_data_master_read_data_valid_pio0_s1;
   wire             cpu0_data_master_read_data_valid_sdram_s1;
@@ -8248,9 +7372,6 @@ module Nios2Core2 (
   wire    [ 31: 0] cpu0_data_master_readdata;
   wire             cpu0_data_master_requests_cfi_s1;
   wire             cpu0_data_master_requests_cpu0_jtag_debug_module;
-  wire             cpu0_data_master_requests_fifo0_in;
-  wire             cpu0_data_master_requests_fifo0_in_csr;
-  wire             cpu0_data_master_requests_fifo0_out;
   wire             cpu0_data_master_requests_jtag_uart_avalon_jtag_slave;
   wire             cpu0_data_master_requests_pio0_s1;
   wire             cpu0_data_master_requests_sdram_s1;
@@ -8368,9 +7489,6 @@ module Nios2Core2 (
   wire    [ 31: 0] cpu1_jtag_debug_module_writedata;
   wire             d1_cpu0_jtag_debug_module_end_xfer;
   wire             d1_cpu1_jtag_debug_module_end_xfer;
-  wire             d1_fifo0_in_csr_end_xfer;
-  wire             d1_fifo0_in_end_xfer;
-  wire             d1_fifo0_out_end_xfer;
   wire             d1_jtag_uart_avalon_jtag_slave_end_xfer;
   wire             d1_pio0_s1_end_xfer;
   wire             d1_pio1_s1_end_xfer;
@@ -8380,22 +7498,6 @@ module Nios2Core2 (
   wire             d1_timer1_s1_end_xfer;
   wire             d1_triStateBridge_avalon_slave_end_xfer;
   wire    [  7: 0] data_to_and_from_the_cfi;
-  wire    [  2: 0] fifo0_in_csr_address;
-  wire             fifo0_in_csr_read;
-  wire    [ 31: 0] fifo0_in_csr_readdata;
-  wire    [ 31: 0] fifo0_in_csr_readdata_from_sa;
-  wire             fifo0_in_csr_write;
-  wire    [ 31: 0] fifo0_in_csr_writedata;
-  wire             fifo0_in_reset_n;
-  wire             fifo0_in_waitrequest;
-  wire             fifo0_in_waitrequest_from_sa;
-  wire             fifo0_in_write;
-  wire    [ 31: 0] fifo0_in_writedata;
-  wire             fifo0_out_read;
-  wire    [ 31: 0] fifo0_out_readdata;
-  wire    [ 31: 0] fifo0_out_readdata_from_sa;
-  wire             fifo0_out_waitrequest;
-  wire             fifo0_out_waitrequest_from_sa;
   wire    [  7: 0] incoming_data_to_and_from_the_cfi;
   wire    [  7: 0] incoming_data_to_and_from_the_cfi_with_Xs_converted_to_0;
   wire             jtag_uart_avalon_jtag_slave_address;
@@ -8432,7 +7534,6 @@ module Nios2Core2 (
   wire    [ 31: 0] pio1_s1_writedata;
   wire             read_n_to_the_cfi;
   wire             registered_cpu0_data_master_read_data_valid_cfi_s1;
-  wire             registered_cpu0_data_master_read_data_valid_fifo0_out;
   wire             registered_cpu1_data_master_read_data_valid_cfi_s1;
   wire             reset_n_sources;
   wire    [ 23: 0] sdram_s1_address;
@@ -8533,9 +7634,6 @@ module Nios2Core2 (
       .cpu0_data_master_dbs_write_8                                   (cpu0_data_master_dbs_write_8),
       .cpu0_data_master_granted_cfi_s1                                (cpu0_data_master_granted_cfi_s1),
       .cpu0_data_master_granted_cpu0_jtag_debug_module                (cpu0_data_master_granted_cpu0_jtag_debug_module),
-      .cpu0_data_master_granted_fifo0_in                              (cpu0_data_master_granted_fifo0_in),
-      .cpu0_data_master_granted_fifo0_in_csr                          (cpu0_data_master_granted_fifo0_in_csr),
-      .cpu0_data_master_granted_fifo0_out                             (cpu0_data_master_granted_fifo0_out),
       .cpu0_data_master_granted_jtag_uart_avalon_jtag_slave           (cpu0_data_master_granted_jtag_uart_avalon_jtag_slave),
       .cpu0_data_master_granted_pio0_s1                               (cpu0_data_master_granted_pio0_s1),
       .cpu0_data_master_granted_sdram_s1                              (cpu0_data_master_granted_sdram_s1),
@@ -8545,9 +7643,6 @@ module Nios2Core2 (
       .cpu0_data_master_no_byte_enables_and_last_term                 (cpu0_data_master_no_byte_enables_and_last_term),
       .cpu0_data_master_qualified_request_cfi_s1                      (cpu0_data_master_qualified_request_cfi_s1),
       .cpu0_data_master_qualified_request_cpu0_jtag_debug_module      (cpu0_data_master_qualified_request_cpu0_jtag_debug_module),
-      .cpu0_data_master_qualified_request_fifo0_in                    (cpu0_data_master_qualified_request_fifo0_in),
-      .cpu0_data_master_qualified_request_fifo0_in_csr                (cpu0_data_master_qualified_request_fifo0_in_csr),
-      .cpu0_data_master_qualified_request_fifo0_out                   (cpu0_data_master_qualified_request_fifo0_out),
       .cpu0_data_master_qualified_request_jtag_uart_avalon_jtag_slave (cpu0_data_master_qualified_request_jtag_uart_avalon_jtag_slave),
       .cpu0_data_master_qualified_request_pio0_s1                     (cpu0_data_master_qualified_request_pio0_s1),
       .cpu0_data_master_qualified_request_sdram_s1                    (cpu0_data_master_qualified_request_sdram_s1),
@@ -8556,9 +7651,6 @@ module Nios2Core2 (
       .cpu0_data_master_read                                          (cpu0_data_master_read),
       .cpu0_data_master_read_data_valid_cfi_s1                        (cpu0_data_master_read_data_valid_cfi_s1),
       .cpu0_data_master_read_data_valid_cpu0_jtag_debug_module        (cpu0_data_master_read_data_valid_cpu0_jtag_debug_module),
-      .cpu0_data_master_read_data_valid_fifo0_in                      (cpu0_data_master_read_data_valid_fifo0_in),
-      .cpu0_data_master_read_data_valid_fifo0_in_csr                  (cpu0_data_master_read_data_valid_fifo0_in_csr),
-      .cpu0_data_master_read_data_valid_fifo0_out                     (cpu0_data_master_read_data_valid_fifo0_out),
       .cpu0_data_master_read_data_valid_jtag_uart_avalon_jtag_slave   (cpu0_data_master_read_data_valid_jtag_uart_avalon_jtag_slave),
       .cpu0_data_master_read_data_valid_pio0_s1                       (cpu0_data_master_read_data_valid_pio0_s1),
       .cpu0_data_master_read_data_valid_sdram_s1                      (cpu0_data_master_read_data_valid_sdram_s1),
@@ -8568,9 +7660,6 @@ module Nios2Core2 (
       .cpu0_data_master_readdata                                      (cpu0_data_master_readdata),
       .cpu0_data_master_requests_cfi_s1                               (cpu0_data_master_requests_cfi_s1),
       .cpu0_data_master_requests_cpu0_jtag_debug_module               (cpu0_data_master_requests_cpu0_jtag_debug_module),
-      .cpu0_data_master_requests_fifo0_in                             (cpu0_data_master_requests_fifo0_in),
-      .cpu0_data_master_requests_fifo0_in_csr                         (cpu0_data_master_requests_fifo0_in_csr),
-      .cpu0_data_master_requests_fifo0_out                            (cpu0_data_master_requests_fifo0_out),
       .cpu0_data_master_requests_jtag_uart_avalon_jtag_slave          (cpu0_data_master_requests_jtag_uart_avalon_jtag_slave),
       .cpu0_data_master_requests_pio0_s1                              (cpu0_data_master_requests_pio0_s1),
       .cpu0_data_master_requests_sdram_s1                             (cpu0_data_master_requests_sdram_s1),
@@ -8581,26 +7670,18 @@ module Nios2Core2 (
       .cpu0_data_master_writedata                                     (cpu0_data_master_writedata),
       .cpu0_jtag_debug_module_readdata_from_sa                        (cpu0_jtag_debug_module_readdata_from_sa),
       .d1_cpu0_jtag_debug_module_end_xfer                             (d1_cpu0_jtag_debug_module_end_xfer),
-      .d1_fifo0_in_csr_end_xfer                                       (d1_fifo0_in_csr_end_xfer),
-      .d1_fifo0_in_end_xfer                                           (d1_fifo0_in_end_xfer),
-      .d1_fifo0_out_end_xfer                                          (d1_fifo0_out_end_xfer),
       .d1_jtag_uart_avalon_jtag_slave_end_xfer                        (d1_jtag_uart_avalon_jtag_slave_end_xfer),
       .d1_pio0_s1_end_xfer                                            (d1_pio0_s1_end_xfer),
       .d1_sdram_s1_end_xfer                                           (d1_sdram_s1_end_xfer),
       .d1_sysid_control_slave_end_xfer                                (d1_sysid_control_slave_end_xfer),
       .d1_timer0_s1_end_xfer                                          (d1_timer0_s1_end_xfer),
       .d1_triStateBridge_avalon_slave_end_xfer                        (d1_triStateBridge_avalon_slave_end_xfer),
-      .fifo0_in_csr_readdata_from_sa                                  (fifo0_in_csr_readdata_from_sa),
-      .fifo0_in_waitrequest_from_sa                                   (fifo0_in_waitrequest_from_sa),
-      .fifo0_out_readdata_from_sa                                     (fifo0_out_readdata_from_sa),
-      .fifo0_out_waitrequest_from_sa                                  (fifo0_out_waitrequest_from_sa),
       .incoming_data_to_and_from_the_cfi_with_Xs_converted_to_0       (incoming_data_to_and_from_the_cfi_with_Xs_converted_to_0),
       .jtag_uart_avalon_jtag_slave_irq_from_sa                        (jtag_uart_avalon_jtag_slave_irq_from_sa),
       .jtag_uart_avalon_jtag_slave_readdata_from_sa                   (jtag_uart_avalon_jtag_slave_readdata_from_sa),
       .jtag_uart_avalon_jtag_slave_waitrequest_from_sa                (jtag_uart_avalon_jtag_slave_waitrequest_from_sa),
       .pio0_s1_readdata_from_sa                                       (pio0_s1_readdata_from_sa),
       .registered_cpu0_data_master_read_data_valid_cfi_s1             (registered_cpu0_data_master_read_data_valid_cfi_s1),
-      .registered_cpu0_data_master_read_data_valid_fifo0_out          (registered_cpu0_data_master_read_data_valid_fifo0_out),
       .reset_n                                                        (clk_0_reset_n),
       .sdram_s1_readdata_from_sa                                      (sdram_s1_readdata_from_sa),
       .sdram_s1_waitrequest_from_sa                                   (sdram_s1_waitrequest_from_sa),
@@ -8837,86 +7918,6 @@ module Nios2Core2 (
       .jtag_debug_module_write               (cpu1_jtag_debug_module_write),
       .jtag_debug_module_writedata           (cpu1_jtag_debug_module_writedata),
       .reset_n                               (cpu1_jtag_debug_module_reset_n)
-    );
-
-  fifo0_in_arbitrator the_fifo0_in
-    (
-      .clk                                         (clk_0),
-      .cpu0_data_master_address_to_slave           (cpu0_data_master_address_to_slave),
-      .cpu0_data_master_granted_fifo0_in           (cpu0_data_master_granted_fifo0_in),
-      .cpu0_data_master_qualified_request_fifo0_in (cpu0_data_master_qualified_request_fifo0_in),
-      .cpu0_data_master_read                       (cpu0_data_master_read),
-      .cpu0_data_master_read_data_valid_fifo0_in   (cpu0_data_master_read_data_valid_fifo0_in),
-      .cpu0_data_master_requests_fifo0_in          (cpu0_data_master_requests_fifo0_in),
-      .cpu0_data_master_waitrequest                (cpu0_data_master_waitrequest),
-      .cpu0_data_master_write                      (cpu0_data_master_write),
-      .cpu0_data_master_writedata                  (cpu0_data_master_writedata),
-      .d1_fifo0_in_end_xfer                        (d1_fifo0_in_end_xfer),
-      .fifo0_in_reset_n                            (fifo0_in_reset_n),
-      .fifo0_in_waitrequest                        (fifo0_in_waitrequest),
-      .fifo0_in_waitrequest_from_sa                (fifo0_in_waitrequest_from_sa),
-      .fifo0_in_write                              (fifo0_in_write),
-      .fifo0_in_writedata                          (fifo0_in_writedata),
-      .reset_n                                     (clk_0_reset_n)
-    );
-
-  fifo0_in_csr_arbitrator the_fifo0_in_csr
-    (
-      .clk                                             (clk_0),
-      .cpu0_data_master_address_to_slave               (cpu0_data_master_address_to_slave),
-      .cpu0_data_master_granted_fifo0_in_csr           (cpu0_data_master_granted_fifo0_in_csr),
-      .cpu0_data_master_qualified_request_fifo0_in_csr (cpu0_data_master_qualified_request_fifo0_in_csr),
-      .cpu0_data_master_read                           (cpu0_data_master_read),
-      .cpu0_data_master_read_data_valid_fifo0_in_csr   (cpu0_data_master_read_data_valid_fifo0_in_csr),
-      .cpu0_data_master_requests_fifo0_in_csr          (cpu0_data_master_requests_fifo0_in_csr),
-      .cpu0_data_master_waitrequest                    (cpu0_data_master_waitrequest),
-      .cpu0_data_master_write                          (cpu0_data_master_write),
-      .cpu0_data_master_writedata                      (cpu0_data_master_writedata),
-      .d1_fifo0_in_csr_end_xfer                        (d1_fifo0_in_csr_end_xfer),
-      .fifo0_in_csr_address                            (fifo0_in_csr_address),
-      .fifo0_in_csr_read                               (fifo0_in_csr_read),
-      .fifo0_in_csr_readdata                           (fifo0_in_csr_readdata),
-      .fifo0_in_csr_readdata_from_sa                   (fifo0_in_csr_readdata_from_sa),
-      .fifo0_in_csr_write                              (fifo0_in_csr_write),
-      .fifo0_in_csr_writedata                          (fifo0_in_csr_writedata),
-      .reset_n                                         (clk_0_reset_n)
-    );
-
-  fifo0_out_arbitrator the_fifo0_out
-    (
-      .clk                                                   (clk_0),
-      .cpu0_data_master_address_to_slave                     (cpu0_data_master_address_to_slave),
-      .cpu0_data_master_granted_fifo0_out                    (cpu0_data_master_granted_fifo0_out),
-      .cpu0_data_master_qualified_request_fifo0_out          (cpu0_data_master_qualified_request_fifo0_out),
-      .cpu0_data_master_read                                 (cpu0_data_master_read),
-      .cpu0_data_master_read_data_valid_fifo0_out            (cpu0_data_master_read_data_valid_fifo0_out),
-      .cpu0_data_master_requests_fifo0_out                   (cpu0_data_master_requests_fifo0_out),
-      .cpu0_data_master_write                                (cpu0_data_master_write),
-      .d1_fifo0_out_end_xfer                                 (d1_fifo0_out_end_xfer),
-      .fifo0_out_read                                        (fifo0_out_read),
-      .fifo0_out_readdata                                    (fifo0_out_readdata),
-      .fifo0_out_readdata_from_sa                            (fifo0_out_readdata_from_sa),
-      .fifo0_out_waitrequest                                 (fifo0_out_waitrequest),
-      .fifo0_out_waitrequest_from_sa                         (fifo0_out_waitrequest_from_sa),
-      .registered_cpu0_data_master_read_data_valid_fifo0_out (registered_cpu0_data_master_read_data_valid_fifo0_out),
-      .reset_n                                               (clk_0_reset_n)
-    );
-
-  fifo0 the_fifo0
-    (
-      .avalonmm_read_slave_read         (fifo0_out_read),
-      .avalonmm_read_slave_readdata     (fifo0_out_readdata),
-      .avalonmm_read_slave_waitrequest  (fifo0_out_waitrequest),
-      .avalonmm_write_slave_waitrequest (fifo0_in_waitrequest),
-      .avalonmm_write_slave_write       (fifo0_in_write),
-      .avalonmm_write_slave_writedata   (fifo0_in_writedata),
-      .reset_n                          (fifo0_in_reset_n),
-      .wrclk_control_slave_address      (fifo0_in_csr_address),
-      .wrclk_control_slave_read         (fifo0_in_csr_read),
-      .wrclk_control_slave_readdata     (fifo0_in_csr_readdata),
-      .wrclk_control_slave_write        (fifo0_in_csr_write),
-      .wrclk_control_slave_writedata    (fifo0_in_csr_writedata),
-      .wrclock                          (clk_0)
     );
 
   jtag_uart_avalon_jtag_slave_arbitrator the_jtag_uart_avalon_jtag_slave
@@ -9505,7 +8506,6 @@ endmodule
 `include "cpu1_jtag_debug_module_wrapper.v"
 `include "cpu1.v"
 `include "pio1.v"
-`include "fifo0.v"
 `include "jtag_uart.v"
 `include "timer0.v"
 

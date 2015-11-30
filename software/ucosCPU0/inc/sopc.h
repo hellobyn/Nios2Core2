@@ -6,6 +6,7 @@
 #define _LED
 #define _TIMER
 #define _FIFO
+//#define _COMPARATOR
 
 typedef struct
 {
@@ -15,9 +16,23 @@ typedef struct
     unsigned long int edgeCapture;
 }PIOSTR;
 
-#ifdef _LED
-#define led ((PIOSTR*)PIO0_BASE)
-#endif
+typedef struct
+{
+    union
+    {
+        struct
+        {
+            volatile unsigned long int dataEn   :1;    
+            volatile unsigned long int rst      :1;    
+            volatile unsigned long int order    :1;
+            volatile unsigned long int nc       :29;
+        }bit;
+        volatile unsigned long int word;
+    }data;
+    unsigned long int direction;
+    unsigned long int interruptMask;
+    unsigned long int edgeCapture;
+}COMPSTR;
 
 typedef struct
 {
@@ -51,10 +66,6 @@ typedef struct
     volatile unsigned long int snapH;               //
 }TIMERSTR;
 
-#ifdef _TIMER
-#define timer ((TIMERSTR*)TIMER0_BASE)
-#endif
-
 typedef struct
 {
     volatile unsigned long int fillLevel;
@@ -82,8 +93,22 @@ typedef struct
 #define ALMOSRFULL  (FIFO0_IN_CSR_FIFO_DEPTH - 4) 
 #define ALMOSTEMPTY 4
 
+#ifdef _LED
+#define led ((PIOSTR*)PIO0_BASE)
+#endif
+
+#ifdef _TIMER
+#define timer ((TIMERSTR*)TIMER0_BASE)
+#endif
+
 #ifdef _FIFO
 #define fifo ((FIFOSTR*)FIFO0_IN_CSR_BASE)
+#endif
+
+#ifdef _COMPARATOR
+#define compCtrl ((COMPSTR*)COMPCTRL0_BASE)
+#define compDataH ((PIOSTR*)COMPDATA0H_BASE)
+#define compDataL ((PIOSTR*)COMPDATA0L_BASE)
 #endif
 
 #endif

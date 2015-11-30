@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench version="2.0">
 <workbenchAdvisor/>
-<window height="728" maximized="true" width="1024" x="1476" y="38">
+<window height="728" maximized="true" width="1024" x="1696" y="-15">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -31,19 +31,23 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="3"/>
 <part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="sopc.h" partName="sopc.h" path="E:/MyProject/My_project/Altera/Q11MultiCore/software/ucosCPU0/inc/sopc.h" title="sopc.h" tooltip="ucosCPU0/inc/sopc.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ucosCPU0/inc/sopc.h"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="OSmain.c" partName="OSmain.c" path="E:/MyProject/My_project/Altera/Q11MultiCore/software/ucosCPU0/Os/OSmain.c" title="OSmain.c" tooltip="ucosCPU0/Os/OSmain.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ucosCPU0/Os/OSmain.c"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="hello_ucosii.c" partName="hello_ucosii.c" path="E:/MyProject/My_project/Altera/Q11MultiCore/software/ucosCPU0/scr/hello_ucosii.c" title="hello_ucosii.c" tooltip="ucosCPU0/scr/hello_ucosii.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ucosCPU0/scr/hello_ucosii.c"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="OSmain.c" partName="OSmain.c" path="E:/MyProject/My_project/Altera/Q11MultiCore/software/ucosCPU1/Os/OSmain.c" title="OSmain.c" tooltip="ucosCPU1/Os/OSmain.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ucosCPU1/Os/OSmain.c"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="system.h" partName="system.h" path="E:/MyProject/My_project/Altera/Q11MultiCore/software/ucosCPU0_syslib/Debug/system_description/system.h" title="system.h" tooltip="ucosCPU0_syslib/Debug/system_description/system.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ucosCPU0_syslib/Debug/system_description/system.h"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="sopc.h" partName="sopc.h" path="E:/MyProject/My_project/Altera/Q11MultiCore/software/ucosCPU1/Inc/sopc.h" title="sopc.h" tooltip="ucosCPU1/Inc/sopc.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ucosCPU1/Inc/sopc.h"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="sopc.h" partName="sopc.h" path="E:/MyProject/My_project/Altera/Q11MultiCore/software/ucosCPU0/Inc/sopc.h" title="sopc.h" tooltip="ucosCPU0/Inc/sopc.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ucosCPU0/Inc/sopc.h"/>
 </editor>
 </editors>
 <views>
@@ -54,7 +58,7 @@
 <viewState/>
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
-<viewState columnWidth0="698" columnWidth1="87" columnWidth2="162" columnWidth3="72" columnWidth4="0" horizontalPosition="0" verticalPosition="0">
+<viewState columnWidth0="713" columnWidth1="102" columnWidth2="177" columnWidth3="87" columnWidth4="0" horizontalPosition="0" verticalPosition="0">
 <columnOrder columnOrderIndex="0"/>
 <columnOrder columnOrderIndex="1"/>
 <columnOrder columnOrderIndex="2"/>
@@ -69,16 +73,9 @@
 <viewState horizontalPosition="0" verticalPosition="0">
 <expanded>
 <element path="E:\MyProject\My_project\Altera\Q11MultiCore\software\ucosCPU0"/>
-<element path="E:\MyProject\My_project\Altera\Q11MultiCore\software\ucosCPU0\inc"/>
-<element path="E:\MyProject\My_project\Altera\Q11MultiCore\software\ucosCPU0\scr"/>
-<element path="E:\MyProject\My_project\Altera\Q11MultiCore\software\ucosCPU0_syslib"/>
-<element path="E:\MyProject\My_project\Altera\Q11MultiCore\software\ucosCPU0_syslib\Debug"/>
-<element path="E:\MyProject\My_project\Altera\Q11MultiCore\software\ucosCPU0_syslib\Debug\system_description"/>
-<element path="E:\MyProject\My_project\Altera\Q11MultiCore\software\ucosCPU1\inc"/>
-<element path="E:\MyProject\My_project\Altera\Q11MultiCore\software\ucosCPU1\scr"/>
 </expanded>
 <selection>
-<element path="E:/MyProject/My_project/Altera/Q11MultiCore/software/ucosCPU0_syslib/Debug/system_description/system.h"/>
+<element path="E:/MyProject/My_project/Altera/Q11MultiCore/software/ucosCPU0_syslib"/>
 </selection>
 <customFilters userDefinedPatternsEnabled="false">
 <xmlDefinedFilters>
@@ -162,8 +159,8 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.16888577" ratioLeft="241" ratioRight="1186" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottom" ratio="0.7216" ratioLeft="451" ratioRight="174" relationship="4" relative="org.eclipse.ui.editorss">
+<info part="org.eclipse.ui.editorss" ratio="0.24386826" ratioLeft="348" ratioRight="1079" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottom" ratio="0.6060226" ratioLeft="483" ratioRight="314" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
@@ -198,166 +195,162 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ucosCPU0/scr/hello_ucosii.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ucosCPU0/inc/sopc.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ucosCPU0_syslib/Debug/system_description/system.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ucosCPU1/hello_ucosii.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ucosCPU1/scr/hello_ucosii.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ucosCPU1/inc/sopc.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ucosCPU0/scr/hello_ucosii.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ucosCPU0/inc/sopc.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ucosCPU0/scr/hello_ucosii.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ucosCPU0_syslib/Debug/system_description/system.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ucosCPU1/Os/OSmain.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ucosCPU0/Os/OSmain.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ucosCPU0/Inc/sopc.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ucosCPU1/Os/OSmain.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ucosCPU1/Inc/sopc.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ucosCPU0/Inc/sopc.h"/>
 </editors>
-<item historyLabel="hello_ucosii.c" index="0">
-<position info="not_deleted" x="2980" y="0"/>
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="1357" y="0"/>
 </item>
-<item historyLabel="sopc.h" index="1">
+<item historyLabel="OSmain.c" index="0">
+<position info="not_deleted" x="1270" y="0"/>
+</item>
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="1332" y="0"/>
+</item>
+<item historyLabel="OSmain.c" index="0">
+<position info="not_deleted" x="1025" y="0"/>
+</item>
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="1243" y="0"/>
+</item>
+<item historyLabel="OSmain.c" index="0">
+<position info="not_deleted" x="1093" y="0"/>
+</item>
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="1093" y="0"/>
+</item>
+<item historyLabel="OSmain.c" index="0">
+<position info="not_deleted" x="1093" y="0"/>
+</item>
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="1229" y="14"/>
+</item>
+<item historyLabel="OSmain.c" index="0">
+<position info="not_deleted" x="1359" y="0"/>
+</item>
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="1124" y="0"/>
+</item>
+<item historyLabel="OSmain.c" index="0">
+<position info="not_deleted" x="912" y="0"/>
+</item>
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="635" y="0"/>
+</item>
+<item historyLabel="OSmain.c" index="0">
+<position info="not_deleted" x="912" y="0"/>
+</item>
+<item historyLabel="OSmain.c" index="1">
 <position/>
 </item>
-<item historyLabel="hello_ucosii.c" index="0">
-<position info="not_deleted" x="2980" y="0"/>
-</item>
-<item historyLabel="system.h" index="2">
-<position info="not_deleted" x="7267" y="11"/>
-</item>
-<item historyLabel="hello_ucosii.c" index="3">
+<item historyLabel="sopc.h" index="2">
 <position/>
 </item>
-<item historyLabel="hello_ucosii.c" index="4">
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="583" y="0"/>
+</item>
+<item historyLabel="OSmain.c" index="3">
 <position/>
 </item>
-<item historyLabel="hello_ucosii.c" index="0">
-<position info="not_deleted" x="2746" y="27"/>
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="583" y="0"/>
 </item>
-<item historyLabel="hello_ucosii.c" index="4">
+<item historyLabel="OSmain.c" index="3">
+<position info="not_deleted" x="1621" y="5"/>
+</item>
+<item historyLabel="sopc.h" index="4">
 <position/>
 </item>
-<item historyLabel="hello_ucosii.c" index="0">
-<position info="not_deleted" x="2674" y="14"/>
+<item historyLabel="OSmain.c" index="1">
+<position/>
 </item>
-<item historyLabel="hello_ucosii.c" index="4">
-<position info="not_deleted" x="3442" y="0"/>
+<item historyLabel="OSmain.c" index="3">
+<position/>
+</item>
+<item historyLabel="OSmain.c" index="1">
+<position/>
+</item>
+<item historyLabel="OSmain.c" index="3">
+<position/>
+</item>
+<item historyLabel="OSmain.c" index="1">
+<position/>
+</item>
+<item historyLabel="OSmain.c" index="3">
+<position/>
+</item>
+<item historyLabel="OSmain.c" index="1">
+<position/>
+</item>
+<item historyLabel="OSmain.c" index="3">
+<position/>
+</item>
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="1162" y="0"/>
+</item>
+<item historyLabel="sopc.h" index="4">
+<position/>
 </item>
 <item historyLabel="sopc.h" index="5">
 <position/>
 </item>
-<item historyLabel="hello_ucosii.c" index="4">
-<position info="not_deleted" x="3442" y="0"/>
+<item historyLabel="sopc.h" index="4">
+<position info="not_deleted" x="1066" y="0"/>
 </item>
-<item historyLabel="hello_ucosii.c" index="0">
-<position info="not_deleted" x="2177" y="24"/>
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="1730" y="0"/>
 </item>
-<item historyLabel="hello_ucosii.c" index="4">
-<position info="not_deleted" x="2669" y="0"/>
-</item>
-<item historyLabel="hello_ucosii.c" index="0">
-<position info="not_deleted" x="2813" y="0"/>
-</item>
-<item historyLabel="hello_ucosii.c" index="4">
+<item historyLabel="OSmain.c" index="3">
 <position/>
 </item>
-<item historyLabel="hello_ucosii.c" index="6">
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="754" y="204"/>
+</item>
+<item historyLabel="OSmain.c" index="3">
 <position/>
 </item>
-<item historyLabel="sopc.h" index="7">
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="1165" y="0"/>
+</item>
+<item historyLabel="OSmain.c" index="3">
 <position/>
 </item>
-<item historyLabel="hello_ucosii.c" index="8">
-<position/>
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="706" y="703"/>
 </item>
-<item historyLabel="sopc.h" index="7">
-<position/>
+<item historyLabel="OSmain.c" index="3">
+<position info="not_deleted" x="1409" y="0"/>
 </item>
-<item historyLabel="hello_ucosii.c" index="8">
-<position info="not_deleted" x="3145" y="0"/>
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="1170" y="0"/>
 </item>
-<item historyLabel="sopc.h" index="7">
-<position info="not_deleted" x="2348" y="0"/>
+<item historyLabel="OSmain.c" index="3">
+<position info="not_deleted" x="1407" y="0"/>
 </item>
-<item historyLabel="system.h" index="9">
-<position/>
+<item historyLabel="sopc.h" index="5">
+<position info="not_deleted" x="647" y="0"/>
 </item>
-<item historyLabel="hello_ucosii.c" index="8">
-<position info="not_deleted" x="3145" y="0"/>
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="1856" y="307"/>
 </item>
-<item historyLabel="sopc.h" index="7">
-<position info="not_deleted" x="2348" y="0"/>
+<item historyLabel="OSmain.c" index="3">
+<position info="not_deleted" x="1856" y="323"/>
 </item>
-<item historyLabel="sopc.h" index="7">
-<position info="not_deleted" x="1414" y="0"/>
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="2339" y="0"/>
 </item>
-<item historyLabel="sopc.h" index="7">
-<position info="not_deleted" x="2368" y="0"/>
+<item historyLabel="OSmain.c" index="3">
+<position info="not_deleted" x="1091" y="0"/>
 </item>
-<item historyLabel="hello_ucosii.c" index="8">
-<position info="not_deleted" x="2674" y="0"/>
+<item historyLabel="OSmain.c" index="1">
+<position info="not_deleted" x="2339" y="0"/>
 </item>
-<item historyLabel="sopc.h" index="7">
-<position info="not_deleted" x="2368" y="0"/>
-</item>
-<item historyLabel="hello_ucosii.c" index="8">
-<position info="not_deleted" x="2674" y="0"/>
-</item>
-<item historyLabel="sopc.h" index="7">
-<position info="not_deleted" x="2368" y="0"/>
-</item>
-<item historyLabel="hello_ucosii.c" index="8">
-<position info="not_deleted" x="3560" y="0"/>
-</item>
-<item historyLabel="sopc.h" index="7">
-<position info="not_deleted" x="1513" y="0"/>
-</item>
-<item historyLabel="hello_ucosii.c" index="8">
-<position info="not_deleted" x="3560" y="0"/>
-</item>
-<item historyLabel="sopc.h" index="7">
-<position info="not_deleted" x="1513" y="0"/>
-</item>
-<item historyLabel="hello_ucosii.c" index="8">
-<position info="not_deleted" x="3560" y="0"/>
-</item>
-<item historyLabel="system.h" index="9">
-<position info="not_deleted" x="10622" y="23"/>
-</item>
-<item historyLabel="hello_ucosii.c" index="8">
-<position info="not_deleted" x="3919" y="0"/>
-</item>
-<item historyLabel="sopc.h" index="7">
-<position info="not_deleted" x="2284" y="0"/>
-</item>
-<item historyLabel="hello_ucosii.c" index="8">
-<position info="not_deleted" x="3535" y="10"/>
-</item>
-<item historyLabel="sopc.h" index="7">
-<position info="not_deleted" x="2243" y="10"/>
-</item>
-<item historyLabel="hello_ucosii.c" index="8">
-<position info="not_deleted" x="3545" y="0"/>
-</item>
-<item historyLabel="sopc.h" index="7">
-<position info="not_deleted" x="2295" y="11"/>
-</item>
-<item historyLabel="hello_ucosii.c" index="8">
-<position info="not_deleted" x="2433" y="0"/>
-</item>
-<item historyLabel="sopc.h" index="7">
-<position info="not_deleted" x="2295" y="11"/>
-</item>
-<item historyLabel="hello_ucosii.c" index="8">
-<position info="not_deleted" x="2433" y="0"/>
-</item>
-<item historyLabel="system.h" index="9">
-<position info="not_deleted" x="8533" y="13"/>
-</item>
-<item historyLabel="hello_ucosii.c" index="8">
-<position info="not_deleted" x="3001" y="0"/>
-</item>
-<item historyLabel="system.h" index="9">
-<position info="not_deleted" x="8533" y="13"/>
-</item>
-<item active="true" historyLabel="hello_ucosii.c" index="8">
-<position info="not_deleted" x="3001" y="0"/>
+<item active="true" historyLabel="OSmain.c" index="3">
+<position info="not_deleted" x="1091" y="0"/>
 </item>
 </navigationHistory>
 <stickyState/>
@@ -377,8 +370,23 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="sopc.h" tooltip="ucosCPU0/Inc/sopc.h">
+<persistable path="/ucosCPU0/Inc/sopc.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="sopc.h" tooltip="ucosCPU1/Inc/sopc.h">
+<persistable path="/ucosCPU1/Inc/sopc.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="OSmain.c" tooltip="ucosCPU1/Os/OSmain.c">
+<persistable path="/ucosCPU1/Os/OSmain.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="OSmain.c" tooltip="ucosCPU0/Os/OSmain.c">
+<persistable path="/ucosCPU0/Os/OSmain.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system.h" tooltip="ucosCPU0_syslib/Debug/system_description/system.h">
 <persistable path="/ucosCPU0_syslib/Debug/system_description/system.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="hello_ucosii.c" tooltip="ucosCPU0/Os/hello_ucosii.c">
+<persistable path="/ucosCPU0/Os/hello_ucosii.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="hello_ucosii.c" tooltip="ucosCPU0/scr/hello_ucosii.c">
 <persistable path="/ucosCPU0/scr/hello_ucosii.c"/>
@@ -406,21 +414,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="hello_ucosii.c" tooltip="ucosCPU0/hello_ucosii.c">
 <persistable path="/ucosCPU0/hello_ucosii.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="CPU1/scr/main.c">
-<persistable path="/CPU1/scr/main.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="sopc.h" tooltip="CPU0/inc/sopc.h">
-<persistable path="/CPU0/inc/sopc.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="CPU0/scr/main.c">
-<persistable path="/CPU0/scr/main.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="sopc.h" tooltip="CPU1/inc/sopc.h">
-<persistable path="/CPU1/inc/sopc.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system.h" tooltip="CPU0_syslib/Debug/system_description/system.h">
-<persistable path="/CPU0_syslib/Debug/system_description/system.h"/>
 </file>
 </mruList>
 </workbench>

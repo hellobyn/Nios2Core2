@@ -15,6 +15,5 @@ set_global_assignment -name SOURCE_FILE [file join $::quartus(qip_path) cpu1.ocp
 # timer1
 # pio1
 # null
-# fifo0
-set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID F46D04FC6EBC000001511EE59758 
+set_global_assignment -name SOPC_BUILDER_SIGNATURE_ID F46D04FC6EBC000001514851F94C 
  
